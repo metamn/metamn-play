@@ -26,7 +26,18 @@ section h1 {
   font-family: 'Josefin Sans';
   font-weight: 100;
   font-size: 600%;
+
+  -moz-transform: rotate(-90deg);
+  position: fixed;
+  top: 45%;
 }
+
+section h1:hover {
+  -moz-transform: rotate(0deg);
+}
+
+
+
 
 section p {
   font-family: 'Playfair Display';
