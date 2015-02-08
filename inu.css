@@ -36,6 +36,10 @@ html {
 section {
   display: flex;
   justify-content: center;
+  margin: 0 0 15%;
+
+  padding: 7.5% 0;
+  background: #f4f4f4;
 }
 
 section figure img {
@@ -96,6 +100,9 @@ header h1:hover {
   -moz-transform: rotate(0deg);
 }
 
+header p {
+  position: fixed;
+}
 
 header p {
   font-family: 'Playfair Display';
@@ -107,4 +114,5 @@ header p.strapline {
 
 header p.since {
   color: red;
+  margin-top: 5em;
 }
