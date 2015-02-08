@@ -2,8 +2,21 @@
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 100;
-  src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(http://fonts.gstatic.com/l/font?kit=q9w3H4aeBxj0hZ8Osfi3d8bE8gcUuAd7xgV7AEcJM0Q) format('woff2'), url(http://fonts.gstatic.com/l/font?kit=q9w3H4aeBxj0hZ8Osfi3dz0JDW2eCd_G__4SQ17xXBU) format('woff');
+  src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(http://fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d1dBB84BqlWy1BjOnCrU9PY.woff2) format('woff2'), url(http://fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dy1dfeF-hbOdKKuBDEXxqhQ.woff) format('woff');
 }
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(http://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Josefin Sans SemiBold'), local('JosefinSans-SemiBold'), url(http://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z_Bf3Xtc57ojmY2ox2Xv8Go.woff2) format('woff2'), url(http://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z9Od4RnLmtUrdSQkDmC5b8k.woff) format('woff');
+}
+
 
 @font-face {
   font-family: 'Playfair Display';
@@ -27,6 +40,40 @@ section {
 
 section figure img {
   max-width: 1024px;
+  position: relative;
+  margin-top: -5%;
+}
+
+section figure figcaption {
+  display: flex;
+  justify-content: center;
+}
+
+section figure figcaption div {
+  background: black;
+  color: white;
+
+  margin: 2.5em;
+  width: 5em;
+  height: 5em;
+  border: 1px solid black;
+  border-radius: 5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+section figure hr {
+  position: relative;
+  top: -5.75em;
+}
+
+section figure {
+  position: relative;
 }
 
 
