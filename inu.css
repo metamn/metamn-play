@@ -38,8 +38,14 @@ section {
   justify-content: center;
   margin: 0 0 15%;
 
-  padding: 7.5% 0;
+  padding: 5% 0 0;
   background: #f4f4f4;
+}
+
+section article h3, section article p {
+  color: white;
+  background: black;
+  padding: 1% 2%;
 }
 
 section figure img {
