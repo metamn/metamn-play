@@ -34,7 +34,7 @@ html {
 
 nav {
   position: fixed;
-  top: 25%;
+  top: 20%;
   right: 15%;
 
   display: flex;
@@ -53,7 +53,7 @@ nav div {
 section {
   display: flex;
   justify-content: center;
-  margin: 0 0 15%;
+  margin: 7.5% 0;
 
   padding: 5% 0 0;
   background: #f4f4f4;
@@ -106,29 +106,24 @@ section figure {
 
 
 header {
-  padding: 5% 10%;
+  position: fixed;
+  bottom: 5%;
+  width: 70%;
+  padding: 0 15%;
+  display: inline-block;
 }
 
 header h1 {
   font-family: 'Josefin Sans';
   font-weight: 100;
-  font-size: 600%;
-
-  -moz-transform: rotate(-90deg);
-  position: fixed;
-  top: 45%;
+  float: right;
+  margin-top: 3.5%;
 }
 
-header h1:hover {
-  -moz-transform: rotate(0deg);
-}
-
-header p {
-  position: fixed;
-}
 
 header p {
   font-family: 'Playfair Display';
+  margin-left: 5%;
 }
 
 header p.strapline {
@@ -137,5 +132,4 @@ header p.strapline {
 
 header p.since {
   color: red;
-  margin-top: 5em;
 }
