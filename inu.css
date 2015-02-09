@@ -32,6 +32,23 @@ html {
 }
 
 
+nav {
+  position: fixed;
+  top: 25%;
+  right: 15%;
+
+  display: flex;
+}
+
+nav div {
+  font-size: 600%;
+  margin-right: .25em;
+}
+
+
+
+
+
 
 section {
   display: flex;
