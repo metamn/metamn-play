@@ -35,11 +35,17 @@ var paths = {
 
 
 // Swig
-// - compile a .swig file with YAML front matter and/or JSON into HTML or SCSS
+// - compile a .swig file with external JSON data into HTML or SCSS
+// - the .swig file has the have two prefixes, the first prefix either .scss or .html
+// - example:
+//    colors.json
+//    colors.scss.swig
+// - output:
+//    colors.scss
 gulp.task('swig', function() {
   return gulp.src(paths.swig)
     .pipe(data(function(file) {
-      return require('/home/cs/work/metamn/app/components/atoms/colors.json');
+      return require(file.path.split('.')[0] + '.json');
     }))
     .pipe(swig({
       defaults: {
