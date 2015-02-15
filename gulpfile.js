@@ -44,8 +44,15 @@ var paths = {
 
 // Site HTML
 // - collect all .html files from site and move them to the final destination folder
+// - URLs are made seo friendly: about.html => about/index.html
 gulp.task('site_html', function() {
   return gulp.src(paths.site_html_src)
+    .pipe(rename(function(path) {
+      if (path.basename != 'index') {
+        path.dirname = path.basename;
+        path.basename = 'index';
+      }
+    }))
     .pipe(minifyHTML())
     .pipe(gulp.dest(paths.dest));
 });
@@ -53,12 +60,18 @@ gulp.task('site_html', function() {
 
 // Styleguide HTML
 // - collect all .html files from styleguide and move them to the final destination folder /styleguide
+// - URLs are made seo friendly: about.html => about/index.html
 gulp.task('styleguide_html', function() {
   return gulp.src(paths.styleguide_html_src)
+    .pipe(rename(function(path) {
+      if (path.basename != 'index') {
+        path.dirname = path.basename;
+        path.basename = 'index';
+      }
+    }))
     .pipe(minifyHTML())
     .pipe(gulp.dest(paths.dest_styleguide));
 });
-
 
 
 
