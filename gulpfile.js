@@ -48,7 +48,7 @@ gulp.task('swig', function() {
   return gulp.src(paths.swig)
     .pipe(data(function(file) {
       json = file.path.split('.')[0] + '.json';
-      if (fs.exists(json)) {
+      if (fs.existsSync(json)) {
         return require(json);
       }
     }))
