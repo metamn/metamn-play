@@ -49,7 +49,7 @@ gulp.task('site_html', function() {
   return gulp.src(paths.site_html_src)
     .pipe(rename(function(path) {
       if (path.basename != 'index') {
-        path.dirname = path.basename;
+        path.dirname = path.dirname + '/' + path.basename;
         path.basename = 'index';
       }
     }))
@@ -65,7 +65,7 @@ gulp.task('styleguide_html', function() {
   return gulp.src(paths.styleguide_html_src)
     .pipe(rename(function(path) {
       if (path.basename != 'index') {
-        path.dirname = path.basename;
+        path.dirname = path.dirname + '/' + path.basename;
         path.basename = 'index';
       }
     }))
