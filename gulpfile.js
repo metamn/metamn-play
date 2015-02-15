@@ -10,23 +10,55 @@ var gulp = require('gulp'),
 
     swig = require('gulp-swig'),
     data = require('gulp-data'),
-    fs = require('fs');
+    fs = require('fs'),
+
+    minifyHTML = require('gulp-minify-html');
 
 
 // Folder structure
 var paths = {
+  // the source of all html files from site which will go to the final destination folder
+  site_html_src: 'app/site/**/*.html',
+
+  // the source of all html files from Styleguide which will go to the final destination folder
+  styleguide_html_src: 'app/styleguide/**/*.html',
+
+  // the final destination folder for styleguide
+  dest_styleguide: 'dist/styleguide',
+
   // the final destination folder
   dest: 'dist',
 
   // the source of all swig files
   swig_src: 'app/**/*.swig',
 
-  // the destination of all compiles swig files
+  // the destination of all compiled swig files
   swig_dest: 'app',
 
   // watch these files for changes
   watch: ['app/**/*.swig', 'app/**/*.json']
 };
+
+
+
+
+// Site HTML
+// - collect all .html files from site and move them to the final destination folder
+gulp.task('site_html', function() {
+  return gulp.src(paths.site_html_src)
+    .pipe(minifyHTML())
+    .pipe(gulp.dest(paths.dest));
+});
+
+
+// Styleguide HTML
+// - collect all .html files from styleguide and move them to the final destination folder /styleguide
+gulp.task('styleguide_html', function() {
+  return gulp.src(paths.styleguide_html_src)
+    .pipe(minifyHTML())
+    .pipe(gulp.dest(paths.dest_styleguide));
+});
+
 
 
 
@@ -96,6 +128,8 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
+    'site_html',
+    'styleguide_html',
     cb
   );
 });
