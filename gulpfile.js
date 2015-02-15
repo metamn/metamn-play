@@ -19,8 +19,8 @@ var gulp = require('gulp'),
 
 // Folder structure
 var paths = {
-  components: 'app/components',
-  swig: 'app/components/**/*.swig',
+  swig_src: 'app/**/*.swig',
+  swig_dest: 'app',
   css: 'app/components/pages/*.css',
   js: 'app/components/**/*.js',
   styles: 'dist/assets/styles',
@@ -45,7 +45,7 @@ var paths = {
 // - output:
 //    colors.scss
 gulp.task('swig', function() {
-  return gulp.src(paths.swig)
+  return gulp.src(paths.swig_src)
     .pipe(data(function(file) {
       json = file.path.split('.')[0] + '.json';
       if (fs.existsSync(json)) {
@@ -58,7 +58,7 @@ gulp.task('swig', function() {
       }
     }))
     .pipe(rename({ extname: '' }))
-    .pipe(gulp.dest(paths.components));
+    .pipe(gulp.dest(paths.swig_dest));
 });
 
 

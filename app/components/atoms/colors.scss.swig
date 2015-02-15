@@ -1,2 +1,2 @@
-test
+components
 {{ red }}
