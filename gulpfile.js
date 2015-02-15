@@ -48,16 +48,17 @@ var paths = {
 //    - output:
 //        colors.scss
 //
-// - when in Styleguide if there is a JSON in components it will be used
+// - when in Styleguide if there is a JSON in Components it will be used
 // - example:
 //    - input:
 //        components/atoms/colors.json
 //        styleguide/atoms/colors.html.swig
 //    - output:
-//        styleguide/atoms/colors.html using data from colors.json 
+//        styleguide/atoms/colors.html using data from colors.json
 gulp.task('swig', function() {
   return gulp.src(paths.swig_src)
     .pipe(data(function(file) {
+
       // Get the JSON from the same folder
       json = file.path.split('.')[0] + '.json';
       if (fs.existsSync(json)) {
