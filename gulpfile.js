@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     swig = require('gulp-swig'),
     data = require('gulp-data'),
     fm = require('front-matter'),
+    fs = require('fs'),
 
     minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify');
@@ -36,7 +37,8 @@ var paths = {
 
 // Swig
 // - compile a .swig file with external JSON data into HTML or SCSS
-// - the .swig file has the have two prefixes, the first prefix either .scss or .html
+// - it works also when there is no JSON file
+// - the .swig file has to have two prefixes, the first prefix is the output format (.scss, .html)
 // - example:
 //    colors.json
 //    colors.scss.swig
@@ -45,7 +47,10 @@ var paths = {
 gulp.task('swig', function() {
   return gulp.src(paths.swig)
     .pipe(data(function(file) {
-      return require(file.path.split('.')[0] + '.json');
+      json = file.path.split('.')[0] + '.json';
+      if (fs.exists(json)) {
+        return require(json);
+      }
     }))
     .pipe(swig({
       defaults: {
