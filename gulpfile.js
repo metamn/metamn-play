@@ -18,27 +18,43 @@ var gulp = require('gulp'),
 
 // Folder structure
 var paths = {
-  components: 'components',
-  swig: 'components/**/*.swig',
-  css: 'components/pages/*.css',
-  js: 'components/**/*.js',
-  yaml: 'components/**/*.yml',
-  styles: 'site/assets/styles',
-  scripts: 'site/assets/scripts',
-  assets_src: 'assets/**/*',
-  assets_dest: 'site/assets',
-  pages: 'components/pages/*.html',
-  site: 'site',
-  home: 'site/home',
+  components: 'app/components',
+  swig: 'app/components/**/*.swig',
+  css: 'app/components/pages/*.css',
+  js: 'app/components/**/*.js',
+  styles: 'dist/assets/styles',
+  scripts: 'dist/assets/scripts',
+  assets_src: 'app/assets/**/*',
+  assets_dest: 'dist/assets',
+  pages: 'app/components/pages/*.html',
+  site: 'dist',
+  home: 'dist/home',
   watch: ['components/**/*.swig', 'components/pages/*.{js,css}']
 };
 
 
 
+// Swig
+// - compile a .swig file with YAML front matter and/or JSON into HTML or SCSS
+gulp.task('swig', function() {
+  return gulp.src(paths.swig)
+    .pipe(data(function(file) {
+      return require('/home/cs/work/metamn/app/components/atoms/colors.json');
+    }))
+    .pipe(swig({
+      defaults: {
+        cache: false
+      }
+    }))
+    .pipe(rename({ extname: '' }))
+    .pipe(gulp.dest(paths.components));
+});
+
+
 
 // Swig
 // - compile a .swig file with YAML front matter into HTML
-gulp.task('swig', function() {
+gulp.task('swig2', function() {
   return gulp.src(paths.swig)
     .pipe(data(function(file) {
       var content = fm(String(file.contents));
