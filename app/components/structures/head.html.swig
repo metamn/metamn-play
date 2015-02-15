@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>{{ title }} &mdash; {{ site.title }}</title>
+
+    <link href="{{ site.url }}/assets/styles/all.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+    <!-- Picturefill Responsive Images -->
+    <script async src="{{ site.url }}/assets/scripts/picturefill.min.js"></script>
+  </head>
+
+  <body>
