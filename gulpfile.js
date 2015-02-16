@@ -49,10 +49,16 @@ var paths = {
   config_json: './app/site/config.json',
 
   // the main scss files to compile to css; they include all other scss partials from /components
-  scss_source: 'app/site/assets/styles/site.scss',
+  site_scss_source: 'app/site/assets/styles/site.scss',
 
   // the destination for the compiled css file
-  scss_dest: 'dist/assets/styles',
+  site_scss_dest: 'dist/assets/styles',
+
+  // the main scss file for styleguide to be compiled
+  styleguide_scss_source: 'app/styleguide/assets/styles/styleguide.scss',
+
+  // the destination css file for styleguide
+  styleguide_scss_dest: 'dist/styleguide/assets/styles',
 
   // watch these files for changes
   watch: ['app/**/*.swig', '!app/helpers/**/*.swig', 'app/**/*.json', 'app/**/*.scss']
@@ -74,14 +80,14 @@ var seoFriendlyURL = function(path) {
 
 
 
-// SASS
+// SASS for /site
 // - there is a single .scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
 // - only this file is compiled to css, all others in /components are not
 // - a sourcemap is created
 // - Autoprefixer is used with default settings (https://github.com/ai/browserslist) > 1%, last 2 versions, Firefox ESR, Opera 12.1.
 // - The final css is minified
-gulp.task('scss', function(){
-  gulp.src(paths.scss_source)
+gulp.task('site_scss', function(){
+  gulp.src(paths.site_scss_source)
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -90,7 +96,22 @@ gulp.task('scss', function(){
     .pipe(postcss([ autoprefixer() ]))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.scss_dest));
+    .pipe(gulp.dest(paths.site_scss_dest));
+});
+
+
+// SASS for /styleguide
+gulp.task('styleguide_scss', function(){
+  gulp.src(paths.styleguide_scss_source)
+    .pipe(cssGlobbing({
+      extensions: ['.scss']
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(minifyCSS())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.styleguide_scss_dest));
 });
 
 
@@ -202,7 +223,8 @@ gulp.task('default', function(cb) {
     'swig',
     'site_html',
     'styleguide_html',
-    'scss',
+    'site_scss',
+    'styleguide_scss',
     cb
   );
 });

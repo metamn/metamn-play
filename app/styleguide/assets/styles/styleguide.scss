@@ -1,7 +1,9 @@
 @import '../../../components/**/**/*.scss';
 
+@import '../../atoms/**/*.scss';
+
 body {
-  background: $black;
-  color: $white;
+  background: $white;
+  color: $black;
   transform: 1s ease-out;
 }
