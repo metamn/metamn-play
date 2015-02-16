@@ -12,14 +12,14 @@ var gulp = require('gulp'),
     data = require('gulp-data'),
     fs = require('fs'),
     fm = require('front-matter'),
+    minifyHTML = require('gulp-minify-html'),
 
     sass = require('gulp-sass'),
     cssGlobbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer-core'),
-
-    minifyHTML = require('gulp-minify-html');
+    minifyCSS = require('gulp-minify-css');
 
 
 // Folder structure
@@ -75,6 +75,8 @@ var seoFriendlyURL = function(path) {
 // - there is a single .scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
 // - only this file is compiled to css, all others in /components are not
 // - a sourcemap is created
+// - Autoprefixer is used with default settings (https://github.com/ai/browserslist) > 1%, last 2 versions, Firefox ESR, Opera 12.1.
+// - The final css is minified
 gulp.task('scss', function(){
   gulp.src(paths.scss_source)
     .pipe(cssGlobbing({
@@ -82,7 +84,8 @@ gulp.task('scss', function(){
     }))
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scss_dest));
 });

@@ -3,6 +3,7 @@ var gulp = require('gulp'),
   minifyCSS = require('../'),
   CleanCSS = require('clean-css'),
   sourceMaps = require('gulp-sourcemaps'),
+  stylus = require('gulp-stylus'),
   applySourceMap = require('vinyl-sourcemaps-apply'),
   gutil = require('gulp-util'),
   es = require('event-stream'),
@@ -19,7 +20,8 @@ describe('gulp-minify-css source map', function() {
   };
   
   describe('with buffers and gulp-sourcemaps', function() {
-    var filename = path.join(__dirname, './fixture/sourcemap.css');
+    var filename = path.join(__dirname, './fixture/sourcemap.css'),
+      filenameStylus = path.join(__dirname, './fixture/sourcemap.styl');
     
     it('should generate source map with correct mapping', function(done) {
       var write = sourceMaps.write();
@@ -62,6 +64,40 @@ describe('gulp-minify-css source map', function() {
       
       gulp.src(filename)
       .pipe(sourceMaps.init())
+      .pipe(minifyCSS(opts))
+      .pipe(write);
+    });
+    
+    it('should generate source map with correct sources when using preprocessor (stylus) and gulp.src without base', function(done) {
+      var write = sourceMaps.write();
+      
+      write.on('data', function (file) {
+        console.log(file.sourceMap.sources);
+        expect(file.sourceMap).to.have.property('sources').with.length(2);
+        done();
+      });
+      
+      gulp.src(filenameStylus)
+      .pipe(sourceMaps.init())
+      .pipe(stylus())
+      .pipe(minifyCSS(opts))
+      .pipe(write);
+    });
+    
+    it('should generate source map with correct sources when using preprocessor (stylus) and gulp.src with base', function(done) {
+      var write = sourceMaps.write();
+      
+      write.on('data', function (file) {
+        console.log(file.sourceMap.sources);
+        expect(file.sourceMap).to.have.property('sources').with.length(2);
+        done();
+      });
+      
+      gulp.src(filenameStylus, {
+        base: '.'
+      })
+      .pipe(sourceMaps.init())
+      .pipe(stylus())
       .pipe(minifyCSS(opts))
       .pipe(write);
     });

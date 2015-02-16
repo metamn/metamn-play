@@ -77,6 +77,17 @@ describe('gulp-minify-css minification', function() {
         }));
     });
   });
+  describe('with errors', function () {
+    var filename = path.join(__dirname, './fixture/import-error.css');
+    it('should emit gutil.PluginError', function (done) {
+      gulp.src(filename)
+          .pipe(minifyCSS(opts))
+          .on('error', function (err) {
+            expect(err).to.exist;
+            done();
+          });
+    });
+  });
 });
 
 describe('does not loose other properties in the file object', function () {
