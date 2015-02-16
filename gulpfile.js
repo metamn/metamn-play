@@ -31,7 +31,7 @@ var paths = {
   dest: 'dist',
 
   // the source of all swig files
-  swig_src: 'app/**/*.swig',
+  swig_src: ['app/**/*.swig', '!app/helpers/**/*.swig'],
 
   // the destination of all compiled swig files
   swig_dest: 'app',
@@ -40,7 +40,7 @@ var paths = {
   config_json: './app/site/config.json',
 
   // watch these files for changes
-  watch: ['app/**/*.swig', 'app/**/*.json']
+  watch: ['app/**/*.swig', '!app/helpers/**/*.swig', 'app/**/*.json']
 };
 
 

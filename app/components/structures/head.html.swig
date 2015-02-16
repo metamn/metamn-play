@@ -1,5 +1,8 @@
+{% import "../../helpers/classname.swig" as c  %}
+{% set classname = c.classname(title) %}
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="{{ classname }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
