@@ -16,6 +16,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     cssGlobbing = require('gulp-css-globbing'),
     sourcemaps = require('gulp-sourcemaps'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer-core'),
 
     minifyHTML = require('gulp-minify-html');
 
@@ -70,8 +72,9 @@ var seoFriendlyURL = function(path) {
 
 
 // SASS
-// - there is a single scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
-// - this file is compiled only to css, all others in /components are not
+// - there is a single .scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
+// - only this file is compiled to css, all others in /components are not
+// - a sourcemap is created
 gulp.task('scss', function(){
   gulp.src(paths.scss_source)
     .pipe(cssGlobbing({
@@ -79,6 +82,7 @@ gulp.task('scss', function(){
     }))
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scss_dest));
 });
