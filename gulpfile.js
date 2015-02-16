@@ -13,6 +13,9 @@ var gulp = require('gulp'),
     fs = require('fs'),
     fm = require('front-matter'),
 
+    sass = require('gulp-sass'),
+    cssGlobbing = require('gulp-css-globbing'),
+
     minifyHTML = require('gulp-minify-html');
 
 
@@ -39,6 +42,12 @@ var paths = {
   // the config JSON file shared accross all swig templates (it should be an absolute url)
   config_json: './app/site/config.json',
 
+  // the main scss files to compile to css; they include all other scss partials from /components
+  scss_source: 'app/site/assets/styles/site.scss',
+
+  // the destination for the compiled css file
+  scss_dest: 'dist/assets/styles',
+
   // watch these files for changes
   watch: ['app/**/*.swig', '!app/helpers/**/*.swig', 'app/**/*.json']
 };
@@ -58,6 +67,16 @@ var seoFriendlyURL = function(path) {
 }
 
 
+
+// Sass
+gulp.task('scss', function(){
+  gulp.src(paths.scss_source)
+    .pipe(cssGlobbing({
+      extensions: ['.scss']
+    }))
+    .pipe(sass())
+    .pipe(gulp.dest(paths.scss_dest));
+});
 
 
 
@@ -168,6 +187,7 @@ gulp.task('default', function(cb) {
     'swig',
     'site_html',
     'styleguide_html',
+    'scss',
     cb
   );
 });
