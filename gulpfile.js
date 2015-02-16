@@ -35,7 +35,7 @@ var paths = {
   // the destination of all compiled swig files
   swig_dest: 'app',
 
-  // the config JSON file shared accross all swig templates
+  // the config JSON file shared accross all swig templates (it should be an absolute url)
   config_json: './app/site/config.json',
 
   // watch these files for changes
@@ -45,7 +45,7 @@ var paths = {
 
 
 
-// Helper function
+// Helper functions
 //
 // Make URLs SEO friendly
 // - about.html => about/index.html
