@@ -23,71 +23,58 @@ var gulp = require('gulp'),
 
 
 // Folder structure
-// - we have a shared /components and /helpers folder
-// - we have two separate sites (/site) and (/styleguide) built on shared components
+//
+// - we have two separate sites (/site) and (/styleguide)
 // - the final files are generated into /dist where /styleguide is mounted as a page of /site
+// - /styleguide can use all the resources (components, helpers) of /site and can have it's own too
 var paths = {
-  // the source of all html files from /site which will go to the final destination folder
-  site_html_src: 'app/site/**/*.html',
-
-  // the source of all html files from /styleguide which will go to the final destination folder
-  styleguide_html_src: 'app/styleguide/**/*.html',
-
-  // the final destination folder for /styleguide
-  dest_styleguide: 'dist/styleguide',
+  // the source of all the .html files which will go to the final destination folder
+  html_src: 'components/pages/**/*.html',
 
   // the final destination folder
   dest: 'dist',
 
-  // the source of all swig files
-  swig_src: ['app/**/*.swig', '!app/helpers/**/*.swig'],
+  // the final destination folder for /styleguide
+  dest_styleguide: 'dist/styleguide',
 
-  // the destination of all compiled swig files
-  swig_dest: 'app',
 
-  // the config JSON file shared accross all swig templates (it should be an absolute url)
-  config_json: './app/site/config.json',
+
+  // the source of all .swig files
+  swig_src: '**/*.swig',
+
+  // the destination of all compiled .swig files
+  swig_dest: '',
+
+  // the config JSON file shared accross all swig templates (it should be an absolute url, starting with './')
+  config_json: 'config.json',
+
+
+
 
   // the main scss files to compile to css; they include all other scss partials from /components
-  site_scss_source: 'app/site/assets/styles/site.scss',
+  scss_source: 'assets/styles/site.scss',
 
   // the destination for the compiled css file
-  site_scss_dest: 'dist/assets/styles',
+  scss_dest: 'dist/assets/styles',
 
-  // the main scss file for styleguide to be compiled
-  styleguide_scss_source: 'app/styleguide/assets/styles/styleguide.scss',
 
-  // the destination css file for styleguide
-  styleguide_scss_dest: 'dist/styleguide/assets/styles',
 
   // watch these files for changes
-  watch: ['app/**/*.swig', '!app/helpers/**/*.swig', 'app/**/*.json', 'app/**/*.scss']
+  watch: ['site/**/*.swig', '!site/helpers/**/*.swig', 'site/**/*.json', 'site/**/*.scss', 'styleguide/**/*.swig', '!styleguide/helpers/**/*.swig', 'styleguide/**/*.json', 'styleguide/**/*.scss']
 };
 
 
 
-
-// Helper functions
+// Helpers
 //
-// Make URLs SEO friendly
-// - about.html => about/index.html
-var seoFriendlyURL = function(path) {
-  if (path.basename != 'index') {
-    path.dirname = path.dirname + '/' + path.basename;
-    path.basename = 'index';
-  }
-}
-
-
-
-// SASS for /site
+// SCSS
 // - there is a single .scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
 // - only this file is compiled to css, all others in /components are not
 // - a sourcemap is created
 // - Autoprefixer is used with default settings (https://github.com/ai/browserslist) > 1%, last 2 versions, Firefox ESR, Opera 12.1.
 // - The final css is minified
-gulp.task('site_scss', function(){
-  gulp.src(paths.site_scss_source)
+var _scss = function(source, dest) {
+  gulp.src(source)
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -96,49 +83,39 @@ gulp.task('site_scss', function(){
     .pipe(postcss([ autoprefixer() ]))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.site_scss_dest));
-});
+    .pipe(gulp.dest(dest));
+}
 
 
-// SASS for /styleguide
-gulp.task('styleguide_scss', function(){
-  gulp.src(paths.styleguide_scss_source)
-    .pipe(cssGlobbing({
-      extensions: ['.scss']
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(postcss([ autoprefixer() ]))
-    .pipe(minifyCSS())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.styleguide_scss_dest));
-});
-
-
-
-// Site HTML
+// HTML
 // - collect all .html files from /site and move them to the final destination folder
 // - URLs are made seo friendly: about.html => about/index.html
-gulp.task('site_html', function() {
-  return gulp.src(paths.site_html_src)
+var _html = function(source, dest) {
+  return gulp.src(source)
     .pipe(rename(function(path) {
-      seoFriendlyURL(path);
+      if (path.basename != 'index') {
+        path.dirname = path.dirname + '/' + path.basename;
+        path.basename = 'index';
+      }
     }))
     .pipe(minifyHTML())
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(dest));
+}
+
+
+
+// Tasks
+//
+// SCSS
+gulp.task('scss', function(){
+  _scss('site/' + paths.scss_source, paths.scss_dest);
 });
 
 
-// Styleguide HTML
-// - collect all .html files from /styleguide and move them to the final destination folder's styleguide folder
-// - URLs are made seo friendly: about.html => about/index.html
-gulp.task('styleguide_html', function() {
-  return gulp.src(paths.styleguide_html_src)
-    .pipe(rename(function(path) {
-      seoFriendlyURL(path);
-    }))
-    .pipe(minifyHTML())
-    .pipe(gulp.dest(paths.dest_styleguide));
+// HTML
+gulp.task('html', function() {
+  _html('site/' + paths.html_source, paths.dest);
+  _html('styleguide/' + paths.html_source, paths.dest_styleguide);
 });
 
 
@@ -194,9 +171,9 @@ gulp.task('swig', function() {
       defaults: {
         cache: false,
         // Load site-wide JSON settings
-        locals: {
-          site: require(paths.config_json)
-        }
+        //locals: {
+          //site: require(paths.config_json)
+        //}
       }
     }))
     .pipe(rename({ extname: '' }))
@@ -221,10 +198,8 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
-    'site_html',
-    'styleguide_html',
-    'site_scss',
-    'styleguide_scss',
+    'html',
+    'scss',
     cb
   );
 });
