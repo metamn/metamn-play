@@ -42,9 +42,6 @@ var paths = {
   // the source of all .swig files
   swig_src: '**/*.swig',
 
-  // the destination of all compiled .swig files
-  swig_dest: '',
-
   // the config JSON file shared accross all swig templates (it should be an absolute url, starting with './')
   config_json: 'config.json',
 
@@ -52,7 +49,7 @@ var paths = {
 
 
   // the main scss file to be compiled to css; they include all other scss partials from /components
-  scss_source: 'assets/styles/site.scss',
+  scss_src: 'assets/styles/site.scss',
 
   // the destination for the compiled css file
   scss_dest: 'dist/assets/styles',
@@ -107,22 +104,6 @@ var _html = function(source, dest) {
 
 
 
-// Tasks
-//
-// SCSS
-gulp.task('scss', function(){
-  _scss('site/' + paths.scss_source, paths.scss_dest);
-});
-
-
-// HTML
-gulp.task('html', function() {
-  _html('site/' + paths.html_source, paths.dest);
-  _html('styleguide/' + paths.html_source, paths.dest_styleguide);
-});
-
-
-
 // Swig
 // - compile a .swig file into HTML or SCSS
 // - the generated file will be saved into the same directory as the source file
@@ -147,12 +128,12 @@ gulp.task('html', function() {
 //        styleguide/atoms/colors.html.swig
 //    - output:
 //        styleguide/atoms/colors.html using data from colors.json
-gulp.task('swig', function() {
-  return gulp.src(paths.swig_src)
+var _swig = function(source) {
+  return gulp.src(source + paths.swig_src)
     // if we are in the styleguide get the JSON from components
     .pipe(data(function(file) {
       if (file.path.indexOf('styleguide') > -1) {
-        components = file.path.replace('styleguide', 'components');
+        components = file.path.replace('styleguide', 'site');
         json = components.split('.')[0] + '.scss.json';
         if (fs.existsSync(json)) {
           return require(json);
@@ -175,14 +156,37 @@ gulp.task('swig', function() {
         cache: false,
         // Load site-wide JSON settings
         locals: {
-          site: require(paths.config_json)
+          site: require('./' + source + paths.config_json)
         }
       }
     }))
     .pipe(rename({ extname: '' }))
-    .pipe(gulp.dest(paths.swig_dest));
+    .pipe(gulp.dest(source));
+}
+
+
+
+
+// Tasks
+//
+// SCSS
+gulp.task('scss', function(){
+  _scss('site/' + paths.scss_src, paths.scss_dest);
 });
 
+
+// HTML
+gulp.task('html', function() {
+  _html('site/' + paths.html_source, paths.dest);
+  _html('styleguide/' + paths.html_source, paths.dest_styleguide);
+});
+
+
+// Swig
+gulp.task('swig', function() {
+  _swig('site/');
+  _html('styleguide/');
+});
 
 
 // Clean destination folder
@@ -201,8 +205,6 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
-    'html',
-    'scss',
     cb
   );
 });
