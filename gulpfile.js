@@ -17,13 +17,13 @@ var gulp = require('gulp'),
 
 // Folder structure
 var paths = {
-  // the source of all html files from site which will go to the final destination folder
+  // the source of all html files from Site which will go to the final destination folder
   site_html_src: 'app/site/**/*.html',
 
   // the source of all html files from Styleguide which will go to the final destination folder
   styleguide_html_src: 'app/styleguide/**/*.html',
 
-  // the final destination folder for styleguide
+  // the final destination folder for Styleguide
   dest_styleguide: 'dist/styleguide',
 
   // the final destination folder
@@ -34,6 +34,9 @@ var paths = {
 
   // the destination of all compiled swig files
   swig_dest: 'app',
+
+  // the config JSON file shared accross all swig templates
+  config_json: './app/site/config.json',
 
   // watch these files for changes
   watch: ['app/**/*.swig', 'app/**/*.json']
@@ -116,9 +119,14 @@ gulp.task('swig', function() {
       }
     }))
     .pipe(swig({
+      // Load a same-name JSON file if found
       load_json: true,
       defaults: {
-        cache: false
+        cache: false,
+        // Load site-wide JSON settings
+        locals: {
+          site: require(paths.config_json)
+        }
       }
     }))
     .pipe(rename({ extname: '' }))
