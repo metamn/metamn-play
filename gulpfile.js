@@ -42,16 +42,28 @@ var paths = {
 
 
 
+// Helper function
+//
+// Make URLs SEO friendly
+// - about.html => about/index.html
+var seoFriendlyURL = function(path) {
+  if (path.basename != 'index') {
+    path.dirname = path.dirname + '/' + path.basename;
+    path.basename = 'index';
+  }
+}
+
+
+
+
+
 // Site HTML
 // - collect all .html files from site and move them to the final destination folder
 // - URLs are made seo friendly: about.html => about/index.html
 gulp.task('site_html', function() {
   return gulp.src(paths.site_html_src)
     .pipe(rename(function(path) {
-      if (path.basename != 'index') {
-        path.dirname = path.dirname + '/' + path.basename;
-        path.basename = 'index';
-      }
+      seoFriendlyURL(path);
     }))
     .pipe(minifyHTML())
     .pipe(gulp.dest(paths.dest));
@@ -64,10 +76,7 @@ gulp.task('site_html', function() {
 gulp.task('styleguide_html', function() {
   return gulp.src(paths.styleguide_html_src)
     .pipe(rename(function(path) {
-      if (path.basename != 'index') {
-        path.dirname = path.dirname + '/' + path.basename;
-        path.basename = 'index';
-      }
+      seoFriendlyURL(path);
     }))
     .pipe(minifyHTML())
     .pipe(gulp.dest(paths.dest_styleguide));
@@ -78,12 +87,11 @@ gulp.task('styleguide_html', function() {
 // Swig
 // - compile a .swig file with external JSON data into HTML or SCSS
 // - the generated file will be saved into the same directory as the source file
-// - it works also when there is no JSON file
 //
 // - the .swig file has to have two prefixes, the first prefix is the output format (.scss, .html)
 // - example:
 //    - input:
-//        colors.json
+//        colors.scss.json
 //        colors.scss.swig
 //    - output:
 //        colors.scss
@@ -91,30 +99,24 @@ gulp.task('styleguide_html', function() {
 // - when in Styleguide if there is a JSON in Components it will be used
 // - example:
 //    - input:
-//        components/atoms/colors.json
+//        components/atoms/colors.scss.json
 //        styleguide/atoms/colors.html.swig
 //    - output:
 //        styleguide/atoms/colors.html using data from colors.json
 gulp.task('swig', function() {
   return gulp.src(paths.swig_src)
     .pipe(data(function(file) {
-
-      // Get the JSON from the same folder
-      json = file.path.split('.')[0] + '.json';
-      if (fs.existsSync(json)) {
-        return require(json);
-      }
-
       // If we are in the styleguide get the JSON from components
       if (file.path.indexOf('styleguide') > -1) {
         components = file.path.replace('styleguide', 'components');
-        json = components.split('.')[0] + '.json';
+        json = components.split('.')[0] + '.scss.json';
         if (fs.existsSync(json)) {
           return require(json);
         }
       }
     }))
     .pipe(swig({
+      load_json: true,
       defaults: {
         cache: false
       }
