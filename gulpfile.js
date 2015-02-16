@@ -52,7 +52,7 @@ var paths = {
   scss_dest: 'dist/assets/styles',
 
   // watch these files for changes
-  watch: ['app/**/*.swig', '!app/helpers/**/*.swig', 'app/**/*.json']
+  watch: ['app/**/*.swig', '!app/helpers/**/*.swig', 'app/**/*.json', 'app/**/*.scss']
 };
 
 
