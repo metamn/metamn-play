@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 
     sass = require('gulp-sass'),
     cssGlobbing = require('gulp-css-globbing'),
+    sourcemaps = require('gulp-sourcemaps'),
 
     minifyHTML = require('gulp-minify-html');
 
@@ -68,13 +69,17 @@ var seoFriendlyURL = function(path) {
 
 
 
-// Sass
+// SASS
+// - there is a single scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
+// - this file is compiled only to css, all others in /components are not
 gulp.task('scss', function(){
   gulp.src(paths.scss_source)
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scss_dest));
 });
 
