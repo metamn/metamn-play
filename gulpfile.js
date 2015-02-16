@@ -54,9 +54,6 @@ var paths = {
   // the main scss file to be compiled to css; they include all other scss partials from /components
   scss_src: 'assets/styles/site.scss',
 
-  // the destination for the compiled css file
-  scss_dest: 'dist/assets/styles',
-
 
 
   // watch these files for changes
@@ -174,7 +171,8 @@ var _swig = function(source) {
 //
 // SCSS
 gulp.task('scss', function(){
-  _scss('site/' + paths.scss_src, paths.scss_dest);
+  _scss('site/' + paths.scss_src, paths.dest + '/assets/style/');
+  //_scss('styleguide/' + paths.scss_src, paths.dest + '/styleguide');
 });
 
 
@@ -209,6 +207,7 @@ gulp.task('default', function(cb) {
     'clean',
     'swig',
     'html',
+    'scss',
     cb
   );
 });
