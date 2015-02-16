@@ -1,4 +1,4 @@
-{% include "../structures/head.html.swig" %}
+{% extends "../structures/head.html.swig" %}
 
 {% block content %}{% endblock %}
 
