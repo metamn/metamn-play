@@ -51,7 +51,7 @@ var paths = {
 
 
 
-  // the main scss files to compile to css; they include all other scss partials from /components
+  // the main scss file to be compiled to css; they include all other scss partials from /components
   scss_source: 'assets/styles/site.scss',
 
   // the destination for the compiled css file
@@ -67,8 +67,11 @@ var paths = {
 
 // Helpers
 //
+// - they are in fact regular Gulp tasks
+// - they are refactored into functions since they'll be used twice, once for /site and once for /styleguide
+
 // SCSS
-// - there is a single .scss file in site/assets/styles/site.scss which includes (imports) all other scss files from /components
+// - there is a single .scss file in /assets/styles/site.scss which includes (imports) all other scss files from /components
 // - only this file is compiled to css, all others in /components are not
 // - a sourcemap is created
 // - Autoprefixer is used with default settings (https://github.com/ai/browserslist) > 1%, last 2 versions, Firefox ESR, Opera 12.1.
@@ -88,7 +91,7 @@ var _scss = function(source, dest) {
 
 
 // HTML
-// - collect all .html files from /site and move them to the final destination folder
+// - collect all .html files from and move them to the final destination folder
 // - URLs are made seo friendly: about.html => about/index.html
 var _html = function(source, dest) {
   return gulp.src(source)
@@ -171,9 +174,9 @@ gulp.task('swig', function() {
       defaults: {
         cache: false,
         // Load site-wide JSON settings
-        //locals: {
-          //site: require(paths.config_json)
-        //}
+        locals: {
+          site: require(paths.config_json)
+        }
       }
     }))
     .pipe(rename({ extname: '' }))
