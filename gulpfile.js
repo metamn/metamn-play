@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     swig = require('gulp-swig'),
     data = require('gulp-data'),
     fs = require('fs'),
+    fm = require('front-matter'),
 
     minifyHTML = require('gulp-minify-html');
 
@@ -88,8 +89,13 @@ gulp.task('styleguide_html', function() {
 
 
 // Swig
-// - compile a .swig file with external JSON data into HTML or SCSS
+// - compile a .swig file into HTML or SCSS
 // - the generated file will be saved into the same directory as the source file
+//
+// - JSON and Front Matter are supported
+//    - the JSON has to have the same filename, ie index.html.json
+//    - if a data has to be reused accross the site and/or styleguide it has to stay as JSON. ie colors.scss.json
+//    - if the data is just local, like page title it can be a YAML Front Matter entry
 //
 // - the .swig file has to have two prefixes, the first prefix is the output format (.scss, .html)
 // - example:
@@ -108,8 +114,8 @@ gulp.task('styleguide_html', function() {
 //        styleguide/atoms/colors.html using data from colors.json
 gulp.task('swig', function() {
   return gulp.src(paths.swig_src)
+    // if we are in the styleguide get the JSON from components
     .pipe(data(function(file) {
-      // If we are in the styleguide get the JSON from components
       if (file.path.indexOf('styleguide') > -1) {
         components = file.path.replace('styleguide', 'components');
         json = components.split('.')[0] + '.scss.json';
@@ -118,6 +124,15 @@ gulp.task('swig', function() {
         }
       }
     }))
+
+    // use YAML Front Matter
+    .pipe(data(function(file) {
+      var content = fm(String(file.contents));
+      file.contents = new Buffer(content.body);
+      return content.attributes;
+    }))
+
+    // load JSONs
     .pipe(swig({
       // Load a same-name JSON file if found
       load_json: true,

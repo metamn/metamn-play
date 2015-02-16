@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 {% extends "../components/layouts/home.html.swig" %}
 
 <!-- this is a comment -->
