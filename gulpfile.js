@@ -121,13 +121,13 @@ var _html = function(source, dest) {
 //    - output:
 //        colors.scss
 //
-// - when in /styleguide if there is a similar name .json in /components it will be used
+// - when in /styleguide if there is a similar file named .json in site/components it will be used
 // - example:
 //    - input:
-//        components/atoms/colors.scss.json
-//        styleguide/atoms/colors.html.swig
+//        site/components/atoms/colors.scss.json
+//        styleguide/components/atoms/colors.html.swig
 //    - output:
-//        styleguide/atoms/colors.html using data from colors.json
+//        styleguide/components/atoms/colors.html using data from colors.json
 var _swig = function(source) {
   return gulp.src(source + paths.swig_src)
     // if we are in the styleguide get the JSON from components
