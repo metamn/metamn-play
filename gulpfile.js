@@ -28,8 +28,11 @@ var gulp = require('gulp'),
 // - the final files are generated into /dist where /styleguide is mounted as a page of /site
 // - /styleguide can use all the resources (components, helpers) of /site and can have it's own too
 var paths = {
-  // the source of all the .html files which will go to the final destination folder
-  html_src: 'components/pages/**/*.html',
+  // the source of all the .html files which will go to the final destination folder, from /site
+  site_html_src: 'site/components/pages/**/*.html',
+
+  // the source of all the .html files which will go to the final destination folder, from /styleguide
+  styleguide_html_src: 'styleguide/components/**/*.html',
 
   // the final destination folder
   dest: 'dist',
@@ -88,7 +91,7 @@ var _scss = function(source, dest) {
 
 
 // HTML
-// - collect all .html files from and move them to the final destination folder
+// - collect all .html files and move them to the final destination folder
 // - URLs are made seo friendly: about.html => about/index.html
 var _html = function(source, dest) {
   return gulp.src(source)
@@ -177,8 +180,8 @@ gulp.task('scss', function(){
 
 // HTML
 gulp.task('html', function() {
-  _html('site/' + paths.html_source, paths.dest);
-  _html('styleguide/' + paths.html_source, paths.dest_styleguide);
+  _html(paths.site_html_src, paths.dest);
+  //_html(paths.styleguide_html_src, paths.dest_styleguide);
 });
 
 
@@ -205,6 +208,7 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
+    'html',
     cb
   );
 });
