@@ -156,7 +156,7 @@ var _swig = function(source) {
         cache: false,
         // Load site-wide JSON settings
         locals: {
-          site: require('./' + source + paths.config_json)
+          site: require('./site/' + paths.config_json)
         }
       }
     }))
@@ -185,7 +185,7 @@ gulp.task('html', function() {
 // Swig
 gulp.task('swig', function() {
   _swig('site/');
-  _html('styleguide/');
+  _swig('styleguide/');
 });
 
 
