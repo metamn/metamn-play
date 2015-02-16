@@ -23,14 +23,17 @@ var gulp = require('gulp'),
 
 
 // Folder structure
+// - we have a shared /components and /helpers folder
+// - we have two separate sites (/site) and (/styleguide) built on shared components
+// - the final files are generated into /dist where /styleguide is mounted as a page of /site
 var paths = {
-  // the source of all html files from Site which will go to the final destination folder
+  // the source of all html files from /site which will go to the final destination folder
   site_html_src: 'app/site/**/*.html',
 
-  // the source of all html files from Styleguide which will go to the final destination folder
+  // the source of all html files from /styleguide which will go to the final destination folder
   styleguide_html_src: 'app/styleguide/**/*.html',
 
-  // the final destination folder for Styleguide
+  // the final destination folder for /styleguide
   dest_styleguide: 'dist/styleguide',
 
   // the final destination folder
@@ -93,7 +96,7 @@ gulp.task('scss', function(){
 
 
 // Site HTML
-// - collect all .html files from site and move them to the final destination folder
+// - collect all .html files from /site and move them to the final destination folder
 // - URLs are made seo friendly: about.html => about/index.html
 gulp.task('site_html', function() {
   return gulp.src(paths.site_html_src)
@@ -106,7 +109,7 @@ gulp.task('site_html', function() {
 
 
 // Styleguide HTML
-// - collect all .html files from styleguide and move them to the final destination folder /styleguide
+// - collect all .html files from /styleguide and move them to the final destination folder's styleguide folder
 // - URLs are made seo friendly: about.html => about/index.html
 gulp.task('styleguide_html', function() {
   return gulp.src(paths.styleguide_html_src)
@@ -136,7 +139,7 @@ gulp.task('styleguide_html', function() {
 //    - output:
 //        colors.scss
 //
-// - when in Styleguide if there is a JSON in Components it will be used
+// - when in /styleguide if there is a similar name .json in /components it will be used
 // - example:
 //    - input:
 //        components/atoms/colors.scss.json
