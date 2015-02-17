@@ -172,13 +172,13 @@ var _swig = function(source) {
 // SCSS
 gulp.task('scss', function(){
   _scss('site/' + paths.scss_src, paths.dest + '/assets/style/');
-  //_scss('styleguide/' + paths.scss_src, paths.dest + '/styleguide');
+  _scss('styleguide/' + paths.scss_src, paths.dest + '/styleguide');
 });
 
 
 // HTML
 gulp.task('html', function() {
-  _html(paths.site_html_src, paths.dest);
+  //_html(paths.site_html_src, paths.dest);
   //_html(paths.styleguide_html_src, paths.dest_styleguide);
 });
 
