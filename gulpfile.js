@@ -24,10 +24,10 @@ var gulp = require('gulp'),
 
 var paths = {
   // .swig source files
-  swig_src: ['styleguide/components/**/*.swig'],
+  swig_src: ['components/**/*.swig'],
 
   // .swig dest files (same directory)
-  swig_dest: 'styleguide/components',
+  swig_dest: 'components',
 
   // global config.json file
   config_json: './site/config.json',
@@ -38,9 +38,19 @@ var paths = {
 
 
 
-// Swig
-gulp.task('swig', function() {
-  return gulp.src(paths.swig_src)
+var _swig = function(source, dest, grabJSON) {
+  return gulp.src(source)
+
+    // use global JSON definitions from /site in /styleguide
+    .pipe(data(function(file) {
+      if (grabJSON) {
+        components = file.path.replace('styleguide', 'site');
+        json = components.split('.')[0] + '.scss.json';
+        if (fs.existsSync(json)) {
+          return require(json);
+        }
+      }
+    }))
 
     // use YAML Front Matter
     .pipe(data(function(file) {
@@ -63,7 +73,15 @@ gulp.task('swig', function() {
       }
     }))
     .pipe(rename({ extname: '' }))
-    .pipe(gulp.dest(paths.swig_dest));
+    .pipe(gulp.dest(dest));
+}
+
+
+
+// Swig
+gulp.task('swig', function() {
+  _swig('site/' + paths.swig_src, 'site/' + paths.swig_dest);
+  _swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
 });
 
 
