@@ -9,13 +9,11 @@
 
     <title>{{ title }} &mdash; {{ site.title }}</title>
 
-    {% block styles %}
-      <link href="{{ site.url }}/assets/styles/site.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    {% endblock %}
+    <link href="{{ site.url }}/assets/styles/site.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     <!-- Picturefill Responsive Images -->
     <script async src="{{ site.url }}/assets/scripts/picturefill.min.js"></script>
   </head>
 
   <body>
-    {% block content %}{% endblock %}
+    

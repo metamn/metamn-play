@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{% extends "../components/layouts/home.html.swig" %}
+{% extends "../layouts/home.html.swig" %}
 
 <!-- this is a comment -->
 {% block content %}
