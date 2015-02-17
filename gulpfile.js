@@ -4,7 +4,6 @@
 var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
 
