@@ -33,19 +33,40 @@ var paths = {
   config_json: './site/config.json',
 
 
-  // .html files from /site to be moved into /dist
+  // .html files from /site to be moved into dest
   html_src: 'site/components/pages/**/*.html',
 
   // the destination folder
   dest: 'dist',
+
+
+  // .html files from /styleguide to be moved to dest
+  styleguide_html_src: 'styleguide/components/**/*.html',
+
+  // the destination folder for /styleguide
+  styleguide_dest: 'dist/styleguide',
+
 
   // watch these files for changes
   watch: []
 };
 
 
+gulp.task('html_styleguide', function() {
+  return gulp.src(paths.styleguide_html_src)
+    .pipe(rename(function(path) {
+      // rename about.html > about/index.html
+      if (path.basename != 'index') {
+        path.dirname = path.dirname + '/' + path.basename;
+        path.basename = 'index';
+      }
+    }))
+    .pipe(minifyHTML())
+    .pipe(gulp.dest(paths.styleguide_dest));
+});
 
-gulp.task('html', function() {
+
+gulp.task('html_site', function() {
   return gulp.src(paths.html_src)
     .pipe(rename(function(path) {
       // rename about.html > about/index.html
@@ -57,6 +78,9 @@ gulp.task('html', function() {
     .pipe(minifyHTML())
     .pipe(gulp.dest(paths.dest));
 });
+
+
+
 
 
 
@@ -128,7 +152,7 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
-    'html',
+    'html_styleguide',
     cb
   );
 });
