@@ -24,10 +24,10 @@ var gulp = require('gulp'),
 
 var paths = {
   // .swig source files
-  swig_src: ['site/components/**/*.swig'],
+  swig_src: ['styleguide/components/**/*.swig'],
 
   // .swig dest files (same directory)
-  swig_dest: 'site/components',
+  swig_dest: 'styleguide/components',
 
   // global config.json file
   config_json: './site/config.json',
