@@ -52,6 +52,7 @@ var paths = {
 };
 
 
+
 gulp.task('html_styleguide', function() {
   return gulp.src(paths.styleguide_html_src)
     .pipe(rename(function(path) {
@@ -59,6 +60,11 @@ gulp.task('html_styleguide', function() {
       if (path.basename != 'index') {
         path.dirname = path.dirname + '/' + path.basename;
         path.basename = 'index';
+      }
+
+      // rename pages/index.html > index.html
+      if (path.dirname == 'pages' && path.basename == "index") {
+        path.dirname = '';
       }
     }))
     .pipe(minifyHTML())
@@ -152,6 +158,7 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
+    'html_site',
     'html_styleguide',
     cb
   );
