@@ -32,9 +32,35 @@ var paths = {
   // global config.json file
   config_json: './site/config.json',
 
+
+  // .html files from /site to be moved into /dist
+  html_src: 'site/components/pages/**/*.html',
+
+  // the destination folder
+  dest: 'dist',
+
   // watch these files for changes
   watch: []
 };
+
+
+
+gulp.task('html', function() {
+  return gulp.src(paths.html_src)
+    .pipe(rename(function(path) {
+      // rename about.html > about/index.html
+      if (path.basename != 'index') {
+        path.dirname = path.dirname + '/' + path.basename;
+        path.basename = 'index';
+      }
+    }))
+    .pipe(minifyHTML())
+    .pipe(gulp.dest(paths.dest));
+});
+
+
+
+
 
 
 
@@ -54,7 +80,6 @@ var _swig = function(source, dest, grabJSON) {
 
     // use YAML Front Matter
     .pipe(data(function(file) {
-      console.log(file.path);
       var content = fm(String(file.contents));
       file.contents = new Buffer(content.body);
       return content.attributes;
@@ -85,6 +110,8 @@ gulp.task('swig', function() {
 });
 
 
+
+
 // Clean destination folder
 gulp.task('clean', function(cb) {
   del([paths.dest + '/**/*']);
@@ -101,6 +128,7 @@ gulp.task('default', function(cb) {
   runSequence(
     'clean',
     'swig',
+    'html',
     cb
   );
 });
