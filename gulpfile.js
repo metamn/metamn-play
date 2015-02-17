@@ -33,6 +33,7 @@ var paths = {
   config_json: './site/config.json',
 
 
+
   // .html files from /site to be moved into dest
   html_src: 'site/components/pages/**/*.html',
 
@@ -48,6 +49,7 @@ var paths = {
 
 
 
+
   // .scss file to compile
   scss_src: 'assets/styles/site.scss',
 
@@ -59,11 +61,15 @@ var paths = {
 
 
 
+
   // watch these files for changes
   watch: ['site/**/*.{swig,json,scss}', 'styleguide/**/*.{swig,json,scss}']
 };
 
 
+
+
+// SCSS
 
 var _scss = function(source, dest) {
   gulp.src(source)
@@ -78,8 +84,6 @@ var _scss = function(source, dest) {
     .pipe(gulp.dest(dest));
 }
 
-
-
 gulp.task('scss', function(){
   _scss('site/' + paths.scss_src, paths.scss_dest);
   _scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest);
@@ -87,6 +91,8 @@ gulp.task('scss', function(){
 
 
 
+
+// HTML
 
 gulp.task('html_styleguide', function() {
   return gulp.src(paths.styleguide_html_src)
@@ -124,10 +130,7 @@ gulp.task('html_site', function() {
 
 
 
-
-
-
-
+// SWIG
 
 var _swig = function(source, dest, grabJSON) {
   return gulp.src(source)
@@ -177,13 +180,17 @@ gulp.task('swig', function() {
 
 
 
+
+
+
+// Common tasks
+//
+
 // Clean destination folder
 gulp.task('clean', function(cb) {
   del([paths.dest + '/**/*']);
   cb();
 });
-
-
 
 
 // The default task
