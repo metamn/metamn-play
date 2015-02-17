@@ -47,9 +47,44 @@ var paths = {
   styleguide_dest: 'dist/styleguide',
 
 
+
+  // .scss file to compile
+  scss_src: 'assets/styles/site.scss',
+
+  // .css file destination
+  scss_dest: 'dist/assets/styles',
+
+  // .css file destination for /styleguide
+  styleguide_scss_dest: 'dist/styleguide/assets/styles',
+
+
+
   // watch these files for changes
-  watch: []
+  watch: ['site/**/*.{swig,json,scss}', 'styleguide/**/*.{swig,json,scss}']
 };
+
+
+
+var _scss = function(source, dest) {
+  gulp.src(source)
+    .pipe(cssGlobbing({
+      extensions: ['.scss']
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(minifyCSS())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(dest));
+}
+
+
+
+gulp.task('scss', function(){
+  _scss('site/' + paths.scss_src, paths.scss_dest);
+  _scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest);
+});
+
 
 
 
@@ -160,6 +195,7 @@ gulp.task('default', function(cb) {
     'swig',
     'html_site',
     'html_styleguide',
+    'scss',
     cb
   );
 });

@@ -7,7 +7,7 @@
     },
     {
       "name": "black",
-      "value": "#000",
+      "value": "#f0f",
       "description": "The foreground color"
     }
   ]
