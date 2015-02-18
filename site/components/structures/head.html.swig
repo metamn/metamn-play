@@ -9,13 +9,13 @@
 
     <title>{{ title }} &mdash; {{ site.title }}</title>
 
-    <link href="{{ site.url }}/assets/styles/site.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{{ site.url }}assets/styles/site.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     <script src="//use.typekit.net/qiy3lwz.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
 
     <!-- Picturefill Responsive Images -->
-    <script async src="{{ site.url }}/assets/scripts/picturefill.min.js"></script>
+    <script async src="{{ site.url }}assets/scripts/picturefill.min.js"></script>
   </head>
 
   <body>
