@@ -8,8 +8,6 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
 
-    deploy = require('gulp-gh-pages'),
-
     swig = require('gulp-swig'),
     data = require('gulp-data'),
     fs = require('fs'),
@@ -228,11 +226,4 @@ gulp.task('watch', ['server'], function(cb) {
   gulp.watch(paths.watch, ['default']);
 
   cb();
-});
-
-
-// Deploy
-gulp.task('deploy', function () {
-  return gulp.src('./' + paths.dest + '/**/*')
-    .pipe(deploy());
 });
