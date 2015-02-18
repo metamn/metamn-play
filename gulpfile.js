@@ -4,8 +4,11 @@
 var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
+
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
+
+    deploy = require('gulp-gh-pages'),
 
     swig = require('gulp-swig'),
     data = require('gulp-data'),
@@ -225,4 +228,11 @@ gulp.task('watch', ['server'], function(cb) {
   gulp.watch(paths.watch, ['default']);
 
   cb();
+});
+
+
+// Deploy
+gulp.task('deploy', function () {
+  return gulp.src('./' + paths.dest + '/**/*')
+    .pipe(deploy());
 });
