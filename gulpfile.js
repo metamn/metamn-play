@@ -148,7 +148,6 @@ var _swig = function(source, dest, grabJSON) {
 
     // use YAML Front Matter
     .pipe(data(function(file) {
-      console.log(file.path);
       var content = fm(String(file.contents));
       file.contents = new Buffer(content.body);
       return content.attributes;

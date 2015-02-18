@@ -1,0 +1,10 @@
+@mixin header {
+  h1 {
+    @include font(logo);
+    @include uppercase;
+  }
+
+  h2 {
+    @include font(strapline);
+  }
+}

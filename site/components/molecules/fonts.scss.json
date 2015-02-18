@@ -1,0 +1,18 @@
+{
+  "fonts": [
+    {
+      "name": "logo",
+      "family": "Europa, sans-serif",
+      "weight": "300",
+      "style": "normal",
+      "size": "1em"
+    },
+    {
+      "name": "strapline",
+      "family": "Playfair Display, serif",
+      "weight": "400",
+      "style": "italic",
+      "size": "$h3"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
     {
       "name": "Europa",
       "description": "The default font",
-      "font_family": "serif",
+      "font_family": "sans-serif",
       "served_from": "Typekit",
       "character_set": "English",
       "styles": [
@@ -37,7 +37,7 @@
     {
       "name": "Playfair Display",
       "description": "The headline font",
-      "font_family": "sans-serif",
+      "font_family": "serif",
       "served_from": "Google",
       "google_font_id": "Playfair+Display",
       "character_set": "Custom",

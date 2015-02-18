@@ -1,0 +1,21 @@
+// Font settings
+// - generated from components/molecules/fonts.scss.json
+// - please do not edit directly this file
+
+@mixin font($name) {
+  
+  // logo
+  @if ($name == logo) {
+    font-family: Europa, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+  }
+  
+  // strapline
+  @if ($name == strapline) {
+    font-family: Playfair Display, serif;
+    font-weight: 400;
+    font-size: $h3;
+  }
+  
+}

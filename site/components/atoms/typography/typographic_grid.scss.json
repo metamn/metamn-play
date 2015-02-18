@@ -1,0 +1,28 @@
+{
+  "typographic_grid": {
+    "font_size": "100%",
+    "line_height": "1.25",
+    "scss_variables": [
+      {
+        "description": "The basic metric for padding and margin",
+        "name": "lem",
+        "value": "1.25em"
+      },
+      {
+        "description": "Font size for H3",
+        "name": "h3",
+        "value": "1.6154em"
+      },
+      {
+        "description": "Font size for H2",
+        "name": "h2",
+        "value": "2.6154em"
+      },
+      {
+        "description": "Font size for H1",
+        "name": "h1",
+        "value": "4.2308em"
+      }
+    ]
+  }
+}
