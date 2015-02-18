@@ -3,57 +3,56 @@
     {
       "name": "Europa",
       "description": "The default font",
-      "font_family": "serif",
-      "served_from": "Typekit",
-      "character_set": "English",
+      "font-family": "serif",
+      "served-from": "Typekit",
+      "character-set": "English",
       "styles": [
         {
           "name": "Light",
           "weight": "300",
-          "font_style": "normal"
+          "font-style": "normal",
         },
         {
           "name": "Light italic",
           "weight": "300",
-          "font_style": "italic"
+          "font-style": "italic",
         },
         {
           "name": "Normal",
           "weight": "400",
-          "font_style": "normal"
+          "font-style": "normal",
         },
         {
           "name": "Normal italic",
           "weight": "400",
-          "font_style": "italic"
+          "font-style": "italic",
         },
         {
           "name": "Bold",
           "weight": "700",
-          "font_style": "normal"
-        }
-      ]
+          "font-style": "normal",
+        },
+      ],
     },
     {
       "name": "Playfair Display",
       "description": "The headline font",
-      "font_family": "sans-serif",
-      "served_from": "Google",
-      "google_font_id": "Playfair+Display",
-      "character_set": "Custom",
+      "font-family": "sans-serif",
+      "served-from": "Google",
+      "character-set": "Custom",
       "characters": "Design&code",
       "styles": [
         {
           "name": "Normal italic",
           "weight": "400",
-          "font_style": "italic",
-          "id": "400italic"
+          "font-style": "italic",
+          "id": "400italic",
         },
         {
           "name": "Bold italic",
           "weight": "700",
-          "font_style": "italic",
-          "id": "700italic"
+          "font-style": "italic",
+          "id": "700italic",
         }
       ]
     }

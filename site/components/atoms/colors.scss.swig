@@ -1,5 +1,5 @@
 // Colors
-// - generated from app/components/atoms/color.json
+// - generated from components/atoms/colors.scss.json
 // - please do not edit directly this file
 
 {% for color in colors %}
