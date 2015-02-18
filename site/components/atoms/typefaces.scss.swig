@@ -1,5 +1,5 @@
-// Fonts
-// - generated from components/atoms/fonts.scss.json
+// Typefaces
+// - generated from components/atoms/typefaces.scss.json
 // - please do not edit directly this file
 
 {% for font in fonts %}
