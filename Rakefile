@@ -12,14 +12,14 @@ require 'jekyll'
 desc "Publish to gh-pages"
 task :publish do
   Dir.mktmpdir do |tmp|
-    system "mv dist/* #{tmp}"
-    system "git checkout -B gh-pages"
+    system "cp -r dist/* #{tmp}"
+    system "git checkout gh-pages"
     system "rm -rf *"
     system "mv #{tmp}/* ."
     message = "Site updated at #{Time.now.utc}"
     system "git add ."
     system "git commit -am #{message.shellescape}"
-    system "git push origin gh-pages --force"
+    system "git push origin gh-pages"
     system "echo done."
   end
 end

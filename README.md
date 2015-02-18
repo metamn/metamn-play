@@ -1,0 +1,1 @@
+- do not use sudo !! : http://stackoverflow.com/questions/19352976/npm-modules-wont-install-globally-without-sudo
