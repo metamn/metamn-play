@@ -233,6 +233,8 @@ gulp.task('watch', ['server'], function(cb) {
 
 // Deploy
 gulp.task('deploy', function () {
-  return gulp.src(paths.dest + '/**/*')
-    .pipe(deploy());
+  return gulp.src('./' + paths.dest + '/**/*')
+    .pipe(deploy({
+      cacheDir: 'tmp/metamn'
+    }));
 });

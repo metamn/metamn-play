@@ -12,7 +12,7 @@ require 'jekyll'
 desc "Publish to gh-pages"
 task :publish do
   Dir.mktmpdir do |tmp|
-    system "mv site/* #{tmp}"
+    system "mv dist/* #{tmp}"
     system "git checkout -B gh-pages"
     system "rm -rf *"
     system "mv #{tmp}/* ."
