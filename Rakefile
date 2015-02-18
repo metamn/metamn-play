@@ -14,7 +14,7 @@ task :publish do
   Dir.mktmpdir do |tmp|
     system "mv dist/* #{tmp}"
     system "git checkout -B gh-pages"
-    system "sudo rm -rf *"
+    system "rm -rf *"
     system "mv #{tmp}/* ."
     message = "Site updated at #{Time.now.utc}"
     system "git add ."
