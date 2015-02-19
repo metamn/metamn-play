@@ -2,9 +2,9 @@
   <h3>{{ site.title }}</h3>
 
   <ul>
-    <li>Design</li>
-    <li>Code</li>
-    <li>About</li>
-    <li>Contact</li>
+    <li>design</li>
+    <li>code</li>
+    <li>about</li>
+    <li>contact</li>
   </ul>
 </nav>
