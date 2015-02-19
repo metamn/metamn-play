@@ -18,8 +18,7 @@
       top: 0;
       left: 0;
 
-      will-change: transform;
-      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      @include animation;
     }
 
     #menu {

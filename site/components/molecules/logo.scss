@@ -1,5 +1,7 @@
 @mixin logo {
   @include font(logo);
+  @include animation;
+
   display: flex;
   align-items: center;
 
@@ -18,9 +20,6 @@
       display: none;
     }
   }
-
-  will-change: transform;
-  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
 
 
