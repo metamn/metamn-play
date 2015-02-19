@@ -11,5 +11,14 @@
     h1 {
       @include font(title);
     }
+
+    figure {
+      max-width: calc(49% - #{$lem} * 2);
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
 }
