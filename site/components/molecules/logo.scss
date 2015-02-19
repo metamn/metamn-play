@@ -1,5 +1,6 @@
 @mixin logo {
   @include font(logo);
+  @include circle;
 
   span {
     transform: rotate(-90deg);
