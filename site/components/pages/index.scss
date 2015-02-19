@@ -1,6 +1,6 @@
 html.home {
   @include sliding-menu;
-  
+
   body {
     @include colors(black-on-white);
 
@@ -25,6 +25,15 @@ html.home {
         bottom: $lem;
         left: $lem;
         cursor: pointer;
+      }
+    }
+
+
+    &.view-change {
+      main {
+        #logo {
+          @include logo-rotate;
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
 <div id="logo">
-  <span>M</span>
+  <span class="first-letter"><span>M</span></span>
+  <span class="site-title">{{ site.title }}</span>
 </div>
