@@ -12,9 +12,14 @@ $black: #555;
 
 @mixin colors($name) {
 
-  @if $name == white-on-black {
+  @if $name == black-on-white {
     background: $white;
     color: $black;
+  }
+
+  @if $name == white-on-black {
+    background: $black;
+    color: $white;
   }
 
 }

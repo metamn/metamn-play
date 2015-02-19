@@ -13,9 +13,14 @@
   ],
   "color_pairs": [
     {
+      "name": "black-on-white",
+      "color": "$black",
+      "background": "$white"
+    },
+    {
       "name": "white-on-black",
-      "background": "$white",
-      "color": "$black"
+      "color": "$white",
+      "background": "$black"
     }
   ]
 }

@@ -1,7 +1,8 @@
 html.home {
+  @include sliding-menu;
+  
   body {
-    @include colors(white-on-black);
-    @include sliding-menu;
+    @include colors(black-on-white);
 
     #menu {
       @include menu;
