@@ -8,8 +8,7 @@ body {
   line-height: {{ typographic_grid.line_height }};
 }
 
-{% for variable in typographic_grid.s
-  css_variables %}
+{% for variable in typographic_grid.scss_variables %}
 // {{ variable.description }}
 ${{variable.name }}: {{ variable.value }};
 {% endfor %}
