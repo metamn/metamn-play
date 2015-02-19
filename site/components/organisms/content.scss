@@ -8,8 +8,14 @@
     justify-content: space-around;
     align-items: center;
 
-    h1 {
-      @include font(title);
+    aside {
+      h1 {
+        @include font(title);
+      }
+
+      .button {
+        @include button;
+      }
     }
 
     figure {
