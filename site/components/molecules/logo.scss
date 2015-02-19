@@ -2,7 +2,8 @@
   @include font(logo);
 
   padding: $lem;
-  width: calc(300px - #{$lem} * 2);
+  padding-left: $lem * 2;
+  width: calc(300px - #{$lem} * 3);
 
   display: flex;
   align-items: center;

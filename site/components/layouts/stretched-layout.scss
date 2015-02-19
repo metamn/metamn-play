@@ -1,5 +1,9 @@
 @mixin stretched-layout {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  #logo, #header {
+    //margin-left: 11em;
+  }
 }
