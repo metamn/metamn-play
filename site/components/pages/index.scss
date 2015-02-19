@@ -16,6 +16,10 @@ html.home {
         @include header;
       }
 
+      #content {
+        @include content;
+      }
+
       #logo {
         @include logo;
       }

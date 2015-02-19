@@ -1,0 +1,15 @@
+@mixin content {
+  background: #f1f1f1;
+  padding: $lem 0;
+
+  section {
+    display: flex;
+    wrap: no-wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      @include font(title);
+    }
+  }
+}

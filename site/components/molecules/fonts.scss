@@ -23,4 +23,14 @@
     
   }
   
+  // title
+  @if ($name == title) {
+    font-family: Europa, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: $h1;
+    @include uppercase;
+    
+  }
+  
 }

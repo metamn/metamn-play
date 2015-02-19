@@ -44,6 +44,30 @@
           "value": "1em"
         }
       ]
+    },
+    {
+      "name": "title",
+      "properties": [
+        {
+          "name": "font-family",
+          "value": "Europa, sans-serif"
+        },
+        {
+          "name": "font-weight",
+          "value": "300"
+        },
+        {
+          "name": "font-style",
+          "value": "normal"
+        },
+        {
+          "name": "font-size",
+          "value": "$h1"
+        }
+      ],
+      "mixins": [
+        "uppercase"
+      ]
     }
   ]
 }

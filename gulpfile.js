@@ -70,15 +70,34 @@ var paths = {
   js_dest: 'dist/assets/scripts',
 
 
+
+  // images to move
+  images_src: 'site/assets/images/**/*',
+
+  // images destination
+  images_dest: 'dist/assets/images',
+
+
+
   // watch these files for changes
   watch: ['site/**/*.{swig,json,scss,js}', 'styleguide/**/*.{swig,json,scss,js}']
 };
 
 
 
+// Images
+
+// - collect all images and move to dist/assets/images
+gulp.task('images', function() {
+  return gulp.src(paths.images_src)
+    .pipe(gulp.dest(paths.images_dest));
+});
+
+
+
+
 // JS
 
-// Scripts
 // - collect all .js files into all.js, then minify into all.min.js, then move to site/assets/scripts
 gulp.task('scripts', function() {
   return gulp.src(paths.js_src)
@@ -225,6 +244,7 @@ gulp.task('default', function(cb) {
     'html_styleguide',
     'scss',
     'scripts',
+    'images',
     cb
   );
 });
