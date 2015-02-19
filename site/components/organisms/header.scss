@@ -1,5 +1,10 @@
 @mixin header {
   h1 {
     @include font(strapline);
+
+    a {
+      @include link(no-decoration);
+      @include colors(black-on-white);
+    }
   }
 }

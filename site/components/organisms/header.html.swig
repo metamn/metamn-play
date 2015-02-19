@@ -1,3 +1,7 @@
 <header id="header">
-  <h1>{{ site.subtitle }}</h1>
+  <h1>
+    <a href="{{ site.url }}" title="{{ site.title }}">
+      {{ site.subtitle }}
+    </a>
+  </h1>
 </header>
