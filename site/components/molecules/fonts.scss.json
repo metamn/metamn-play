@@ -2,17 +2,48 @@
   "fonts": [
     {
       "name": "logo",
-      "family": "Europa, sans-serif",
-      "weight": "300",
-      "style": "normal",
-      "size": "1em"
+      "properties": [
+        {
+          "name": "font-family",
+          "value": "Europa, sans-serif"
+        },
+        {
+          "name": "font-weight",
+          "value": "300"
+        },
+        {
+          "name": "font-style",
+          "value": "normal"
+        },
+        {
+          "name": "font-size",
+          "value": "1em"
+        }
+      ],
+      "mixins": [
+        "uppercase"
+      ]
     },
     {
       "name": "strapline",
-      "family": "Playfair Display, serif",
-      "weight": "400",
-      "style": "italic",
-      "size": "1em"
+      "properties": [
+        {
+          "name": "font-family",
+          "value": "Playfair Display, serif"
+        },
+        {
+          "name": "font-weight",
+          "value": "400"
+        },
+        {
+          "name": "font-style",
+          "value": "italic"
+        },
+        {
+          "name": "font-size",
+          "value": "1em"
+        }
+      ]
     }
   ]
 }

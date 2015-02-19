@@ -8,14 +8,19 @@
   @if ($name == logo) {
     font-family: Europa, sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 1em;
+    @include uppercase;
+    
   }
   
   // strapline
   @if ($name == strapline) {
     font-family: Playfair Display, serif;
     font-weight: 400;
+    font-style: italic;
     font-size: 1em;
+    
   }
   
 }
