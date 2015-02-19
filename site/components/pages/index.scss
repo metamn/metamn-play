@@ -1,26 +1,10 @@
 html.home {
   body {
     @include colors(white-on-black);
-
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-
-    #menu, main {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      will-change: transform;
-      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    }
+    @include sliding-menu;
 
     #menu {
       @include menu;
-      transform: translateX(-100%);
     }
 
     main {
@@ -40,16 +24,6 @@ html.home {
         bottom: $lem;
         left: $lem;
         cursor: pointer;
-      }
-    }
-
-    &.view-change {
-      #menu {
-        transform: translateX(0);
-      }
-
-      main {
-        transform: translateX(100%);
       }
     }
   }

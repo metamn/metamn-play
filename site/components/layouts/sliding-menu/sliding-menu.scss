@@ -1,0 +1,31 @@
+@mixin sliding-menu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  #menu, main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    will-change: transform;
+    transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  }
+
+  #menu {
+    transform: translateX(-100%);
+  }
+
+  &.view-change {
+    #menu {
+      transform: translateX(0);
+    }
+
+    main {
+      transform: translateX(100%);
+    }
+  }
+}
