@@ -1,3 +1,6 @@
+// Sliding menu
+// - https://developers.google.com/web/fundamentals/look-and-feel/animations/animating-between-views
+
 @mixin sliding-menu {
   height: 100%;
 
@@ -30,7 +33,7 @@
       }
 
       main {
-        transform: translateX(100%);
+        transform: translateX(300px);
       }
     }
   }
