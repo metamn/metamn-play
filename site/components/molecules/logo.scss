@@ -1,0 +1,8 @@
+@mixin logo {
+  @include font(logo);
+
+  span {
+    transform: rotate(-90deg);
+    display: inline-block;
+  }
+}

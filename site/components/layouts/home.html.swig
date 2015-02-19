@@ -1,7 +1,11 @@
 {% include "../structures/head.html.swig" %}
-{% include "../organisms/header.html.swig" %}
 
-{% block content %}{% endblock %}
+{% include "../organisms/menu.html.swig" %}
+<main>
+  {% include "../organisms/header.html.swig" %}
+  {% include "../molecules/logo.html.swig" %}
+  
+  {% block content %}{% endblock %}
+</main>
 
-{% include "../organisms/navigation.html.swig" %}
 {% include "../structures/footer.html.swig" %}

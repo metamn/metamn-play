@@ -4,6 +4,7 @@
 var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
+    concat = require('gulp-concat'),
 
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
@@ -62,11 +63,30 @@ var paths = {
 
 
 
+  // .js files to concat
+  js_src: 'site/**/*.js',
+
+  // .js file destination
+  js_dest: 'dist/assets/scripts',
+
 
   // watch these files for changes
-  watch: ['site/**/*.{swig,json,scss}', 'styleguide/**/*.{swig,json,scss}']
+  watch: ['site/**/*.{swig,json,scss,js}', 'styleguide/**/*.{swig,json,scss,js}']
 };
 
+
+
+// JS
+
+// Scripts
+// - collect all .js files into all.js, then minify into all.min.js, then move to site/assets/scripts
+gulp.task('scripts', function() {
+  return gulp.src(paths.js_src)
+    .pipe(concat('site.js'))
+    .pipe(rename({ suffix: '.min' }))
+    //.pipe(uglify())
+    .pipe(gulp.dest(paths.js_dest));
+});
 
 
 
@@ -175,7 +195,7 @@ var _swig = function(source, dest, grabJSON) {
 // Swig
 gulp.task('swig', function() {
   _swig('site/' + paths.swig_src, 'site/' + paths.swig_dest);
-  _swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
+  //_swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
 });
 
 
@@ -204,6 +224,7 @@ gulp.task('default', function(cb) {
     'html_site',
     'html_styleguide',
     'scss',
+    'scripts',
     cb
   );
 });

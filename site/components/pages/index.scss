@@ -1,9 +1,56 @@
 html.home {
   body {
     @include colors(white-on-black);
-    
-    #header {
-      @include header;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    #menu, main {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      will-change: transform;
+      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    }
+
+    #menu {
+      @include menu;
+      transform: translateX(-100%);
+    }
+
+    main {
+      #header {
+        @include header;
+
+        position: fixed;
+        left: $lem;
+        top: $lem;
+        cursor: pointer;
+      }
+
+      #logo {
+        @include logo;
+
+        position: fixed;
+        bottom: $lem;
+        left: $lem;
+        cursor: pointer;
+      }
+    }
+
+    &.view-change {
+      #menu {
+        transform: translateX(0);
+      }
+
+      main {
+        transform: translateX(100%);
+      }
     }
   }
 }

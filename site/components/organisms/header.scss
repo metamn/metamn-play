@@ -1,6 +1,4 @@
 @mixin header {
-  padding: $lem;
-
   h1 {
     @include font(strapline);
   }
