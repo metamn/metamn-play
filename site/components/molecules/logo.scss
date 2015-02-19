@@ -1,6 +1,5 @@
 @mixin logo {
   @include font(logo);
-  @include animation;
 
   display: flex;
   align-items: center;
@@ -9,10 +8,7 @@
     display: inline-block;
 
     &.first-letter {
-      span {
-        @include circle;
-        transform: rotate(-90deg);
-      }
+      @include first-letter;
     }
 
     &.site-title {
