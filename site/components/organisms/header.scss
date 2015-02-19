@@ -1,12 +1,7 @@
 @mixin header {
   padding: $lem;
-  color: $black;
 
   h1 {
-    @include font(logo);
-  }
-
-  h2 {
     @include font(strapline);
   }
 }
