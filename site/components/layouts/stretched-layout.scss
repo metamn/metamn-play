@@ -4,6 +4,7 @@
   justify-content: space-around;
 
   #logo, #header {
-    //margin-left: 11em;
+    padding-left: $lem * 2;
+    width: calc(300px - #{$lem} * 2);
   }
 }
