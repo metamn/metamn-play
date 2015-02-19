@@ -7,6 +7,4 @@
     <li>About</li>
     <li>Contact</li>
   </ul>
-
-  {% include "../molecules/logo.html.swig" %}
 </nav>

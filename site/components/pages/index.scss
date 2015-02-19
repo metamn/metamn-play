@@ -3,28 +3,21 @@ html.home {
 
   body {
     @include colors(black-on-white);
+    @include semantic-html5;
 
     #menu {
       @include menu;
     }
 
     main {
+      @include stretched-layout;
+
       #header {
         @include header;
-
-        position: fixed;
-        left: $lem;
-        top: $lem;
-        cursor: pointer;
       }
 
       #logo {
         @include logo;
-
-        position: fixed;
-        bottom: $lem;
-        left: $lem;
-        cursor: pointer;
       }
     }
 
