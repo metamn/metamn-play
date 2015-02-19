@@ -10,5 +10,12 @@
       "value": "#555",
       "description": "The foreground color"
     }
+  ],
+  "color_pairs": [
+    {
+      "name": "white-on-black",
+      "background": "$white",
+      "color": "$black"
+    }
   ]
 }

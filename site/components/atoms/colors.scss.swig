@@ -6,3 +6,12 @@
 // {{ color.description }}
 ${{ color.name }}: {{ color.value }};
 {% endfor %}
+
+@mixin colors($name) {
+{% for pair in color_pairs %}
+  @if $name == {{ pair.name }} {
+    background: {{ pair.background }};
+    color: {{ pair.color }};
+  }
+{% endfor %}
+}

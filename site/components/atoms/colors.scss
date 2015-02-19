@@ -9,3 +9,12 @@ $white: #fff;
 // The foreground color
 $black: #555;
 
+
+@mixin colors($name) {
+
+  @if $name == white-on-black {
+    background: $white;
+    color: $black;
+  }
+
+}
