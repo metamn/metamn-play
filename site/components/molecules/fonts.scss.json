@@ -62,7 +62,7 @@
         },
         {
           "name": "font-size",
-          "value": "$h3"
+          "value": "1em"
         }
       ],
       "mixins": [
