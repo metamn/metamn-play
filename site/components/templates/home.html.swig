@@ -1,8 +1,10 @@
 {% include "../structures/head.html.swig" %}
 
 
-{% include "../molecules/layout/base.html.swig" %}
-{% include "../molecules/layout/content.html.swig" %}
+{% include "../structures/layout/base.html.swig" %}
+<main id="content">
+  {% block content %}{% endblock %}
+</main>
 
 
 {% include "../structures/footer.html.swig" %}

@@ -1,0 +1,26 @@
+@mixin content {
+  section {
+    @include full-page(absolute);
+
+    aside, article {
+      @include full-page(absolute);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    aside {
+      @include title;
+    }
+
+    article {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      @include figure;
+    }
+  }
+}

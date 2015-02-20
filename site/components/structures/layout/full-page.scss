@@ -10,4 +10,6 @@
   @if ($z-index != none) {
     z-index: $z-index;
   }
+
+  background: transparent;
 }

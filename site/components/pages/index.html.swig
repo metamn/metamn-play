@@ -16,9 +16,13 @@ title: Home
       </div>
     </aside>
 
-    <figure>
-      <img src="{{ site.url }}assets/images/anvelocom-archive-laptop-front-3x.png">
-    </figure>
+    <article>
+      <h3>Image</h3>
+
+      <figure>
+        <img src="{{ site.url }}assets/images/anvelocom-archive-laptop-front-3x.png">
+      </figure>
+    </article>
   </section>
 
 {% endblock %}

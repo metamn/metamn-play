@@ -1,0 +1,11 @@
+@mixin figure {
+  figure {
+    width: 320px;
+    transform: translatex(200px);
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin title {
+  h1 {
+    @include font(title);
+    background: #f1f1f1;
+    padding: $lem * 2 $lem;
+  }
+
+  .button {
+    display: none;
+  }
+}
