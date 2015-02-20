@@ -6,6 +6,9 @@
   <article>
     <h3>Header and footer</h3>
     {% include "../../organisms/header.html.swig" %}
+
+    <div class="spacer">&nbsp;</div>
+    
     {% include "../../molecules/logo.html.swig" %}
   </article>
 </section>

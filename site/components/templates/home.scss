@@ -6,12 +6,12 @@ html.home {
     @include full-page;
 
     #base {
-      @include full-page(absolute, 2);
+      @include full-page(absolute, 20);
       @include base;
     }
 
     #content {
-      @include full-page(absolute, 1);
+      @include full-page(absolute, 10);
       @include content;
     }
   }

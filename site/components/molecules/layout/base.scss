@@ -8,17 +8,19 @@
   article {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    #header, #logo {
-      padding: $lem;
+    .spacer {
+      height: $lem * 5;
     }
 
     #header {
+      padding-left: $lem;
       @include header;
     }
 
     #logo {
+      padding-left: $lem;
       @include logo;
     }
   }
