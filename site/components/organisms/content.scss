@@ -10,7 +10,7 @@
 
     aside {
       padding-left: $lem;
-      
+
       h1 {
         @include font(title);
       }
@@ -21,8 +21,12 @@
       }
     }
 
+    position: relative;
+
     figure {
-      display: none;
+      position: absolute;
+      
+      //display: none;
       max-width: calc(49% - #{$lem} * 2);
 
       img {
