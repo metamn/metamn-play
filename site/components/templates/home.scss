@@ -1,0 +1,18 @@
+html.home {
+  height: 100%;
+  position: relative;
+
+  body {
+    @include full-page;
+
+    #base {
+      @include full-page(absolute, 2);
+      @include base;
+    }
+
+    #content {
+      @include full-page(absolute, 1);
+      @include content;
+    }
+  }
+}

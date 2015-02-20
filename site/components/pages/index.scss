@@ -1,37 +1,6 @@
 html.home {
-  @include sliding-menu;
-
   body {
     @include colors(black-on-white);
     @include semantic-html5;
-
-    #menu {
-      @include menu;
-    }
-
-    main {
-      @include stretched-layout;
-
-      #header {
-        @include header;
-      }
-
-      #content {
-        @include content;
-      }
-
-      #logo {
-        @include logo;
-      }
-    }
-
-
-    &.view-change {
-      main {
-        #logo {
-          @include logo-rotate;
-        }
-      }
-    }
   }
 }

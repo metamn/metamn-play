@@ -1,5 +1,5 @@
 <nav id="menu">
-  <h3>{{ site.title }}</h3>
+  <h3>Menu</h3>
 
   <ul>
     <li>design</li>

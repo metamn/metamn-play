@@ -1,0 +1,24 @@
+// Creates a hidden menu sliding in from right on a click
+// - this container has two elements, the first is the menu, the second is the content
+// - adapted from https://developers.google.com/web/fundamentals/look-and-feel/animations/animating-between-views
+@mixin sliding-menu {
+  nav, article {
+    @include full-page(absolute);
+    @include animation;
+  }
+
+  nav {
+    width: 300px;
+    transform: translateX(-300px);
+  }
+
+  &.view-change {
+    nav {
+      transform: translateX(0);
+    }
+
+    article {
+      transform: translateX(300px);
+    }
+  }
+}

@@ -1,6 +1,6 @@
-var container = document.querySelector('body');
-var trigger = document.querySelector('main #logo');
-var backButton = document.querySelector('#menu #logo');
+var container = document.querySelector('#base');
+var trigger = document.querySelector('#base #logo');
+var backButton = document.querySelector('#base #menu #logo');
 
 function onViewChange(evt) {
   container.classList.toggle('view-change');

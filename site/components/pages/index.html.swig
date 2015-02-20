@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{% extends "../layouts/home.html.swig" %}
+{% extends "../templates/home.html.swig" %}
 {% block content %}
 
   <section id="ui">

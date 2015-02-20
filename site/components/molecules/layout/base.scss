@@ -1,0 +1,25 @@
+@mixin base {
+  @include sliding-menu;
+
+  #menu {
+    @include menu;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #header, #logo {
+      padding: $lem;
+    }
+
+    #header {
+      @include header;
+    }
+
+    #logo {
+      @include logo;
+    }
+  }
+}
