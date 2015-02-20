@@ -1,7 +1,9 @@
 @mixin figure {
   figure {
-    width: 320px;
-    transform: translatex(200px);
+    //width: 320px;
+    //transform: translatex(200px);
+
+    width: 70%;
 
     img {
       max-width: 100%;
