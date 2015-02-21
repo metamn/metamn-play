@@ -74,6 +74,12 @@ var paths = {
   // .js file destination
   js_dest: 'dist/assets/scripts',
 
+  // .js files to move
+  js_move_src: 'site/assets/scripts/**/*.js',
+
+  // .js files to move destination
+  js_move_dest: 'dist/assets/scripts',
+
 
 
   // images to move
@@ -111,12 +117,20 @@ gulp.task('images', function() {
 
 // JS
 // - collect all .js files into all.js, then minify into all.min.js, then move to site/assets/scripts
-gulp.task('scripts', function() {
+gulp.task('js', function() {
   return gulp.src(paths.js_src)
     .pipe(concat('site.js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js_dest));
+});
+
+
+// Scripts
+// - move (third party) scripts to dest
+gulp.task('scripts', function() {
+  return gulp.src(paths.js_move_src)
+    .pipe(gulp.dest(paths.js_move_dest));
 });
 
 
@@ -264,6 +278,7 @@ gulp.task('default', function(cb) {
     'html_site',
     'html_styleguide',
     'scss',
+    'js',
     'scripts',
     'images',
     cb
