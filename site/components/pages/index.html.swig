@@ -10,7 +10,7 @@ title: Home
       <h3>{{ section.title }}</h3>
 
       <aside>
-        <h1>{{ section.title }}</h1>
+        <h1>{{ section.title | replace(' ', ' <br/> ', 'g') | safe }}</h1>
       </aside>
 
       <article>
