@@ -14,11 +14,10 @@ title: Home
       </aside>
 
       <article>
-        <h3>{{ section.image_title }}</h3>
+        <h3>{{ section.image.title }}</h3>
 
-        <figure>
-          <img src="{{ site.url }}assets/images/{{ section.image }}" alt="{{ section.image_title }}">
-        </figure>
+        {% set image = section.image %}
+        {% include "../atoms/figure.html.swig" %}
       </article>
     </section>
   {% endfor %}
