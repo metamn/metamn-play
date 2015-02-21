@@ -5,24 +5,22 @@ title: Home
 {% extends "../templates/home.html.swig" %}
 {% block content %}
 
-  <section id="ui">
-    <h3>User Interface</h3>
+  {% for section in index.sections %}
+    <section id="{{ section.id }}">
+      <h3>{{ section.title }}</h3>
 
-    <aside>
-      <h1>Clean<br/>User<br/>Interfaces</h1>
+      <aside>
+        <h1>{{ section.title }}</h1>
+      </aside>
 
-      <div class="button">
-        View portfolio
-      </div>
-    </aside>
+      <article>
+        <h3>{{ section.image_title }}</h3>
 
-    <article>
-      <h3>Image</h3>
-
-      <figure>
-        <img src="{{ site.url }}assets/images/anvelocom-archive-laptop-front-3x.png">
-      </figure>
-    </article>
-  </section>
+        <figure>
+          <img src="{{ site.url }}assets/images/{{ section.image }}" alt="{{ section.image_title }}">
+        </figure>
+      </article>
+    </section>
+  {% endfor %}
 
 {% endblock %}
