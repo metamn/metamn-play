@@ -67,6 +67,17 @@
       ],
       "mixins": [
         "uppercase"
+      ],
+      "responsive": [
+        {
+          "name": "mobile",
+          "properties": [
+            {
+              "name": "font-size",
+              "value": "1em"
+            }
+          ]
+        }
       ]
     }
   ]
