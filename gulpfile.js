@@ -8,6 +8,7 @@ var gulp = require('gulp'),
 
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
+    plumber = require('gulp-plumber'),
 
     swig = require('gulp-swig'),
     data = require('gulp-data'),
@@ -88,6 +89,12 @@ var paths = {
 
 
 
+// Error handling
+var onError = function(error) {
+  console.log(error.message)
+  this.emit('end');
+};
+
 
 
 
@@ -119,6 +126,7 @@ gulp.task('scripts', function() {
 // - minify and copy the site.css and the sourcemap to dist/assets/styles
 var _scss = function(source, dest) {
   gulp.src(source)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -143,6 +151,7 @@ gulp.task('scss', function(){
 // - create seo friendly urls
 gulp.task('html_styleguide', function() {
   return gulp.src(paths.styleguide_html_src)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(rename(function(path) {
       // rename about.html > about/index.html
       if (path.basename != 'index') {
