@@ -21,7 +21,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer-core'),
-    minifyCSS = require('gulp-minify-css')
+    minifyCSS = require('gulp-minify-css'),
+    uncss = require('gulp-uncss'),
 
     uglify = require('gulp-uglify');
 
@@ -124,7 +125,7 @@ gulp.task('scripts', function() {
 // - import all scss files into site.scss
 // - compile site.scss with autoprefixer
 // - minify and copy the site.css and the sourcemap to dist/assets/styles
-var _scss = function(source, dest) {
+var _scss = function(source, dest, html) {
   gulp.src(source)
     .pipe(plumber({errorHandler: onError}))
     .pipe(cssGlobbing({
@@ -133,14 +134,17 @@ var _scss = function(source, dest) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
+    .pipe(uncss({
+      html: html
+    }))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dest));
 }
 
 gulp.task('scss', function(){
-  _scss('site/' + paths.scss_src, paths.scss_dest);
-  _scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest);
+  _scss('site/' + paths.scss_src, paths.scss_dest, paths.html_src);
+  _scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest, paths.styleguide_html_src);
 });
 
 
