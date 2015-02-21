@@ -20,10 +20,13 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer-core'),
-    minifyCSS = require('gulp-minify-css');
+    minifyCSS = require('gulp-minify-css')
+
+    uglify = require('gulp-uglify');
 
 
 
+// Folders and files
 var paths = {
   // .swig source files
   swig_src: ['components/**/*.swig'],
@@ -42,7 +45,6 @@ var paths = {
   // the destination folder
   dest: 'dist',
 
-
   // .html files from /styleguide to be moved to dest
   styleguide_html_src: 'styleguide/components/**/*.html',
 
@@ -60,6 +62,7 @@ var paths = {
 
   // .css file destination for /styleguide
   styleguide_scss_dest: 'dist/styleguide/assets/styles',
+
 
 
 
@@ -85,8 +88,10 @@ var paths = {
 
 
 
-// Images
 
+
+
+// Images
 // - collect all images and move to dist/assets/images
 gulp.task('images', function() {
   return gulp.src(paths.images_src)
@@ -97,20 +102,21 @@ gulp.task('images', function() {
 
 
 // JS
-
 // - collect all .js files into all.js, then minify into all.min.js, then move to site/assets/scripts
 gulp.task('scripts', function() {
   return gulp.src(paths.js_src)
     .pipe(concat('site.js'))
     .pipe(rename({ suffix: '.min' }))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(paths.js_dest));
 });
 
 
 
 // SCSS
-
+// - import all scss files into site.scss
+// - compile site.scss with autoprefixer
+// - minify and copy the site.css and the sourcemap to dist/assets/styles
 var _scss = function(source, dest) {
   gulp.src(source)
     .pipe(cssGlobbing({
@@ -119,7 +125,7 @@ var _scss = function(source, dest) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
-    //.pipe(minifyCSS())
+    .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dest));
 }
@@ -133,7 +139,8 @@ gulp.task('scss', function(){
 
 
 // HTML
-
+// - minify and copy html files to dist
+// - create seo friendly urls
 gulp.task('html_styleguide', function() {
   return gulp.src(paths.styleguide_html_src)
     .pipe(rename(function(path) {
@@ -171,7 +178,10 @@ gulp.task('html_site', function() {
 
 
 // SWIG
-
+// - compile swig files into html, scss or js. Each swig file has two extensions like colors.scss.swig or page.html.swig
+// - process YAML Front Matter data, if any
+// - load JSON data for every file. It looks for a same-name json file. colors.scss.swig will look for colors.scss.json
+// - make available to /styleguide all JSON data from /site
 var _swig = function(source, dest, grabJSON) {
   return gulp.src(source)
 
@@ -210,11 +220,10 @@ var _swig = function(source, dest, grabJSON) {
 }
 
 
-
 // Swig
 gulp.task('swig', function() {
   _swig('site/' + paths.swig_src, 'site/' + paths.swig_dest);
-  //_swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
+  _swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
 });
 
 
