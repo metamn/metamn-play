@@ -24,7 +24,9 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     uncss = require('gulp-uncss'),
 
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+
+    imageResize = require('gulp-image-resize');
 
 
 
@@ -82,8 +84,12 @@ var paths = {
 
 
 
+
+  // where to resize images
+  image_resize_dest: 'site/assets/images/resized',
+
   // images to move
-  images_src: 'site/assets/images/**/*',
+  images_src: 'site/assets/images/**/*.png',
 
   // images destination
   images_dest: 'dist/assets/images',
@@ -105,9 +111,41 @@ var onError = function(error) {
 
 
 
+var _image_resize = function(file, sizes) {
+  sizes = sizes.image_sizes;
+  for (i in sizes) {
+    console.log("Resizing image to " + sizes[i].width);
+    gulp.src(file)
+      .pipe(imageResize({
+        width : sizes[i].width,
+        sharpen: true,
+        imageMagick: true
+      }))
+      .pipe(rename(function (path) { path.basename += "_" + sizes[i].name; }))
+      .pipe(gulp.dest(paths.image_resize_dest));
+  }
+}
+
+
+
+// Image resize
+// - create different images for different devices
+gulp.task('image_resize', function() {
+  return gulp.src(paths.images_src)
+    .pipe(data(function(file) {
+      json_file = file.path.replace('.png', '.json');
+      if (fs.existsSync(json_file)) {
+        json = require(json_file);
+        _image_resize(file.path, json);
+      }
+    }))
+});
+
+
+
 // Images
 // - collect all images and move to dist/assets/images
-gulp.task('images', function() {
+gulp.task('image_move', function() {
   return gulp.src(paths.images_src)
     .pipe(gulp.dest(paths.images_dest));
 });
@@ -124,6 +162,8 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(gulp.dest(paths.js_dest));
 });
+
+
 
 
 // Scripts
@@ -280,7 +320,8 @@ gulp.task('default', function(cb) {
     'scss',
     'js',
     'scripts',
-    'images',
+    'image_resize',
+    'image_move',
     cb
   );
 });
