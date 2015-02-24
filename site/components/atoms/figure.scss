@@ -1,10 +1,7 @@
 @mixin figure {
   figure {
-    //width: 320px;
-    //transform: translatex(200px);
-
-    width: 70%;
-
+    margin: 0;
+    
     img {
       max-width: 100%;
       height: auto;
