@@ -9,6 +9,9 @@ $white: #fff;
 // The foreground color
 $black: #555;
 
+// The background color for article title
+$lightgray: #f1f1f1;
+
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
@@ -21,6 +24,11 @@ $black: #555;
   @if $name == white-on-black {
     background: $black;
     color: $white;
+  }
+
+  @if $name == black-on-lightgray {
+    background: $lightgray;
+    color: $black;
   }
 
 }
