@@ -111,19 +111,16 @@ var onError = function(error) {
 
 
 
-var _image_resize = function(file, sizes) {
-  sizes = sizes.image_sizes;
-  for (i in sizes) {
-    console.log("Resizing image to " + sizes[i].width);
-    gulp.src(file)
-      .pipe(imageResize({
-        width : sizes[i].width,
-        sharpen: true,
-        imageMagick: true
-      }))
-      .pipe(rename(function (path) { path.basename += "_" + sizes[i].name; }))
-      .pipe(gulp.dest(paths.image_resize_dest));
-  }
+var _image_resize = function(file, size) {
+  console.log("Resizing image to " + size.width);
+  gulp.src(file)
+    .pipe(imageResize({
+      width : size.width,
+      sharpen: true,
+      imageMagick: true
+    }))
+    .pipe(rename(function (path) { path.basename += "_" + size.name; }))
+    .pipe(gulp.dest(paths.image_resize_dest));
 }
 
 
@@ -136,7 +133,10 @@ gulp.task('image_resize', function() {
       json_file = file.path.replace('.png', '.json');
       if (fs.existsSync(json_file)) {
         json = require(json_file);
-        _image_resize(file.path, json);
+        sizes = json.image_sizes;
+        for (i in sizes) {
+          _image_resize(file.path, sizes[i]);
+        }
       }
     }))
 });
