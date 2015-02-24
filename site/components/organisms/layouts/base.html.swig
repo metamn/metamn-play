@@ -5,6 +5,7 @@
 
   <article>
     <h3>Header and footer</h3>
+
     {% include "../header.html.swig" %}
 
     <div class="spacer">&nbsp;</div>
