@@ -27,7 +27,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
 
     imageResize = require('gulp-image-resize'),
-    changed = require('gulp-changed');
+    changed = require('gulp-changed'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 
 
 
@@ -88,6 +90,9 @@ var paths = {
 
   // where to resize images
   image_resize_dest: 'site/assets/images/resized',
+
+  // where to optimize images
+  image_optimize_dest: 'site/assets/images/optimized',
 
   // images to move
   images_src: 'site/assets/images/*.png',
@@ -158,11 +163,20 @@ gulp.task('image_resize_2x', function() {
 });
 
 
+// Optimize images
+gulp.task('image_optimize', function() {
+  return gulp.src(paths.image_resize_dest + '/*.png')
+    .pipe(imagemin({
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest(paths.image_optimize_dest));
+});
+
 
 // Move resized and compressed images
 // - collect all images and move to dist/assets/images
 gulp.task('image_move', function() {
-  return gulp.src(paths.image_resize_dest + '/*.png')
+  return gulp.src(paths.image_optimize_dest + '/*.png')
     .pipe(gulp.dest(paths.images_dest));
 });
 
@@ -352,6 +366,7 @@ gulp.task('default', function(cb) {
     'scripts',
     'image_resize',
     'image_resize_2x',
+    'image_optimize',
     'image_move',
     'image_move_original',
     cb
