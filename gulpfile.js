@@ -166,9 +166,7 @@ gulp.task('image_resize_2x', function() {
 // Optimize images
 gulp.task('image_optimize', function() {
   return gulp.src(paths.image_resize_dest + '/*.png')
-    .pipe(imagemin({
-      use: [pngquant()]
-    }))
+    .pipe(imagemin())
     .pipe(gulp.dest(paths.image_optimize_dest));
 });
 
