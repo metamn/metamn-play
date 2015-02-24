@@ -23,3 +23,6 @@ title: Home
   {% endfor %}
 
 {% endblock %}
+
+
+{% block action %}action{% endblock %}
