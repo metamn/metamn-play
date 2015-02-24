@@ -28,8 +28,7 @@ var gulp = require('gulp'),
 
     imageResize = require('gulp-image-resize'),
     changed = require('gulp-changed'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant');
+    shell = require('gulp-shell');
 
 
 
@@ -90,9 +89,6 @@ var paths = {
 
   // where to resize images
   image_resize_dest: 'site/assets/images/resized',
-
-  // where to optimize images
-  image_optimize_dest: 'site/assets/images/optimized',
 
   // images to move
   images_src: 'site/assets/images/*.png',
@@ -164,17 +160,19 @@ gulp.task('image_resize_2x', function() {
 
 
 // Optimize images
+// - the gulp pngquant task gives an error
+// - we use gulp shell to run pngquant manually
+// - the old file will be overwritten instead of appending the usual 'fs8' suffix
 gulp.task('image_optimize', function() {
   return gulp.src(paths.image_resize_dest + '/*.png')
-    .pipe(imagemin())
-    .pipe(gulp.dest(paths.image_optimize_dest));
+    .pipe(shell(['pngquant --ext .png --force <%= file.path %>']))
 });
 
 
 // Move resized and compressed images
 // - collect all images and move to dist/assets/images
 gulp.task('image_move', function() {
-  return gulp.src(paths.image_optimize_dest + '/*.png')
+  return gulp.src(paths.image_resize_dest + '/*.png')
     .pipe(gulp.dest(paths.images_dest));
 });
 
