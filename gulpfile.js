@@ -27,7 +27,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
 
     imageResize = require('gulp-image-resize'),
-    changed = require('gulp-changed'),
+    newer = require('gulp-newer'),
     shell = require('gulp-shell');
 
 
@@ -131,7 +131,7 @@ var _image_resize = function(file, size, name) {
 // Resize a bunch of images
 var _image_batch_resize = function(files, retina, retina_name) {
   return gulp.src(files)
-    .pipe(changed(paths.images_dest))
+    .pipe(newer(paths.images_dest))
     .pipe(data(function(file) {
       json_file = file.path.replace('.png', '.json');
       if (fs.existsSync(json_file)) {
@@ -165,6 +165,7 @@ gulp.task('image_resize_2x', function() {
 // - the old file will be overwritten instead of appending the usual 'fs8' suffix
 gulp.task('image_optimize', function() {
   return gulp.src(paths.image_resize_dest + '/*.png')
+    .pipe(newer(paths.images_dest))
     .pipe(shell(['pngquant --ext .png --force <%= file.path %>']))
 });
 
@@ -173,6 +174,7 @@ gulp.task('image_optimize', function() {
 // - collect all images and move to dist/assets/images
 gulp.task('image_move', function() {
   return gulp.src(paths.image_resize_dest + '/*.png')
+    .pipe(newer(paths.images_dest))
     .pipe(gulp.dest(paths.images_dest));
 });
 
@@ -182,7 +184,7 @@ gulp.task('image_move', function() {
 // - original images are moved to make .changed() work
 gulp.task('image_move_original', function() {
   return gulp.src(paths.images_src)
-    .pipe(changed(paths.images_dest))
+    .pipe(newer(paths.images_dest))
     .pipe(gulp.dest(paths.images_dest));
 });
 
