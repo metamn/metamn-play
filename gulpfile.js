@@ -26,7 +26,8 @@ var gulp = require('gulp'),
 
     uglify = require('gulp-uglify'),
 
-    imageResize = require('gulp-image-resize');
+    imageResize = require('gulp-image-resize'),
+    changed = require('gulp-changed');
 
 
 
@@ -89,7 +90,7 @@ var paths = {
   image_resize_dest: 'site/assets/images/resized',
 
   // images to move
-  images_src: 'site/assets/images/**/*.png',
+  images_src: 'site/assets/images/*.png',
 
   // images destination
   images_dest: 'dist/assets/images',
@@ -111,44 +112,73 @@ var onError = function(error) {
 
 
 
-var _image_resize = function(file, size) {
-  console.log("Resizing image to " + size.width);
+
+// Resize a single image with ImageMagick
+var _image_resize = function(file, size, name) {
+  console.log("Resizing image to " + size);
   gulp.src(file)
     .pipe(imageResize({
-      width : size.width,
+      width : size,
       sharpen: true,
       imageMagick: true
     }))
-    .pipe(rename(function (path) { path.basename += "_" + size.name; }))
+    .pipe(rename(function (path) { path.basename += "_" + name; }))
     .pipe(gulp.dest(paths.image_resize_dest));
 }
 
 
-
-// Image resize
-// - create different images for different devices
-gulp.task('image_resize', function() {
-  return gulp.src(paths.images_src)
+// Resize a bunch of images
+var _image_batch_resize = function(files, retina, retina_name) {
+  return gulp.src(files)
+    .pipe(changed(paths.images_dest))
     .pipe(data(function(file) {
       json_file = file.path.replace('.png', '.json');
       if (fs.existsSync(json_file)) {
         json = require(json_file);
         sizes = json.image_sizes;
         for (i in sizes) {
-          _image_resize(file.path, sizes[i]);
+          _image_resize(file.path, sizes[i].width * retina, sizes[i].name + retina_name);
         }
       }
     }))
+}
+
+
+// Image resize
+// - create different images for different devices
+gulp.task('image_resize', function() {
+  _image_batch_resize(paths.images_src, 1, '');
+});
+
+
+// Retina images
+// - create 2x images for different devices
+gulp.task('image_resize_2x', function() {
+  _image_batch_resize(paths.images_src, 2, '2x');
 });
 
 
 
-// Images
+// Move resized and compressed images
 // - collect all images and move to dist/assets/images
 gulp.task('image_move', function() {
-  return gulp.src(paths.images_src)
+  return gulp.src(paths.image_resize_dest + '/*.png')
     .pipe(gulp.dest(paths.images_dest));
 });
+
+
+// Move original images
+// - collect all original images and move to dist/assets/images
+// - original images are moved to make .changed() work
+gulp.task('image_move_original', function() {
+  return gulp.src(paths.images_src)
+    .pipe(changed(paths.images_dest))
+    .pipe(gulp.dest(paths.images_dest));
+});
+
+
+
+
 
 
 
@@ -321,7 +351,9 @@ gulp.task('default', function(cb) {
     'js',
     'scripts',
     'image_resize',
+    'image_resize_2x',
     'image_move',
+    'image_move_original',
     cb
   );
 });
