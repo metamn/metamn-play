@@ -1,14 +1,14 @@
 <section id="base">
   <h3>Header, footer and menu</h3>
 
-  {% include "../../organisms/menu.html.swig" %}
+  {% include "../menu.html.swig" %}
 
   <article>
     <h3>Header and footer</h3>
-    {% include "../../organisms/header.html.swig" %}
+    {% include "../header.html.swig" %}
 
     <div class="spacer">&nbsp;</div>
-    
-    {% include "../../molecules/logo.html.swig" %}
+
+    {% include "../logo.html.swig" %}
   </article>
 </section>

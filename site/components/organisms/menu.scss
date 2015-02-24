@@ -1,14 +1,7 @@
 @mixin menu {
-  @include colors(white-on-black);
+  @include text-menu;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
-  ul {
-    // Do not overlay logo
-    margin-bottom: $lem * 4;
-
-    @include menu-items;
-  }
 }

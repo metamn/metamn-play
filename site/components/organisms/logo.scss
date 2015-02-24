@@ -1,0 +1,6 @@
+@mixin logo {
+  @include text-logo;
+
+  display: flex;
+  align-items: center;
+}

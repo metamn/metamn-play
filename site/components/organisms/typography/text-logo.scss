@@ -1,0 +1,17 @@
+@mixin text-logo {
+  @include font(logo);
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+
+    &.first-letter {
+      @include first-letter;
+    }
+
+    &.site-title {
+      margin-left: $lem;
+      display: none;
+    }
+  }
+}

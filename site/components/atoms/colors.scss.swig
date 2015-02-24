@@ -7,6 +7,7 @@
 ${{ color.name }}: {{ color.value }};
 {% endfor %}
 
+// Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 {% for pair in color_pairs %}
   @if $name == {{ pair.name }} {

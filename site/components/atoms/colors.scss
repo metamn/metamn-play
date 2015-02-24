@@ -10,6 +10,7 @@ $white: #fff;
 $black: #555;
 
 
+// Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 
   @if $name == black-on-white {

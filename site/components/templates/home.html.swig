@@ -1,10 +1,10 @@
-{% include "../structures/head.html.swig" %}
+{% include "head.html.swig" %}
 
 
-{% include "../structures/layout/base.html.swig" %}
+{% include "../organisms/layouts/base.html.swig" %}
 <main id="content">
   {% block content %}{% endblock %}
 </main>
 
 
-{% include "../structures/footer.html.swig" %}
+{% include "footer.html.swig" %}
