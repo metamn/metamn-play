@@ -19,6 +19,10 @@
 
     article {
       transform: translateX(300px);
+
+      #logo {
+        @include text-logo-rotated;
+      }
     }
   }
 }

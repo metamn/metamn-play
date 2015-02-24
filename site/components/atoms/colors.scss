@@ -12,6 +12,9 @@ $black: #555;
 // The background color for article title
 $lightgray: #f1f1f1;
 
+// The list border bottom color for the menu
+$list-border-bottom: #999;
+
 
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {

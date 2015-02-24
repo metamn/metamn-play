@@ -12,7 +12,7 @@
     li {
       margin: $lem 0 $lem - $lem / 4;
       padding-bottom: $lem / 4;
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid $list-border-bottom;
     }
   }
 }

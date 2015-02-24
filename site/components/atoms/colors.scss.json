@@ -14,6 +14,11 @@
       "name": "lightgray",
       "value": "#f1f1f1",
       "description": "The background color for article title"
+    },
+    {
+      "name": "list-border-bottom",
+      "value": "#999",
+      "description": "The list border bottom color for the menu"
     }
   ],
   "color_pairs": [

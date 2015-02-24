@@ -1,7 +1,4 @@
 @mixin text-logo-rotated {
-  @include colors(white-on-black);
-  transform: translateX(-300px);
-
   span {
     &.first-letter {
       span {
