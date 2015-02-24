@@ -1,0 +1,9 @@
+@mixin article-home {
+  aside {
+    @include text-article-title;
+  }
+
+  article {
+    @include figure;
+  }
+}

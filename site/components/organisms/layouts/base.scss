@@ -1,10 +1,6 @@
 @mixin base {
   @include sliding-menu;
 
-  #menu {
-    @include menu;
-  }
-
   article {
     display: flex;
     flex-direction: column;
@@ -16,12 +12,10 @@
 
     #header {
       padding-left: $lem;
-      @include header;
     }
 
     #logo {
       padding-left: $lem;
-      @include logo;
     }
   }
 }

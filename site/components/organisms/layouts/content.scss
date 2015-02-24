@@ -10,17 +10,11 @@
       justify-content: center;
     }
 
-    aside {
-      @include title;
-    }
-
     article {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-
-      @include figure;
     }
   }
 }

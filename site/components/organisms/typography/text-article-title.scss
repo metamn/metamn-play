@@ -1,4 +1,4 @@
-@mixin title {
+@mixin text-article-title {
   h1 {
     @include font(title);
     background: #f1f1f1;
