@@ -7,4 +7,4 @@
 </main>
 
 
-{% include "footer.html.swig" %}
+{% include "foot.html.swig" %}

@@ -10,6 +10,6 @@
 
     <div class="spacer">&nbsp;</div>
 
-    {% include "../logo.html.swig" %}
+    {% include "../footer.html.swig" %}
   </article>
 </section>
