@@ -350,6 +350,20 @@ gulp.task('clean', function(cb) {
 });
 
 
+
+// Resize, optimize and move images
+gulp.task('images', function(cb) {
+  runSequence(
+    'image_resize',
+    'image_resize_2x',
+    'image_optimize',
+    'image_move',
+    'image_move_original',
+    cb
+  );
+});
+
+
 // The default task
 // - runSequence makes sure all tasks are running one after another
 // - otherwise Gulp is messing up everything with it's async task runner
@@ -362,11 +376,6 @@ gulp.task('default', function(cb) {
     'scss',
     'js',
     'scripts',
-    'image_resize',
-    'image_resize_2x',
-    'image_optimize',
-    'image_move',
-    'image_move_original',
     cb
   );
 });
