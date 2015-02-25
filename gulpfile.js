@@ -97,6 +97,9 @@ var paths = {
   images_dest: 'dist/assets/images',
 
 
+  // clean path
+  clean: ['dist/**/*'],
+
 
   // watch these files for changes
   watch: ['site/**/*.{swig,json,scss,js}', 'styleguide/**/*.{swig,json,scss,js}']
@@ -345,7 +348,7 @@ gulp.task('swig', function() {
 
 // Clean destination folder
 gulp.task('clean', function(cb) {
-  del([paths.dest + '/**/*']);
+  del(paths.clean);
   cb();
 });
 
@@ -369,13 +372,13 @@ gulp.task('images', function(cb) {
 // - otherwise Gulp is messing up everything with it's async task runner
 gulp.task('default', function(cb) {
   runSequence(
-    'clean',
     'swig',
     'html_site',
     'html_styleguide',
     'scss',
     'js',
     'scripts',
+    'images',
     cb
   );
 });
