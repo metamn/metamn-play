@@ -1,8 +1,8 @@
-@mixin circle {
-  width: $lem * 2;
-  height: $lem * 2;
+@mixin circle($size: $lem * 2) {
+  width: $size;
+  height: $size;
   border: 1px solid;
-  border-radius: $lem * 2;
+  border-radius: $size;
 
   display: flex;
   justify-content: center;

@@ -2,12 +2,12 @@
 // - this container has two elements, the first is the menu, the second is the content
 // - adapted from https://developers.google.com/web/fundamentals/look-and-feel/animations/animating-between-views
 @mixin sliding-menu($width: 300px) {
-  nav, article {
+  #menu, article {
     @include full-page(absolute);
     @include animation;
   }
 
-  nav {
+  #menu {
     width: $width;
     transform: translateX(-$width);
 
@@ -18,19 +18,21 @@
   }
 
   &.view-change {
-    nav {
+    #menu {
       transform: translateX(0);
     }
 
-    article {
+    #strapline-and-footer {
       transform: translateX($width);
 
       @include mobile {
         transform: translateX(160px);
       }
 
-      #logo {
-        @include text-logo-rotated;
+      #footer {
+        #logo {
+          @include text-logo-rotated;
+        }
       }
     }
   }

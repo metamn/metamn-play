@@ -1,4 +1,6 @@
 @mixin footer {
+  display: flex;
+  
   #logo {
     @include logo;
   }

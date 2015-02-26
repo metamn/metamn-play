@@ -1,0 +1,12 @@
+@mixin navigation-bullets {
+  display: flex;
+  align-items: center;
+
+  div {
+    margin-right: $lem;
+    
+    span {
+      @include circle($lem / 2);
+    }
+  }
+}

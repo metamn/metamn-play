@@ -1,3 +1,11 @@
 @mixin actionbar {
+  display: flex;
   
+  nav {
+    @include navigation-bullets;
+  }
+
+  .button {
+    @include button;
+  }
 }
