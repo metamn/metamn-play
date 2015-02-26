@@ -46,7 +46,7 @@ var paths = {
 
 
   // .html files from /site to be moved into dest
-  html_src: 'site/components/pages/**/*.html',
+  html_src: 'site/components/structures/pages/**/*.html',
 
   // the destination folder
   dest: 'dist',
@@ -121,6 +121,7 @@ var onError = function(error) {
 var _image_resize = function(file, size, name) {
   console.log("Resizing image to " + size);
   gulp.src(file)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(imageResize({
       width : size,
       sharpen: true,
@@ -134,6 +135,7 @@ var _image_resize = function(file, size, name) {
 // Resize a bunch of images
 var _image_batch_resize = function(files, retina, retina_name) {
   return gulp.src(files)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(newer(paths.images_dest))
     .pipe(data(function(file) {
       json_file = file.path.replace('.png', '.json');
@@ -168,6 +170,7 @@ gulp.task('image_resize_2x', function() {
 // - the old file will be overwritten instead of appending the usual 'fs8' suffix
 gulp.task('image_optimize', function() {
   return gulp.src(paths.image_resize_dest + '/*.png')
+    .pipe(plumber({errorHandler: onError}))
     .pipe(newer(paths.images_dest))
     .pipe(shell(['pngquant --ext .png --force <%= file.path %>']))
 });
@@ -177,6 +180,7 @@ gulp.task('image_optimize', function() {
 // - collect all images and move to dist/assets/images
 gulp.task('image_move', function() {
   return gulp.src(paths.image_resize_dest + '/*.png')
+    .pipe(plumber({errorHandler: onError}))
     .pipe(newer(paths.images_dest))
     .pipe(gulp.dest(paths.images_dest));
 });
@@ -187,6 +191,7 @@ gulp.task('image_move', function() {
 // - original images are moved to make .changed() work
 gulp.task('image_move_original', function() {
   return gulp.src(paths.images_src)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(newer(paths.images_dest))
     .pipe(gulp.dest(paths.images_dest));
 });
@@ -202,6 +207,7 @@ gulp.task('image_move_original', function() {
 // - collect all .js files into all.js, then minify into all.min.js, then move to site/assets/scripts
 gulp.task('js', function() {
   return gulp.src(paths.js_src)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(concat('site.js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
@@ -215,6 +221,7 @@ gulp.task('js', function() {
 // - move (third party) scripts to dest
 gulp.task('scripts', function() {
   return gulp.src(paths.js_move_src)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(gulp.dest(paths.js_move_dest));
 });
 
@@ -234,7 +241,7 @@ var _scss = function(source, dest, html) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
-    .pipe(uncss({ html: html }))
+    //.pipe(uncss({ html: html }))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dest));
@@ -242,7 +249,7 @@ var _scss = function(source, dest, html) {
 
 gulp.task('scss', function(){
   _scss('site/' + paths.scss_src, paths.scss_dest, paths.html_src);
-  _scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest, paths.styleguide_html_src);
+  //_scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest, paths.styleguide_html_src);
 });
 
 
@@ -273,6 +280,7 @@ gulp.task('html_styleguide', function() {
 
 gulp.task('html_site', function() {
   return gulp.src(paths.html_src)
+    .pipe(plumber({errorHandler: onError}))
     .pipe(rename(function(path) {
       // rename about.html > about/index.html
       if (path.basename != 'index') {
@@ -295,6 +303,7 @@ gulp.task('html_site', function() {
 // - make available to /styleguide all JSON data from /site
 var _swig = function(source, dest, grabJSON) {
   return gulp.src(source)
+    .pipe(plumber({errorHandler: onError}))
 
     // use global JSON definitions from /site in /styleguide
     .pipe(data(function(file) {
@@ -334,7 +343,7 @@ var _swig = function(source, dest, grabJSON) {
 // Swig
 gulp.task('swig', function() {
   _swig('site/' + paths.swig_src, 'site/' + paths.swig_dest);
-  _swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
+  //_swig('styleguide/' + paths.swig_src, 'styleguide/' + paths.swig_dest, true);
 });
 
 
@@ -374,7 +383,7 @@ gulp.task('default', function(cb) {
   runSequence(
     'swig',
     'html_site',
-    'html_styleguide',
+    //'html_styleguide',
     'scss',
     'js',
     'scripts',

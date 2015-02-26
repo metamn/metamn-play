@@ -1,0 +1,9 @@
+@mixin footer {
+  #logo {
+    @include logo;
+  }
+
+  #actionbar {
+    @include actionbar;
+  }
+}
