@@ -1,0 +1,10 @@
+@mixin active-bullet($index: 1) {
+  $width: calc(#{$bullet-width} + (#{$index} - 1) * (#{$lem} + #{$bullet-width}) + 5px);
+  transform: translateX($width);
+  //transform: translateX(5px);
+
+  &:after {
+    content: '\237f';
+    font-size: 200%;
+  }
+}

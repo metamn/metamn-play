@@ -4,9 +4,13 @@
 
   div {
     margin-right: $lem;
-    
+
     span {
-      @include circle($lem / 2);
+      @include circle($bullet-width);
     }
+  }
+
+  #active-bullet {
+    @include active-bullet(3);
   }
 }
