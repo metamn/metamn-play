@@ -221,7 +221,7 @@ gulp.task('scripts', function() {
 
 
 // SCSS
-// - import all scss files into site.scss
+// - import all scss files into site.scss. Folders will be imported in alphabetical order
 // - compile site.scss with autoprefixer
 // - remove unused CSS with uncss
 // - minify and copy the site.css and the sourcemap to dist/assets/styles
@@ -234,7 +234,7 @@ var _scss = function(source, dest, html) {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ]))
-    //.pipe(uncss({ html: html }))
+    .pipe(uncss({ html: html }))
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dest));
