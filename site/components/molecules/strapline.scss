@@ -1,4 +1,4 @@
-@mixin header {
+@mixin strapline {
   h3 {
     @include text-strapline;
     display: block;

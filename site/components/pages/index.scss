@@ -3,20 +3,6 @@ html.home {
     @include colors(black-on-white);
     @include semantic-html5;
 
-    #base {
-      #menu {
-        @include menu;
-      }
-
-      #header {
-        @include header;
-      }
-
-      #logo {
-        @include logo;
-      }
-    }
-
     #content {
       section {
         @include article-home;

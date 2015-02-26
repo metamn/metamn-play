@@ -1,0 +1,17 @@
+@mixin strapline-and-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .spacer {
+    height: $lem * 7;
+  }
+
+  #strapline {
+    padding-left: $lem;
+  }
+
+  #footer {
+    padding-left: $lem;
+  }
+}

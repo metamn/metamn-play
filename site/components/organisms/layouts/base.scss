@@ -1,21 +1,12 @@
 @mixin base {
   @include sliding-menu;
 
-  aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    .spacer {
-      height: $lem * 7;
-    }
-
-    #header {
-      padding-left: $lem;
-    }
-
-    #logo {
-      padding-left: $lem;
-    }
+  #menu {
+    @include menu;
   }
+
+  #strapline-and-footer {
+    @include strapline-and-footer;
+  }
+
 }
