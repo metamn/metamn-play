@@ -1,7 +1,7 @@
 @mixin active-bullet($index: 1) {
   // - px works, em not
   // - 6px is the half of the bullet, 20px is the right margin
-  transform: translateX(6px + ($index - 1) * (6px + 20px + 6px));
+  transform: translateX(7px + ($index - 1) * (6px + 20px + 7px));
 
   border-right: 1px solid;
   width: 1px;

@@ -6,11 +6,11 @@
     margin-right: $lem;
 
     span {
-      @include circle($bullet-width);
+      @include circle(calc(#{$bullet-width} + 1px));
     }
   }
 
   #active-bullet {
-    @include active-bullet(3);
+    @include active-bullet(1);
   }
 }
