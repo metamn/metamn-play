@@ -1,6 +1,8 @@
 @mixin article-home {
   aside {
-    @include text-article-title;
+    .title {
+      @include text-article-title;
+    }
   }
 
   article {

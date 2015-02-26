@@ -1,7 +1,7 @@
 @mixin base {
   @include sliding-menu;
 
-  article {
+  aside {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

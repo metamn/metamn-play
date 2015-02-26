@@ -1,10 +1,10 @@
 <section id="base">
-  <h3>Header, footer and menu</h3>
+  <h3>Base layer</h3>
 
   {% include "../menu.html.swig" %}
 
   <article>
-    <h3>Header and footer</h3>
+    <h3>Strapline and footer</h3>
 
     {% include "../header.html.swig" %}
 

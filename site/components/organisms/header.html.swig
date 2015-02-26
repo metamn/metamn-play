@@ -1,7 +1,7 @@
-<header id="header">
-  <h1>
+<aside id="strapline">
+  <h3>
     <a href="{{ site.url }}" title="{{ site.title }}">
       {{ site.subtitle }}
     </a>
-  </h1>
-</header>
+  </h3>
+</aside>

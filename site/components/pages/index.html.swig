@@ -10,7 +10,9 @@ title: Home
       <h3>{{ section.title }}</h3>
 
       <aside>
-        <h1>{{ section.title | replace(' ', ' <br/> ', 'g') | safe }}</h1>
+        <div class="title">
+          <h2>{{ section.title | replace(' ', ' <br/> ', 'g') | safe }}</h2>
+        </div>
       </aside>
 
       <article>
@@ -23,6 +25,3 @@ title: Home
   {% endfor %}
 
 {% endblock %}
-
-
-{% block action %}action{% endblock %}

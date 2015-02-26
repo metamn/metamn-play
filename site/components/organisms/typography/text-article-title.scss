@@ -1,11 +1,8 @@
 @mixin text-article-title {
-  h1 {
-    @include font(title);
-    @include colors(black-on-lightgray);
-    padding: $lem * 2 $lem;
-  }
+  @include colors(black-on-lightgray);
+  padding: $lem * 2 $lem;
 
-  .button {
-    display: none;
+  h2 {
+    @include font(title);
   }
 }
