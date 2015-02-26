@@ -1,4 +1,4 @@
-@mixin article-home {
+@mixin section-home {
   aside {
     .title {
       @include text-article-title;

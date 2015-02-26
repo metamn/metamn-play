@@ -5,7 +5,11 @@ html.home {
 
     #content {
       section {
-        @include article-home;
+        @include section-home;
+
+        &#ui {
+          @include article-home-ui;
+        }
       }
     }
   }

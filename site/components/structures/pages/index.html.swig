@@ -6,7 +6,7 @@ title: Home
 {% block content %}
 
   {% for section in index.sections %}
-    {% include '../sections/home.html.swig' %}
+    {% include '../page-sections/home.html.swig' %}
   {% endfor %}
 
 {% endblock %}
