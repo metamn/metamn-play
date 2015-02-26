@@ -1,4 +1,4 @@
-{% import "../../helpers/classname.swig" as c  %}
+{% import "../../../helpers/classname.swig" as c  %}
 {% set classname = c.classname(title) %}
 
 <!doctype html>
