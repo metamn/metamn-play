@@ -1,10 +1,9 @@
 @mixin active-bullet($index: 1) {
-  $width: calc(#{$bullet-width} + (#{$index} - 1) * (#{$lem} + #{$bullet-width}) + 5px);
-  transform: translateX($width);
-  //transform: translateX(5px);
+  // - px works, em not
+  // - 6px is the half of the bullet, 20px is the right margin
+  transform: translateX(6px + ($index - 1) * (6px + 20px + 6px));
 
-  &:after {
-    content: '\237f';
-    font-size: 200%;
-  }
+  border-right: 1px solid;
+  width: 1px;
+  height: $lem + $lem / 2;
 }
