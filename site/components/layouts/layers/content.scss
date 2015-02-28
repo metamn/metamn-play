@@ -1,4 +1,6 @@
 @mixin content {
+  @include full-page-scroll;
+  
   section {
     @include full-page(absolute);
 

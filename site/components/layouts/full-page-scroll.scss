@@ -1,0 +1,21 @@
+@mixin full-page-scroll {
+  section {
+    @include animation;
+
+    &#mi {
+      transform: translateY(100%);
+    }
+  }
+
+  &.view-change {
+    section {
+      &#ui {
+        transform: translateY(-100%);
+      }
+
+      &#mi {
+        transform: translateY(0);
+      }
+    }
+  }
+}

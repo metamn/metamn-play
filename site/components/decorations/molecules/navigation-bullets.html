@@ -1,4 +1,4 @@
-<nav>
+<nav id="navigation-bullets">
   <h3>Navigation bullets</h3>
 
   <span id="active-bullet"></span>
