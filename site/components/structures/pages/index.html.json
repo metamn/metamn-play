@@ -8,6 +8,14 @@
           "title": "The Anvelocom frontpage on laptop",
           "name": "anvelocom-archive-laptop-front"
         }
+      },
+      {
+        "id": "mi",
+        "title": "Meaningful Interactions",
+        "image": {
+          "title": "The Inu Chivu frontpage on mobile",
+          "name": "inu-frontpage-mobile-portrait"
+        }
       }
     ]
   }
