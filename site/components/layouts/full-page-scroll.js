@@ -1,13 +1,33 @@
 // http://greensock.com/forums/topic/11155-how-to-optimize-tweenlite-on-scroll/
-var pageScroll = function() {
+var fullpageScroll = function() {
   var container = document.querySelector('.home #content');
-  var trigger = document.querySelector('.home #navigation-bullets div');
+  var triggers = document.querySelectorAll('.home #navigation-bullets div');
 
-  function onViewChange(evt) {
-    container.classList.toggle('view-change');
+
+  function markTriggerActive(index) {
+    for (var i = 0; i < triggers.length; i++ ) {
+      triggers[i].classList.remove('active');
+    }
+
+    console.log(index);
+    triggers[index - 2].classList.add('active');
   }
 
-  trigger.addEventListener('click', onViewChange, false);
+  function onViewChange(trigger, index) {
+    if (!trigger.classList.contains('active')) {
+      container.classList.toggle('view-change');
+      markTriggerActive(index);
+    }
+  }
+
+  function attachTriggers() {
+    for (var i = 0; i < triggers.length; i++ ) {
+      var trigger = triggers[i];
+      trigger.addEventListener('click', function(){ onViewChange(trigger, i) }, false);
+    }
+  }
+
+  attachTriggers();
 }
 
-pageScroll();
+fullpageScroll();

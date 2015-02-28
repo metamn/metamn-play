@@ -4,10 +4,14 @@
 
   div {
     margin-right: $lem;
-    cursor: pointer;
 
     span {
       @include circle(calc(#{$bullet-width} + 1px));
+    }
+
+    cursor: pointer;
+    &.active {
+      cursor: default;
     }
   }
 

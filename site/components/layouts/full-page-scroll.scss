@@ -2,7 +2,7 @@
   section {
     @include animation;
 
-    &#mi {
+    &#mi, &#ux {
       transform: translateY(100%);
     }
   }
@@ -13,7 +13,7 @@
         transform: translateY(-100%);
       }
 
-      &#mi {
+      &#ux {
         transform: translateY(0);
       }
     }
