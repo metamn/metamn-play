@@ -1,17 +1,16 @@
 html.home {
-  height: 100%;
-  position: relative;
+  @include full-page(visible);
 
   body {
-    @include full-page;
+    @include full-page(visible);
 
     #base {
-      @include full-page(absolute, 20);
+      @include full-page(hidden, fixed, 20);
       @include base;
     }
 
     #content {
-      @include full-page(absolute, 10);
+      @include full-page(visible, absolute, 10);
       @include content;
     }
   }

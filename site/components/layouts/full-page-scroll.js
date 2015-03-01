@@ -1,33 +1,35 @@
-// http://greensock.com/forums/topic/11155-how-to-optimize-tweenlite-on-scroll/
-var fullpageScroll = function() {
-  var container = document.querySelector('.home #content');
-  var triggers = document.querySelectorAll('.home #navigation-bullets div');
+// Full page scrolling
+// - supporting mouse, keyboard and swipe events with no throttle / debounce
+// - debouncing: http://codepen.io/GreenSock/pen/AwHmy
+// - mouse: http://www.sitepoint.com/html5-javascript-mouse-wheel/
 
 
-  function markTriggerActive(index) {
-    for (var i = 0; i < triggers.length; i++ ) {
-      triggers[i].classList.remove('active');
-    }
+// Mouse + Touchpad
+//
 
-    console.log(index);
-    triggers[index - 2].classList.add('active');
-  }
-
-  function onViewChange(trigger, index) {
-    if (!trigger.classList.contains('active')) {
-      container.classList.toggle('view-change');
-      markTriggerActive(index);
-    }
-  }
-
-  function attachTriggers() {
-    for (var i = 0; i < triggers.length; i++ ) {
-      var trigger = triggers[i];
-      trigger.addEventListener('click', function(){ onViewChange(trigger, i) }, false);
-    }
-  }
-
-  attachTriggers();
+// Listen to the scroll event
+var body = document.querySelector("body");
+if (body.addEventListener) {
+	// IE9, Chrome, Safari, Opera
+	body.addEventListener("mousewheel", MouseWheelHandler, false);
+	// Firefox
+	body.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+} else {
+  // IE 6/7/8
+  body.attachEvent("onmousewheel", MouseWheelHandler);
 }
 
-fullpageScroll();
+// Debounce & get scrolling direction
+var scrollTimeout;
+function MouseWheelHandler(e) {
+	// cross-browser wheel delta
+	var e = window.event || e; // old IE support
+	var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+  // Debouncing ...
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(scrollComplete(delta), 5000);
+}
+
+function scrollComplete(direction) {
+  console.log("delta: " + direction);
+}

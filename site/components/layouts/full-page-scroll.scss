@@ -2,20 +2,12 @@
   section {
     @include animation;
 
-    &#mi, &#ux {
-      transform: translateY(100%);
+    &#mi {
+      top: 100%;
     }
-  }
 
-  &.view-change {
-    section {
-      &#ui {
-        transform: translateY(-100%);
-      }
-
-      &#ux {
-        transform: translateY(0);
-      }
+    &#ux {
+      top: 200%;
     }
   }
 }

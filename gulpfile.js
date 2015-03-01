@@ -209,7 +209,7 @@ gulp.task('js', function() {
   return gulp.src(paths.js_src)
     .pipe(plumber({errorHandler: onError}))
     .pipe(data(function(file) {
-      console.log("Merging " + file.path + " into site.min.js")
+      //console.log("Merging " + file.path + " into site.min.js")
     }))
     .pipe(concat('site.js'))
     .pipe(rename({ suffix: '.min' }))

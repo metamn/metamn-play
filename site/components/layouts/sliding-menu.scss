@@ -3,7 +3,7 @@
 // - adapted from https://developers.google.com/web/fundamentals/look-and-feel/animations/animating-between-views
 @mixin sliding-menu($width: $sliding-menu) {
   #menu, article {
-    @include full-page(absolute);
+    @include full-page($position: absolute);
     @include animation;
   }
 

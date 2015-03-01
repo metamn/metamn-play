@@ -1,10 +1,10 @@
 // Stretching a layout to full page
-@mixin full-page($position: relative, $z-index: none) {
+@mixin full-page($overflow: hidden, $position: relative, $z-index: none) {
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow: $overflow;
   position: $position;
 
   @if ($z-index != none) {

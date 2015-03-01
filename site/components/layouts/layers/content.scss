@@ -1,11 +1,12 @@
 @mixin content {
+  @include full-page(visible);
   @include full-page-scroll;
-  
+
   section {
-    @include full-page(absolute);
+    @include full-page($position: absolute);
 
     aside, article {
-      @include full-page(absolute);
+      @include full-page($position: absolute);
 
       display: flex;
       flex-direction: column;
