@@ -35,12 +35,21 @@
     console.log("scrolling done");
 
     tops = sectionTops();
-    current = currentSection();
+    current = currentSection(tops);
     TweenLite.to(window, 0.5, { scrollTo: tops[current], ease:Power2.easeOut });
   }
 
   // Get the current section where to scroll
-  function currentSection() {
-    return 1;
+  function currentSection(tops) {
+    var doc = document.documentElement;
+    var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    console.log("top:" + top);
+
+    for (var i = 0; i < tops.length; i++) {
+      console.log("t:" + tops[i]);
+      if (top <= tops[i]) {
+        return i;
+      }
+    }
   }
 })();
