@@ -73,7 +73,7 @@ var paths = {
 
 
   // .js files to concat
-  js_src: 'site/**/*.js',
+  js_src: 'site/components/**/*.js',
 
   // .js file destination
   js_dest: 'dist/assets/scripts',
@@ -119,7 +119,7 @@ var onError = function(error) {
 
 // Resize a single image with ImageMagick
 var _image_resize = function(file, size, name) {
-  console.log("Resizing image to " + size);
+  console.log("Resizing image " + file + " to " + size);
   gulp.src(file)
     .pipe(plumber({errorHandler: onError}))
     .pipe(imageResize({
@@ -204,10 +204,13 @@ gulp.task('image_move_original', function() {
 
 
 // JS
-// - collect all .js files into all.js, then minify into all.min.js, then move to site/assets/scripts
+// - collect all .js files into site.js, then minify into site.min.js, then move to dest/assets/scripts
 gulp.task('js', function() {
   return gulp.src(paths.js_src)
     .pipe(plumber({errorHandler: onError}))
+    .pipe(data(function(file) {
+      console.log("Merging " + file.path + " into site.min.js")
+    }))
     .pipe(concat('site.js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
