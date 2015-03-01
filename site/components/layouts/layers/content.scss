@@ -3,7 +3,7 @@
   @include full-page-scroll;
 
   section {
-    @include full-page($position: absolute);
+    @include full-page($position: relative);
 
     aside, article {
       @include full-page($position: absolute);
