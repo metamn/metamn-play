@@ -3,19 +3,10 @@
   align-items: center;
 
   div {
-    margin-right: $lem;
+    margin-right: $lem / 4;
 
     span {
-      @include circle(calc(#{$bullet-width} + 1px));
+      @include circle($lem / 4);
     }
-
-    cursor: pointer;
-    &.active {
-      cursor: default;
-    }
-  }
-
-  #active-bullet {
-    @include active-bullet(1);
   }
 }
