@@ -1,13 +1,3 @@
 @mixin full-page-scroll {
-  section {
-    @include animation;
-
-    &#mi {
-      top: 100%;
-    }
-
-    &#ux {
-      top: 200%;
-    }
-  }
+  
 }
