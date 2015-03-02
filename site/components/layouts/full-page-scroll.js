@@ -30,16 +30,20 @@
   }
 
 
+
   // Our own modified scroller
   function scrollComplete() {
     console.log("scrolling done");
 
     tops = sectionTops();
     current = currentSection(tops);
-    TweenLite.to(window, 0.5, { scrollTo: tops[current], ease:Power2.easeOut });
+    TweenLite.to(window, 0.75, { scrollTo: tops[current], ease:Power2.easeOut });
   }
 
+
+
   // Get the current section where to scroll
+  // - http://stackoverflow.com/questions/3464876/javascript-get-window-x-y-position-for-scroll
   function currentSection(tops) {
     var doc = document.documentElement;
     var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
