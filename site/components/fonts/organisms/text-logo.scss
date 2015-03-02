@@ -1,6 +1,7 @@
 @mixin text-logo {
   @include font(logo);
   cursor: pointer;
+  color: #f1f1f1;
 
   span {
     display: inline-block;

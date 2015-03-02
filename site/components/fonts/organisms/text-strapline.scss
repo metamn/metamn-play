@@ -3,6 +3,6 @@
 
   a {
     @include link(no-decoration);
-    @include colors(black-on-white);
+    color: #f1f1f1;
   }
 }

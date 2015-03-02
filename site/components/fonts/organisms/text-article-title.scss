@@ -1,6 +1,7 @@
 @mixin text-article-title {
-  @include colors(black-on-lightgray);
   padding: $lem * 2 $lem;
+  border-bottom: 1px solid;
+  color: #f1f1f1;
 
   h2 {
     @include font(title);
