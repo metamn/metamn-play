@@ -1,13 +1,4 @@
 // Scrolling a full page instead of the usual scroll
-
-
-// - it seems today this should be avoided
-// - all solutions are imperfect and use very dirty hacks
-// - see http://developer.telerik.com/featured/scroll-event-change-ios-8-big-deal/
-// - and especially: http://johnpolacek.github.io/superscrollorama/simpledemo_mobile.html
- 
-
-
 (function() {
 
   // Saving the top of each section into an array
@@ -27,20 +18,16 @@
 
 
   // Hijacking the original scroller
-  // - http://joshbroton.com/hooking-up-to-the-window-onscroll-event-without-killing-your-performance/
-  var didScroll = false;
-  window.onscroll = doThisStuffOnScroll;
+  // - add throttling
+  // - http://greensock.com/forums/topic/11155-how-to-optimize-tweenlite-on-scroll/
+  var scrollTimeout;
+  window.onscroll = scrollHandler;
 
-  function doThisStuffOnScroll() {
-    didScroll = true;
+  function scrollHandler(event) {
+    console.log("onscroll");
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(scrollComplete, 200);
   }
-
-  setInterval(function() {
-    if(didScroll) {
-      didScroll = false;
-      scrollComplete();
-    }
-  }, 100);
 
 
 
