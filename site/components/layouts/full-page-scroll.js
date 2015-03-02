@@ -18,22 +18,16 @@
 
 
   // Hijacking the original scroller
-  // - with managing throttle
-  // - http://joshbroton.com/hooking-up-to-the-window-onscroll-event-without-killing-your-performance/
+  // - add throttling
+  // - http://greensock.com/forums/topic/11155-how-to-optimize-tweenlite-on-scroll/
+  var scrollTimeout;
+  window.onscroll = scrollHandler;
 
-  var didScroll = false;
-  window.onscroll = doThisStuffOnScroll;
-
-  function doThisStuffOnScroll() {
-    didScroll = true;
+  function scrollHandler(event) {
+    console.log("onscroll");
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(scrollComplete, 200);
   }
-
-  setInterval(function() {
-    if (didScroll) {
-      didScroll = false;
-      scrollComplete();
-    }
-  }, 100);
 
 
 
