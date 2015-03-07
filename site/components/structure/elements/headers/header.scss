@@ -4,11 +4,5 @@
 
   #logo {
     @include logo;
-    @include animation(cubic-bezier);
-    transform: rotate(90deg);
-  }
-
-  #site-title {
-    @include font(logo);
   }
 }

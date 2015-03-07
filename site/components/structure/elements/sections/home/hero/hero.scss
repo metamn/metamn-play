@@ -1,6 +1,6 @@
 @mixin hero {
   position: relative;
-  
+
   video {
     @include full-screen-video;
   }
