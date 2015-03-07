@@ -1,7 +1,0 @@
-@mixin first-letter {
-  span {
-    @include animation;
-    @include circle;
-    transform: rotate(-90deg);
-  }
-}

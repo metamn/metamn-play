@@ -1,9 +1,0 @@
-<aside id="logo">
-  <h3>Logo</h3>
-
-  <span class="first-letter">
-    <span class="circle">M</span>
-  </span>
-
-  <span class="site-title">{{ site.title }}</span>
-</aside>

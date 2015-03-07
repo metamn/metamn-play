@@ -46,7 +46,7 @@ var paths = {
 
 
   // .html files from /site to be moved into dest
-  html_src: 'site/components/structures/pages/**/*.html',
+  html_src: 'site/components/structure/pages/**/*.html',
 
   // the destination folder
   dest: 'dist',
@@ -230,6 +230,10 @@ gulp.task('scripts', function() {
 
 
 
+
+
+
+
 // SCSS
 // - import all scss files into site.scss. Folders will be imported in alphabetical order
 // - compile site.scss with autoprefixer
@@ -254,6 +258,9 @@ gulp.task('scss', function(){
   _scss('site/' + paths.scss_src, paths.scss_dest, paths.html_src);
   //_scss('styleguide/' + paths.scss_src, paths.styleguide_scss_dest, paths.styleguide_html_src);
 });
+
+
+
 
 
 
@@ -285,10 +292,9 @@ gulp.task('html_site', function() {
   return gulp.src(paths.html_src)
     .pipe(plumber({errorHandler: onError}))
     .pipe(rename(function(path) {
-      // rename about.html > about/index.html
-      if (path.basename != 'index') {
-        path.dirname = path.dirname + '/' + path.basename;
-        path.basename = 'index';
+      // rename home/index.html > index.html
+      if (path.dirname == 'home') {
+        path.dirname = '';
       }
     }))
     .pipe(minifyHTML())

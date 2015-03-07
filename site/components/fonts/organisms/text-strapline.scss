@@ -1,8 +1,0 @@
-@mixin text-strapline {
-  @include font(strapline);
-
-  a {
-    @include link(no-decoration);
-    color: #f1f1f1;
-  }
-}

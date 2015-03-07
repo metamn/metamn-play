@@ -1,7 +1,0 @@
-@mixin article-home-ui {
-  article {
-    @include mobile {
-      transform: translateX($home-image-left-from-center);
-    }
-  }
-}

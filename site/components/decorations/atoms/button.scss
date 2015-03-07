@@ -1,9 +1,0 @@
-@mixin button {
-  @include font(logo);
-
-  padding: $lem / 2 $lem;
-  border: 1px solid;
-  text-align: center;
-
-  cursor: pointer;
-}

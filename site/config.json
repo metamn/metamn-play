@@ -2,5 +2,41 @@
   "url": "/",
   "urlx": "http://metamn.github.io/metamn/",
   "title": "Metamn",
-  "subtitle": "design & code"
+  "subtitle": "design & code",
+  "main_menu": [
+    {
+      "title": "design",
+      "url": "design"
+    },
+    {
+      "title": "code",
+      "url": "code"
+    },
+    {
+      "title": "about",
+      "url": "about"
+    },
+    {
+      "title": "contact",
+      "url": "contact"
+    }
+  ],
+  "secondary_menu": [
+    {
+      "title": "home",
+      "url": ""
+    },
+    {
+      "title": "portfolio",
+      "url": "portfolio"
+    },
+    {
+      "title": "styleguide",
+      "url": "styleguide"
+    },
+    {
+      "title": "articles",
+      "url": "articles"
+    }
+  ]
 }
