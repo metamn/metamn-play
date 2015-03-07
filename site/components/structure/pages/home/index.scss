@@ -9,6 +9,11 @@ html {
 
   // homepage settings
   &.home {
-    
+
+    section {
+      &#hero {
+        @include hero;
+      }
+    }
   }
 }

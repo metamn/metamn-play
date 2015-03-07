@@ -90,8 +90,11 @@ var paths = {
   // where to resize images
   image_resize_dest: 'site/assets/images/resized',
 
+  // images to resize and optimize
+  images_resize_src: 'site/assets/images/*.png',
+
   // images to move
-  images_src: 'site/assets/images/*.png',
+  images_src: 'site/assets/images/*.{png,jpg,mp4,webm}',
 
   // images destination
   images_dest: 'dist/assets/images',
@@ -153,14 +156,14 @@ var _image_batch_resize = function(files, retina, retina_name) {
 // Image resize
 // - create different images for different devices
 gulp.task('image_resize', function() {
-  _image_batch_resize(paths.images_src, 1, '');
+  _image_batch_resize(paths.images_resize_src, 1, '');
 });
 
 
 // Retina images
 // - create 2x images for different devices
 gulp.task('image_resize_2x', function() {
-  _image_batch_resize(paths.images_src, 2, '2x');
+  _image_batch_resize(paths.images_resize_src, 2, '2x');
 });
 
 

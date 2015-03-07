@@ -2,7 +2,8 @@
   "url": "/",
   "urlx": "http://metamn.github.io/metamn/",
   "title": "Metamn",
-  "subtitle": "design & code",
+  "strapline": "design & code",
+  "images": "assets/images/",
   "main_menu": [
     {
       "title": "design",
