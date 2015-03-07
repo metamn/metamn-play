@@ -1,0 +1,12 @@
+{
+  "home": {
+    "hero": {
+      "video": {
+        "id": "video__design-and-code",
+        "image": "polina.jpg",
+        "mp4": "polina.mp4",
+        "webm": "polina.webm"
+      }
+    }
+  }
+}
