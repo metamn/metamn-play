@@ -3,7 +3,7 @@ html {
   // common settings
   body {
     @include semantic-html5-titles;
-    
+
     #header {
       @include header;
     }
@@ -11,7 +11,6 @@ html {
 
   // homepage elements
   &.home {
-
     section {
       &#hero {
         @include hero;

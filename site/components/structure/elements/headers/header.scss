@@ -1,8 +1,14 @@
 @mixin header {
   display: flex;
   align-items: center;
-  
+
   #logo {
     @include logo;
+    @include animation(cubic-bezier);
+    transform: rotate(90deg);
+  }
+
+  #site-title {
+    @include font(logo);
   }
 }
