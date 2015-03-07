@@ -1,0 +1,5 @@
+@mixin logo {
+  .circle {
+    @include circle(1.25em);
+  }
+}

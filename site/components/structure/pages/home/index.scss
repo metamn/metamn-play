@@ -1,0 +1,14 @@
+html {
+
+  // common settings
+  body {
+    #header {
+      @include header;
+    }
+  }
+
+  // homepage settings
+  &.home {
+    
+  }
+}

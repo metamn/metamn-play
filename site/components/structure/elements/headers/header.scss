@@ -1,0 +1,8 @@
+@mixin header {
+  display: flex;
+  align-items: center;
+  
+  #logo {
+    @include logo;
+  }
+}
