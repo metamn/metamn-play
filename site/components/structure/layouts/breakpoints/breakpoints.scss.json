@@ -1,0 +1,28 @@
+{
+  "breakpoints": [
+    {
+      "name": "mobile",
+      "value": "37.5em",
+      "description": "Screens smaller than 600px"
+    },
+    {
+      "name": "tablet",
+      "value": "64em",
+      "description": "Screens smaller than 1024px"
+    }
+  ],
+  "responsive_mixins": [
+    {
+      "name": "mobile",
+      "media_query": "(max-width: $breakpoint-mobile - 0.001)"
+    },
+    {
+      "name": "tablet",
+      "media_query": "(min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet)"
+    },
+    {
+      "name": "tablet-and-below",
+      "media_query": "(max-width: $breakpoint-tablet)"
+    }
+  ]
+}

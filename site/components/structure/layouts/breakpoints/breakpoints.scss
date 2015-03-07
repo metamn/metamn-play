@@ -1,0 +1,33 @@
+// Breakpoints and responsive mixins
+// - generated from components/atoms/grid/breakpoints.scss.json
+// - please do not edit directly this file
+
+
+
+// Screens smaller than 600px
+$breakpoint-mobile: 37.5em;
+
+// Screens smaller than 1024px
+$breakpoint-tablet: 64em;
+
+
+
+
+@mixin mobile {
+  @media only screen and (max-width: $breakpoint-mobile - 0.001) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+    @content
+  }
+}
+
+@mixin tablet-and-below {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content
+  }
+}
+

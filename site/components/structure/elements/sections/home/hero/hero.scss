@@ -1,7 +1,3 @@
 @mixin hero {
-  position: relative;
-
-  video {
-    @include full-screen-video;
-  }
+  @include full-screen-video;
 }
