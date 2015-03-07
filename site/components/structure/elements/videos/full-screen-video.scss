@@ -1,5 +1,5 @@
 @mixin full-screen-video {
-  position: fixed;
+  position: relative;
   right: 0;
   bottom: 0;
   min-width: 100%;

@@ -2,12 +2,14 @@ html {
 
   // common settings
   body {
+    @include semantic-html5-titles;
+    
     #header {
       @include header;
     }
   }
 
-  // homepage settings
+  // homepage elements
   &.home {
 
     section {
