@@ -1,6 +1,6 @@
 @mixin article-about {
-  padding: $lem;
-  
+  padding: 0 $lem;
+
   .text {
     @include text-style(body-text);
   }
