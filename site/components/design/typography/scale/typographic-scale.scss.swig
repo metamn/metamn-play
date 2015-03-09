@@ -24,6 +24,7 @@ $lem: {{ default_scale.lem }};
 h1, h2, h3, h4, h5, h6 {
   font-size: {{ default_scale.font_size }};
   line-height: {{ default_scale.line_height }};
+  font-weight: normal;
   margin: 0;
   padding: 0;
 }

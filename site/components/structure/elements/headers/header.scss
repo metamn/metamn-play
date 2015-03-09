@@ -1,8 +1,12 @@
 @mixin header {
   display: flex;
   align-items: center;
+  padding: $lem;
+
+  @include text-style(logo);
 
   #logo {
     @include logo;
+    margin-right: $lem / 4;
   }
 }

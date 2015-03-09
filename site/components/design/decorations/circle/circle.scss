@@ -1,7 +1,7 @@
-@mixin circle($size) {
+@mixin circle($size, $border) {
   width: $size;
   height: $size;
-  border: 1px solid;
+  border: $border;
   border-radius: $size;
 
   display: flex;

@@ -32,6 +32,25 @@
           "name": "vertical-rhythm"
         }
       ]
+    },
+    {
+      "name": "Logo",
+      "description": "Used for the logo",
+      "based_on": "Neuzeit Grotesk",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "neuzeit-grotesk-bold"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "body-text"
+        },
+        {
+          "name": "uppercase",
+          "value": "1.2px"
+        }
+      ]
     }
   ]
 }

@@ -28,4 +28,15 @@
     
   }
   
+  // Logo
+  // - Used for the logo
+  
+  @if ($variant == 'logo') {
+@include font(neuzeit-grotesk-bold);
+    @include typographic-scale(body-text);
+    @include uppercase(1.2px);
+    
+    
+  }
+  
 }

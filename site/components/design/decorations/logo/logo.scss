@@ -1,5 +1,5 @@
 @mixin logo {
   .circle {
-    @include circle(1.25em);
+    @include circle($lem + $lem / 2, $border);
   }
 }
