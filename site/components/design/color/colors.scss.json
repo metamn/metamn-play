@@ -1,0 +1,61 @@
+{
+  "colors": [
+    {
+      "name": "white",
+      "value": "#fff",
+      "description": "The background color"
+    },
+    {
+      "name": "black",
+      "value": "#222",
+      "description": "The foreground color"
+    },
+    {
+      "name": "lightgray",
+      "value": "#f1f1f1",
+      "description": "The background color for article title"
+    },
+    {
+      "name": "gray",
+      "value": "#999",
+      "description": "The list border bottom color for the menu"
+    },
+    {
+      "name": "red",
+      "value": "#fa0000",
+      "description": "The list border bottom color for the menu"
+    }
+  ],
+  "color_pairs": [
+    {
+      "name": "black-on-white",
+      "color": "$black",
+      "background": "$white"
+    },
+    {
+      "name": "white-on-black",
+      "color": "$white",
+      "background": "$black"
+    },
+    {
+      "name": "black-on-lightgray",
+      "color": "$black",
+      "background": "$lightgray"
+    },
+    {
+      "name": "white-on-gray",
+      "color": "$white",
+      "background": "$gray"
+    },
+    {
+      "name": "gray-on-white",
+      "color": "$gray",
+      "background": "$white"
+    },
+    {
+      "name": "red-on-white",
+      "color": "$red",
+      "background": "$white"
+    }
+  ]
+}

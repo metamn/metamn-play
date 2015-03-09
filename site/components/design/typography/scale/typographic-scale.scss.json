@@ -1,0 +1,30 @@
+{
+  "typographic_scale": [
+    {
+      "name": "default",
+      "description": "The default font size and line height",
+      "font_size": "100%",
+      "line_height": "1.25",
+      "lem": "1.25em"
+    },
+    {
+      "name": "body-text",
+      "description": "For long paragraphs and text blocks",
+      "font_size": "1em",
+      "line_height": "1.25",
+      "max_width": "30em"
+    },
+    {
+      "name": "small-text",
+      "description": "Text smaller with one scale then the default text",
+      "font_size": "0.75em",
+      "line_height": "1.667"
+    },
+    {
+      "name": "article-title",
+      "description": "The title of an article",
+      "font_size": "1.333em",
+      "line_height": "1.875"
+    }
+  ]
+}

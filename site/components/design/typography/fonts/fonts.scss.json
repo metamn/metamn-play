@@ -1,0 +1,22 @@
+{
+  "fonts": [
+    {
+      "name": "Neuzeit Grotesk",
+      "description": "The default typeface",
+      "family": "sans-serif",
+      "character_set": "English",
+      "served_from": "Myfonts.com",
+      "styles": [
+        {
+          "name": "Light"
+        },
+        {
+          "name": "Regular"
+        },
+        {
+          "name": "Bold"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+
+
+// Typefaces and Fonts
+// - this file is auto generated. Please do not edit
+
+
+// Neuzeit Grotesk
+// - The default typeface, sans-serif
+// - character set: English
+// - served from Myfonts.com
+// - styles and weights: Light, Regular, Bold, 
+
+
+
+
+// The font mixin
+@mixin font($variant) {
+
+  @if ($variant == 'neuzeit-grotesk-light') {
+    font-family: 'Neuzeit Grotesk Light', sans-serif;
+  }
+  
+  @if ($variant == 'neuzeit-grotesk-regular') {
+    font-family: 'Neuzeit Grotesk Regular', sans-serif;
+  }
+  
+  @if ($variant == 'neuzeit-grotesk-bold') {
+    font-family: 'Neuzeit Grotesk Bold', sans-serif;
+  }
+  
+
+}

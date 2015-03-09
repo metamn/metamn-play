@@ -1,0 +1,90 @@
+{
+  "text_styles": [
+    {
+      "name": "Body text",
+      "description": "Used for paragraphs and longer text content",
+      "based_on": "Arial",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "arial-normal"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "body-text"
+        }
+      ]
+    },
+    {
+      "name": "Article title",
+      "description": "The title of an article, page or something important",
+      "based_on": "Arial",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "arial-bold"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "article-title"
+        }
+      ]
+    },
+    {
+      "name": "Section title",
+      "description": "Section delimiters. Usually contains just a single or a couple of words",
+      "based_on": "Arial",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "arial-bold"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "small-text"
+        },
+        {
+          "name": "uppercase",
+          "value": "1.2px"
+        },
+        {
+          "name": "colors",
+          "value": "white-on-black"
+        }
+      ],
+      "properties": [
+        {
+          "name": "display",
+          "value": "inline-block"
+        },
+        {
+          "name": "padding",
+          "value": "0 $lem/4"
+        }
+      ]
+    },
+    {
+      "name": "Section subtitle",
+      "description": "Section delimiter inside a section. Usually contains just a single or a couple of words",
+      "based_on": "Arial",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "arial-bold"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "small-text"
+        },
+        {
+          "name": "uppercase",
+          "value": "1.2px"
+        },
+        {
+          "name": "colors",
+          "value": "gray-on-white"
+        }
+      ]
+    }
+  ]
+}

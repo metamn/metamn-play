@@ -1,0 +1,8 @@
+@mixin vertical-rhythm {
+  section + section,
+  article + article,
+  aside + aside,
+  p + p {
+    margin-top: $lem;
+  }
+}

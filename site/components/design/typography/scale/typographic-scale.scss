@@ -1,0 +1,63 @@
+// Typographic grid and scale
+// - this file is generated please do not edit
+
+
+// Default scale & grid
+// - the deafult font size / line height gives the basic grid cell height. Usually is set to 16px/20px
+// - the basic grid cell width is 1lem, which is set to 20px, based on the above
+// - now we have a 20px * 20px grid both for typography and positioning all elements
+
+// Scaling
+// - any font size / line height changes must preserve the basic 20px grid
+// - if we have a smaller font we will make the line height larger to reach the 20px
+// - if we have larget font sizes we will make the line height fit to a 20px multiplier
+// - for determining the font size we will use Modular Scale / 3:4 Perfect Fourth settings: http://www.modularscale.com/?1&em&1.333&web&text 
+
+
+
+// The default metric for sizing non-typographic elements
+// - it is based on the default font size and line height
+
+$lem: 1.25em;
+
+// Reset all block text elements to default font size and line height
+h1, h2, h3, h4, h5, h6, p, ul, li, dt, dl {
+  font-size: 100%;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+
+// Different typographic scales
+@mixin typographic-scale($variant) {
+
+  // The default font size and line height
+  @if ($variant == 'default') {
+    font-size: 100%;
+    line-height: 1.25;
+  
+  }
+
+  // For long paragraphs and text blocks
+  @if ($variant == 'body-text') {
+    font-size: 1em;
+    line-height: 1.25;
+  max-width: 30em;
+  }
+
+  // Text smaller with one scale then the default text
+  @if ($variant == 'small-text') {
+    font-size: 0.75em;
+    line-height: 1.667;
+  
+  }
+
+  // The title of an article
+  @if ($variant == 'article-title') {
+    font-size: 1.333em;
+    line-height: 1.875;
+  
+  }
+
+}
