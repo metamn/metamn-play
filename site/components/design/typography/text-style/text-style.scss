@@ -7,48 +7,12 @@
 // The text mixin
 @mixin text-style($variant) {
   
-  // Body text
-  // - Used for paragraphs and longer text content
+  // Default
+  // - Used for the body
   
-  @if ($variant == 'body-text') {
-    @include font(arial-normal);
-    @include typographic-scale(body-text);
-    
-    
-  }
-  
-  // Article title
-  // - The title of an article, page or something important
-  
-  @if ($variant == 'article-title') {
-    @include font(arial-bold);
-    @include typographic-scale(article-title);
-    
-    
-  }
-  
-  // Section title
-  // - Section delimiters. Usually contains just a single or a couple of words
-  
-  @if ($variant == 'section-title') {
-    @include font(arial-bold);
-    @include typographic-scale(small-text);
-    @include uppercase(1.2px);
-    @include colors(white-on-black);
-    
-    display: inline-block;
-    padding: 0 $lem/4;
-    
-  }
-  
-  // Section subtitle
-  // - Section delimiter inside a section. Usually contains just a single or a couple of words
-  
-  @if ($variant == 'section-subtitle') {
-    @include font(arial-bold);
-    @include typographic-scale(small-text);
-    @include uppercase(1.2px);
-    @include colors(gray-on-white);
+  @if ($variant == 'default') {
+    @include font(neuzeit-grotesk-regular);
+    @include typographic-scale(default);
     
     
   }

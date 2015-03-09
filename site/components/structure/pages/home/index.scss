@@ -2,6 +2,7 @@ html {
 
   // common settings
   body {
+    @include text-style(default);
     @include semantic-html5-titles;
 
     #header {

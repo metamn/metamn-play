@@ -39,25 +39,4 @@ h1, h2, h3, h4, h5, h6, p, ul, li, dt, dl {
   
   }
 
-  // For long paragraphs and text blocks
-  @if ($variant == 'body-text') {
-    font-size: 1em;
-    line-height: 1.25;
-  max-width: 30em;
-  }
-
-  // Text smaller with one scale then the default text
-  @if ($variant == 'small-text') {
-    font-size: 0.75em;
-    line-height: 1.667;
-  
-  }
-
-  // The title of an article
-  @if ($variant == 'article-title') {
-    font-size: 1.333em;
-    line-height: 1.875;
-  
-  }
-
 }
