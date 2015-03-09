@@ -21,18 +21,8 @@ html {
         @include about;
       }
 
-      &.slide {
-        margin: $lem;
-        max-width: 37em;
-
-        > h3 {
-          display: block;
-        }
-
-        figure {
-          @include figure;
-          @include placeholder;
-        }
+      &#values {
+        @include values;
       }
     }
   }
