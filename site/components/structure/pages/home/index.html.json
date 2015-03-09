@@ -6,6 +6,20 @@
         "image": "hero.png",
         "mp4": "hero.mp4"
       }
+    },
+    "about": {
+      "buttons": [
+        {
+          "text": "View portfolio",
+          "url": "portfolio",
+          "arrow": "right"
+        },
+        {
+          "text": "Learn more",
+          "url": "#design",
+          "arrow": "bottom"
+        }
+      ]
     }
   }
 }

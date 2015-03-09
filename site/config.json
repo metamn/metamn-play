@@ -3,41 +3,5 @@
   "urlx": "http://metamn.github.io/metamn/",
   "title": "Metamn",
   "strapline": "design & code",
-  "images": "assets/images/",
-  "main_menu": [
-    {
-      "title": "design",
-      "url": "design"
-    },
-    {
-      "title": "code",
-      "url": "code"
-    },
-    {
-      "title": "about",
-      "url": "about"
-    },
-    {
-      "title": "contact",
-      "url": "contact"
-    }
-  ],
-  "secondary_menu": [
-    {
-      "title": "home",
-      "url": ""
-    },
-    {
-      "title": "portfolio",
-      "url": "portfolio"
-    },
-    {
-      "title": "styleguide",
-      "url": "styleguide"
-    },
-    {
-      "title": "articles",
-      "url": "articles"
-    }
-  ]
+  "images": "assets/images/"
 }
