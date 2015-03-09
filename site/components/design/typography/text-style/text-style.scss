@@ -39,4 +39,15 @@
     
   }
   
+  // Navigation
+  // - Used for navigation elements
+  
+  @if ($variant == 'navigation') {
+@include font(neuzeit-grotesk-bold);
+    @include typographic-scale(default);
+    @include uppercase(1.2px);
+    
+    
+  }
+  
 }

@@ -1,0 +1,17 @@
+@mixin button {
+  display: inline-block;
+
+  border: $border;
+  padding: $lem / 2;
+
+  @include colors(black-on-white);
+
+  a {
+    @include link;
+    @include text-style(navigation);
+    @include colors(black-on-white);
+
+    position: relative;
+    top: 2px;
+  }
+}

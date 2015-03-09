@@ -2,4 +2,9 @@
   article {
     @include article-about;
   }
+
+  .button {
+    margin: $lem;
+    @include button;
+  }
 }

@@ -8,18 +8,10 @@
       }
     },
     "about": {
-      "buttons": [
-        {
-          "text": "View portfolio",
-          "url": "portfolio",
-          "arrow": "right"
-        },
-        {
-          "text": "Learn more",
-          "url": "#design",
-          "arrow": "bottom"
-        }
-      ]
+      "button": {
+        "text": "View portfolio",
+        "url": "portfolio"
+      }
     }
   }
 }

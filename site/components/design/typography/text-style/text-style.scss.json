@@ -51,6 +51,25 @@
           "value": "1.2px"
         }
       ]
+    },
+    {
+      "name": "Navigation",
+      "description": "Used for navigation elements",
+      "based_on": "Neuzeit Grotesk",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "neuzeit-grotesk-bold"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "default"
+        },
+        {
+          "name": "uppercase",
+          "value": "1.2px"
+        }
+      ]
     }
   ]
 }
