@@ -19,6 +19,7 @@ html {
 
       &#about {
         @include about;
+        margin-bottom: 70vh;
       }
     }
   }

@@ -3,10 +3,12 @@
   align-items: center;
   padding: $lem;
 
-  @include text-style(logo);
-
   #logo {
+    display: none;
     @include logo;
-    margin-right: $lem / 4;
+  }
+
+  #site-title {
+    @include text-style(logo);
   }
 }
