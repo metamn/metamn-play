@@ -8,11 +8,22 @@
 @mixin text-style($variant) {
   
   // Default
-  // - Used for the body
+  // - Used when no other settings are specified
   
   @if ($variant == 'default') {
-    @include font(neuzeit-grotesk-regular);
+@include font(neuzeit-grotesk-regular);
     @include typographic-scale(default);
+    
+    
+  }
+  
+  // Body text
+  // - Used for body text
+  
+  @if ($variant == 'body-text') {
+@include font(neuzeit-grotesk-regular);
+    @include typographic-scale(body-text);
+    @include vertical-rhythm;
     
     
   }

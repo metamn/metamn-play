@@ -1,7 +1,4 @@
-<section id="about">
-  <h3>About</h3>
-
-  <article>
+<article>
   <h3>Design and code</h3>
 
   <div class="text">
@@ -15,5 +12,3 @@
     </p>
   </div>
 </article>
-
-</section>

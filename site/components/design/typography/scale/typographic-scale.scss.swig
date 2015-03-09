@@ -11,7 +11,7 @@
 // - any font size / line height changes must preserve the basic 20px grid
 // - if we have a smaller font we will make the line height larger to reach the 20px
 // - if we have larget font sizes we will make the line height fit to a 20px multiplier
-// - for determining the font size we will use Modular Scale / 3:4 Perfect Fourth settings: http://www.modularscale.com/?1&em&1.333&web&text 
+// - for determining the font size we will use Modular Scale / 3:4 Perfect Fourth settings: http://www.modularscale.com/?1&em&1.333&web&text
 
 
 
@@ -21,9 +21,14 @@
 $lem: {{ default_scale.lem }};
 
 // Reset all block text elements to default font size and line height
-h1, h2, h3, h4, h5, h6, p, ul, li, dt, dl {
+h1, h2, h3, h4, h5, h6 {
   font-size: {{ default_scale.font_size }};
   line-height: {{ default_scale.line_height }};
+  margin: 0;
+  padding: 0;
+}
+
+p, ul, li, dt, dl {
   margin: 0;
   padding: 0;
 }
