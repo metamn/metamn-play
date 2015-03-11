@@ -3,7 +3,6 @@
 
   {% for value in values %}
     {% set value = value %}
-    {% set filename = '../../../project/values/' + value.id + '/' + value.id + '.html.swig' %}
-    {% include filename %}
+    {% include '../../../project/value/value.html.swig' %}
   {% endfor %}
 </section>

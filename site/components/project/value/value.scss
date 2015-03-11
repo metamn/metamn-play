@@ -1,0 +1,34 @@
+@mixin value {
+  background: $lightgray;
+
+  display: flex;
+  align-items: center;
+
+  // Title
+  .value__title {
+    display: flex;
+    flex: 1 0 0px;
+  }
+
+  // Images
+  .value__images {
+    flex: 4 0 0px;
+
+    @include tablet-and-below {
+      flex: 2 0 0px;
+    }
+
+    // center
+    display: flex;
+    justify-content: center;
+
+    figure {
+      @include figure;
+      @include placeholder;
+    }
+  }
+
+  &.value--ui {
+    @include value--ui;
+  }
+}

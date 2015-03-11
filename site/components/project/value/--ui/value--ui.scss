@@ -1,0 +1,5 @@
+@mixin value--ui {
+  .value--ui__images {
+    @include value--ui__images;
+  }
+}
