@@ -46,7 +46,7 @@ var paths = {
 
 
   // .html files from /site to be moved into dest
-  html_src: 'site/components/structure/pages/**/*.html',
+  html_src: 'site/components/pages/**/*.html',
 
   // the destination folder
   dest: 'dist',
@@ -115,8 +115,6 @@ var onError = function(error) {
   console.log(error.message)
   this.emit('end');
 };
-
-
 
 
 
@@ -295,9 +293,10 @@ gulp.task('html_site', function() {
   return gulp.src(paths.html_src)
     .pipe(plumber({errorHandler: onError}))
     .pipe(rename(function(path) {
-      // rename home/index.html > index.html
+      // rename home/home.html > index.html
       if (path.dirname == 'home') {
         path.dirname = '';
+        path.basename = 'index';
       }
     }))
     .pipe(minifyHTML())

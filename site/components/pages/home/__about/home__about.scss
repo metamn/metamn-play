@@ -1,0 +1,5 @@
+@mixin home__about {
+  .about {
+    @include about;
+  }
+}

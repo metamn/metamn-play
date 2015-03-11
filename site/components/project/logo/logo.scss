@@ -1,0 +1,10 @@
+@mixin logo {
+  display: flex;
+  align-items: center;
+
+  @include text-style(logo);
+  
+  .logo__first-letter {
+    @include logo__first_letter;
+  }
+}

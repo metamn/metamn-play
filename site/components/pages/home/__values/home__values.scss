@@ -1,0 +1,7 @@
+@mixin home__values {
+  article {
+    > h3 {
+      display: block;
+    }
+  }
+}

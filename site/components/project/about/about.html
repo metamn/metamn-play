@@ -1,0 +1,3 @@
+<div class="about">
+  about text here ...
+</about>

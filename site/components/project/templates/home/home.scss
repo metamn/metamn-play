@@ -1,0 +1,9 @@
+html {
+  body {
+    @include semantic-html5-titles;
+
+    .header {
+      @include header;
+    }
+  }
+}

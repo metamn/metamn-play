@@ -1,0 +1,17 @@
+@mixin circle($size, $border) {
+  width: $size;
+  height: $size;
+  border: $border;
+  border-radius: $size;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Align circle content
+  transform: translateY(-2.5px) translateX(-3px);
+
+  .circle__content {
+    transform: translateY(2.5px);
+  }
+}

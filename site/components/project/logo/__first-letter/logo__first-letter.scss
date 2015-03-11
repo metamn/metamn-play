@@ -1,0 +1,7 @@
+@mixin logo__first-letter {
+  margin-right: $lem / 4;
+
+  .circle {
+    @include circle($lem + $lem / 2, $border);
+  }
+}
