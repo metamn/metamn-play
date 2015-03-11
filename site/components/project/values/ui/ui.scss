@@ -1,4 +1,14 @@
 @mixin ui {
+  background: $lightgray;
+  @include ui__grid;
+  
+  .ui__images {
+    @include ui__images;
+  }
+}
+
+
+@mixin ui__grid {
   display: flex;
   align-items: center;
 
@@ -17,7 +27,5 @@
     // center
     display: flex;
     justify-content: center;
-
-    @include ui__images;
   }
 }
