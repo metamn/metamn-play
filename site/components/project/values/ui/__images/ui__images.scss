@@ -1,0 +1,9 @@
+@mixin ui__images {
+  display: flex;
+  justify-content: center;
+  
+  figure {
+    @include figure;
+    @include placeholder;
+  }
+}

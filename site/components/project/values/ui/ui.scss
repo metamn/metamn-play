@@ -1,1 +1,23 @@
-@mixin ui {}
+@mixin ui {
+  display: flex;
+  align-items: center;
+
+  .ui__title {
+    display: flex;
+    flex: 1 0 0px;
+  }
+
+  .ui__images {
+    flex: 4 0 0px;
+
+    @include tablet-and-below {
+      flex: 2 0 0px;
+    }
+
+    // center
+    display: flex;
+    justify-content: center;
+
+    @include ui__images;
+  }
+}

@@ -1,3 +1,7 @@
 @mixin home__values {
-  
+  padding: $lem 0;
+
+  .ui {
+    @include ui;
+  }
 }
