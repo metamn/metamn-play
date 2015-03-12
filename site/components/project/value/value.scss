@@ -20,4 +20,24 @@
   &.value--ui {
     @include value--ui;
   }
+
+  &.value--interactions {
+    @include value--interactions;
+  }
+
+  &.value--ux {
+    //@include value--ux;
+  }
+
+  &.value--styleguide {
+    //@include value--styleguide;
+  }
+
+  &.value--workflow {
+    //@include value--workflow;
+  }
+
+  &.value--wordpress {
+    //@include value--wordpress;
+  }
 }

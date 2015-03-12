@@ -1,0 +1,5 @@
+@mixin value--interactions {
+  .value--interactions__images {
+    @include value--interactions__images;
+  }
+}

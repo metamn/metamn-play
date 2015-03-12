@@ -5,7 +5,7 @@
         "id": "ui",
         "title": "Clean User Interfaces",
         "image": {
-          "title": "Scatter Homepage",
+          "title": "Anvelocom",
           "name": "anvelocom-archive-laptop-front"
         }
       },
@@ -13,20 +13,8 @@
         "id": "interactions",
         "title": "Meaningful Interactions",
         "image": {
-          "title": "Placeholder 16:9",
-          "name": "placeholder-16-9",
-          "responsive" : [
-            {
-              "breakpoint": "mobile",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            },
-            {
-              "breakpoint": "tablet",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            }
-          ]
+          "title": "Interaction on Inu Chivu",
+          "name": "inu-article-black-tablet"
         }
       },
       {
