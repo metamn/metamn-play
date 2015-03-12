@@ -6,3 +6,4 @@
 1. do not check in node_modules to git (add to gitignore)
 2. save a copy of node_modules into ~/tmp/metamn
 3. after deployment & checking out the dev repo copy node_modules back from /tmp
+4. 
