@@ -26,11 +26,6 @@
     figure {
       @include figure;
       @include placeholder;
-
-      width: 70%;
-      @include tablet-and-below {
-        width: 100%;
-      }
     }
   }
 

@@ -1,5 +1,6 @@
 @mixin value--ui__images {
   figure {
-    background: red;
+    background: transparent;
+    padding: $lem;
   }
 }
