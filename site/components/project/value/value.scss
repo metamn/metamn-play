@@ -1,5 +1,4 @@
 @mixin value {
-  background: $lightgray;
   margin-bottom: $lem;
 
   display: flex;
@@ -7,30 +6,14 @@
 
   // Title
   .value__title {
-    display: flex;
-    flex: 1 0 0px;
+    display: none;
   }
 
   // Images
   .value__images {
-    flex: 4 0 0px;
-
-    @include tablet-and-below {
-      flex: 2 0 0px;
-    }
-
-    // center
-    display: flex;
-    justify-content: center;
-
     figure {
       @include figure;
       @include placeholder;
-
-      width: 70%;
-      @include tablet-and-below {
-        width: 100%;
-      }
     }
   }
 
