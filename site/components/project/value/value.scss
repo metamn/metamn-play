@@ -9,17 +9,6 @@
     display: flex;
   }
 
-  // Images
-  .value__images {
-    figure {
-      @include figure;
-      @include placeholder;
-
-      background: $lightgray;
-      padding: $lem / 2;
-    }
-  }
-
   &.value--ui {
     @include value--ui;
   }
