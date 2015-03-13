@@ -1,10 +1,5 @@
 @mixin value--ui {
-  .value--ui__images {
-    @include value--ui__images;
-  }
-
-  .ios-device {
-    @include ios-device(18em);
-    //@include ios-device--cut-half(22em);
+  .value--ui__mockup {
+    @include value--ui__mockup;
   }
 }

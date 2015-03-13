@@ -1,3 +1,4 @@
 <div class="ios-device__screen">
-  {{ content }}
+  {% set image = content %}
+  {% include '../../../../../structure/images/figure.html.swig' %}
 </div>
