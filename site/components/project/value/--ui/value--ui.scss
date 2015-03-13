@@ -4,9 +4,6 @@
   }
 
   .ios-device {
-    @include ios-device;
-    @include ios-device--white;
-    @include ios-device--large;
-    @include ios-device--iphone-5s;
+    @include ios-device(20em);
   }
 }

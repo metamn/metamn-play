@@ -1,4 +1,4 @@
-@mixin ios-device {
+@mixin ios-device($width) {
   background: #121212;
   border: 1px solid #000;
   position: relative;
@@ -17,4 +17,8 @@
     transform:translateX(-50%);
     display: block;
   }
+
+  @include ios-device--white;
+  @include ios-device--large($width);
+  @include ios-device--iphone-5s($width);
 }
