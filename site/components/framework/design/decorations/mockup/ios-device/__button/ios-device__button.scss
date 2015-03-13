@@ -1,0 +1,13 @@
+@mixin ios-device__button {
+  // - width, height and bottom must be added further by a modifier like iphone 5s
+  &:after {
+    content: '';
+    border: 1px solid #444;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    display: block;
+  }
+}
