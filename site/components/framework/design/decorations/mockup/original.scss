@@ -1,0 +1,49 @@
+// - from http://lukejamestaylor.com/portfolio/css-devices/
+.ios-device {
+  background: #121212;
+  border: 1px solid #000;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.ios-device::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  display: block;
+}
+
+.ios-device__screen {
+  border-radius: 2px;
+  background: #222;
+  height: 100%;
+}
+
+.ios-device--white {
+  background: #fff;
+  border-color: #ddd;
+}
+
+.ios-device--white::after {
+  border-color: #ddd;
+}
+
+.iphone-5s--large {
+  border-radius: 12px;
+  width: 116px;
+  height: 246px;
+  padding: 28px 6px;
+}
+
+.ios-device--large::after {
+  width: 16px;
+  height: 16px;
+  bottom: 5px;
+}
