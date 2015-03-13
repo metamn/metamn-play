@@ -1,0 +1,8 @@
+@mixin ios-device--white {
+  background: #fff;
+  border-color: #ddd;
+
+  &:after {
+    border-color: #ddd;
+  }
+}

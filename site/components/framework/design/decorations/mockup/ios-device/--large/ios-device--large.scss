@@ -1,0 +1,7 @@
+@mixin ios-device--large {
+  &:after {
+    width: 16px;
+    height: 16px;
+    bottom: 5px;
+  }
+}
