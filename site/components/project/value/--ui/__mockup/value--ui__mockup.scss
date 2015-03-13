@@ -1,7 +1,7 @@
 @mixin value--ui__mockup {
   .ios-device {
     @include ios-device(17.5em);
-    //@include ios-device--cut-half(22em);
+    @include ios-device--cut-half(22em);
 
     figure {
       @include figure;

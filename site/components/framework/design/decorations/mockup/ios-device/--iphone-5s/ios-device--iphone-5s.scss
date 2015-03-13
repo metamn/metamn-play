@@ -1,7 +1,7 @@
 @mixin ios-device--iphone-5s($width) {
   border-radius: calc(#{$width} * 10.345 / 100);
   width: $width;
-  min-height: calc(#{$width} * 212.068 / 100);
+  height: calc(#{$width} * 212.068 / 100);
   padding: calc(#{$width} * 24.137 / 100) calc(#{$width} * 5.172 / 100);
 
   &:after {
