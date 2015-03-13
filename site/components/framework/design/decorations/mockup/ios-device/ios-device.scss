@@ -4,14 +4,13 @@
   position: relative;
   box-sizing: border-box;
 
+  // the bottom button
+  // - width, height and bottom must be added further by a modifier liek iphone 5s
   &:after {
     content: '';
-    width: 8px;
-    height: 8px;
     border: 1px solid #444;
     border-radius: 50%;
     position: absolute;
-    bottom: 2px;
     left: 50%;
     -webkit-transform:translateX(-50%);
     transform:translateX(-50%);
@@ -19,6 +18,9 @@
   }
 
   @include ios-device--white;
-  @include ios-device--large($width);
   @include ios-device--iphone-5s($width);
+
+  &__screen {
+    @include ios-device__screen;
+  }
 }
