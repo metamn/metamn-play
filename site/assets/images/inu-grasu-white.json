@@ -2,15 +2,15 @@
   "image_sizes": [
     {
       "name": "desktop",
-      "width": "510"
+      "width": "320"
     },
     {
       "name": "laptop",
-      "width": "510"
+      "width": "320"
     },
     {
       "name": "tablet",
-      "width": "510"
+      "width": "320"
     },
     {
       "name": "mobile",

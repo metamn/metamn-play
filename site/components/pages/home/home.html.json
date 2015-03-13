@@ -10,12 +10,12 @@
             "name": "anvelocom-frontpage-mobile-screenshot"
           },
           {
-            "title": "The Inu archive page on mobile",
-            "name": "inu-archive-mobile-screenshot"
-          },
-          {
             "title": "The Scatter frontpage on mobile",
             "name": "scatter-frontpage-mobile-screenshot"
+          },
+          {
+            "title": "The Inu archive page on mobile",
+            "name": "inu-archive-mobile-screenshot"
           }
         ]
       },
@@ -24,7 +24,7 @@
         "title": "Meaningful Interactions",
         "image": {
           "title": "Interaction on Inu Chivu",
-          "name": "inu-article-white-tablet"
+          "name": "inu-grasu-white"
         }
       },
       {

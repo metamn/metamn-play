@@ -1,4 +1,7 @@
 @mixin value--interactions__images {
   figure {
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 21em;
   }
 }

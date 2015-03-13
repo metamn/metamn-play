@@ -36,4 +36,8 @@
     display: none;
     //@include value--wordpress;
   }
+
+  figure {
+    @include figure;
+  }
 }
