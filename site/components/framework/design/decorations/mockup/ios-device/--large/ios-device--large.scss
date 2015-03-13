@@ -1,7 +1,0 @@
-@mixin ios-device--large($width) {
-  &:after {
-    width: calc(#{$width} * 13.793 / 100);
-    height: calc(#{$width} * 13.793 / 100);
-    bottom: calc(#{$width} * 4.310 / 100);
-  }
-}
