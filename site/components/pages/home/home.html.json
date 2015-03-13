@@ -4,10 +4,20 @@
       {
         "id": "ui",
         "title": "Clean User Interfaces",
-        "image": {
-          "title": "The anvelocom frontpage on mobile",
-          "name": "anvelocom-frontpage-mobile-screenshot"
-        }
+        "images": [
+          {
+            "title": "The Anvelocom frontpage on mobile",
+            "name": "anvelocom-frontpage-mobile-screenshot"
+          },
+          {
+            "title": "The Inu archive page on mobile",
+            "name": "inu-archive-mobile-screenshot"
+          },
+          {
+            "title": "The Scatter frontpage on mobile",
+            "name": "scatter-frontpage-mobile-screenshot"
+          }
+        ]
       },
       {
         "id": "interactions",

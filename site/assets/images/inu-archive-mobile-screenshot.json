@@ -1,0 +1,20 @@
+{
+  "image_sizes": [
+    {
+      "name": "desktop",
+      "width": "320"
+    },
+    {
+      "name": "laptop",
+      "width": "320"
+    },
+    {
+      "name": "tablet",
+      "width": "320"
+    },
+    {
+      "name": "mobile",
+      "width": "320"
+    }
+  ]
+}
