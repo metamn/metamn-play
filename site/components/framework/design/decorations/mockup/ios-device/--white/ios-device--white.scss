@@ -2,7 +2,7 @@
   background: #fff;
   border-color: #ddd;
 
-  &:after {
+  &:after, .ios-device__screen {
     border-color: #ddd;
   }
 }
