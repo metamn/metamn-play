@@ -14,8 +14,12 @@
             "name": "scatter-frontpage-mobile-screenshot"
           },
           {
-            "title": "The Inu archive page on mobile",
-            "name": "inu-archive-mobile-screenshot"
+            "title": "The OCCRP frontpage on mobile",
+            "name": "occrp-mobile-frontpage-screenshot"
+          },
+          {
+            "title": "The Smuff archive page on mobile",
+            "name": "smuff-archive-mobile-screenshot"
           }
         ]
       },
