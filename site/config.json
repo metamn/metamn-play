@@ -11,5 +11,60 @@
         "Lately I've been working mostly with New York City companies on design, front&ndash;end and Wordpress projects."
       ]
     }
+  },
+
+  "articles": [
+    "How this site was made",
+    "Usability & Experience Design",
+    "Wordpress"
+  ],
+
+  "links": {
+    "main": [
+      {
+        "title": "Work",
+        "url": "work"
+      },
+      {
+        "title": "Styleguide",
+        "url": "styleguide"
+      },
+      {
+        "title": "About",
+        "url": "about"
+      },
+      {
+        "title": "Contact",
+        "url": "contact"
+      }
+    ],
+
+    "contact": [
+      {
+        "title": "Email",
+        "url": "bartus.csongor@gmail.com",
+        "type": "email"
+      },
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/metamn",
+        "type": "external"
+      },
+      {
+        "title": "Github",
+        "url": "http://github.com/metamn",
+        "type": "external"
+      },
+      {
+        "title": "Tumblr",
+        "url": "http://metamn.tumblr.com",
+        "type": "external"
+      },
+      {
+        "title": "Readability",
+        "url": "https://www.readability.com/metamn/",
+        "type": "external"
+      }
+    ]
   }
 }

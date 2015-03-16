@@ -7,5 +7,5 @@ example:
 ---
 
 {% macro classname(string) -%}
-  {{ string | lower | replace(',', '') | replace('&', '') | replace("'", '') | replace('"', '') | replace(' ', '-') }}
+  {{ string | lower | replace(',', '', 'g') | replace('&', 'and', 'g') | replace("'", '', 'g') | replace('"', '', 'g') | replace(' ', '-', 'g') }}
 {%- endmacro %}
