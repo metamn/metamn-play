@@ -1,5 +1,10 @@
 @mixin value--interactions {
-  .value--interactions__images {
-    @include value--interactions__images;
+  .value--interactions__mockup {
+    @include value--interactions__mockup;
+
+    display: none;
+    &:first-of-type {
+      display: flex;
+    }
   }
 }

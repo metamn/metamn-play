@@ -26,10 +26,16 @@
       {
         "id": "interactions",
         "title": "Meaningful Interactions",
-        "image": {
-          "title": "Interaction on Inu Chivu",
-          "name": "inu-grasu-white"
-        }
+        "images": [
+          {
+            "title": "Interaction on Inu Chivu, white",
+            "name": "inu-archive-mobile-screenshot"
+          },
+          {
+            "title": "Interaction on Inu Chivu, black",
+            "name": "inu-archive-mobile-screenshot-black"
+          }
+        ]
       },
       {
         "id": "ux",
