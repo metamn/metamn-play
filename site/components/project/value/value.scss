@@ -9,7 +9,7 @@
     display: flex;
   }
 
-  
+
   &.value--ui {
     @include value--ui;
   }
@@ -19,8 +19,7 @@
   }
 
   &.value--ux {
-    display: none;
-    //@include value--ux;
+    @include value--ux;
   }
 
   &.value--styleguide {

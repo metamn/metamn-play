@@ -41,20 +41,8 @@
         "id": "ux",
         "title": "User Experience Design",
         "image": {
-          "title": "Placeholder 16:9",
-          "name": "placeholder-16-9",
-          "responsive" : [
-            {
-              "breakpoint": "mobile",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            },
-            {
-              "breakpoint": "tablet",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            }
-          ]
+          "title": "The five focus points",
+          "name": "user-experience-portrait"
         }
       },
       {
