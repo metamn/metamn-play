@@ -6,10 +6,6 @@
         "title": "Clean User Interfaces",
         "images": [
           {
-            "title": "The Anvelocom menu on mobile",
-            "name": "anvelocom-menu-mobile-screenshot"
-          },
-          {
             "title": "The Scatter frontpage on mobile",
             "name": "scatter-frontpage-mobile-screenshot"
           },
@@ -20,6 +16,10 @@
           {
             "title": "The Smuff archive page on mobile",
             "name": "smuff-archive-mobile-screenshot"
+          },
+          {
+            "title": "The Anvelocom menu on mobile",
+            "name": "anvelocom-menu-mobile-screenshot"
           }
         ]
       },
