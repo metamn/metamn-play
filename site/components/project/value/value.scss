@@ -22,19 +22,8 @@
     @include value--ux;
   }
 
-  &.value--styleguide {
-    display: none;
-    //@include value--styleguide;
-  }
-
-  &.value--workflow {
-    display: none;
-    //@include value--workflow;
-  }
-
   &.value--wordpress {
-    display: none;
-    //@include value--wordpress;
+    @include value--wordpress;
   }
 
   figure {

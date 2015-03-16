@@ -46,46 +46,6 @@
         }
       },
       {
-        "id": "styleguide",
-        "title": "Components and Styleguide",
-        "image": {
-          "title": "Placeholder 16:9",
-          "name": "placeholder-16-9",
-          "responsive" : [
-            {
-              "breakpoint": "mobile",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            },
-            {
-              "breakpoint": "tablet",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            }
-          ]
-        }
-      },
-      {
-        "id": "workflow",
-        "title": "Gulp Workflow",
-        "image": {
-          "title": "Placeholder 16:9",
-          "name": "placeholder-16-9",
-          "responsive" : [
-            {
-              "breakpoint": "mobile",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            },
-            {
-              "breakpoint": "tablet",
-              "title": "Placeholder 2:3",
-              "name": "placeholder-2-3"
-            }
-          ]
-        }
-      },
-      {
         "id": "wordpress",
         "title": "Wordpress",
         "image": {
