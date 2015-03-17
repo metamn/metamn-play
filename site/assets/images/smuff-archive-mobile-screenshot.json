@@ -3,6 +3,18 @@
     {
       "name": "mobile",
       "width": "320"
+    },
+    {
+      "name": "tablet",
+      "width": "320"
+    },
+    {
+      "name": "laptop",
+      "width": "320"
+    },
+    {
+      "name": "desktop",
+      "width": "320"
     }
   ]
 }
