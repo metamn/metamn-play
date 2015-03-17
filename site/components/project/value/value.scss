@@ -4,11 +4,14 @@
   display: flex;
   flex-direction: column;
 
-  // Title
+  figure {
+    @include figure;
+  }
+
+  // Display semantic HTML5 titles
   .value__title {
     display: flex;
   }
-
 
   &.value--ui {
     @include value--ui;
@@ -24,9 +27,5 @@
 
   &.value--wordpress {
     @include value--wordpress;
-  }
-
-  figure {
-    @include figure;
   }
 }
