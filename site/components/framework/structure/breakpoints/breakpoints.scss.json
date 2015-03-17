@@ -17,6 +17,10 @@
       "media_query": "(max-width: $breakpoint-mobile - 0.001)"
     },
     {
+      "name": "mobile-and-up",
+      "media_query": "(min-width: $breakpoint-mobile)"
+    },
+    {
       "name": "tablet",
       "media_query": "(min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 0.001)"
     },
