@@ -11,6 +11,13 @@
 // - styles and weights: Light, Regular, Bold, 
 
 
+// Europa
+// - The default typeface, sans-serif
+// - character set: English
+// - served from Typekit
+// - styles and weights: , 
+
+
 
 
 // The font mixin
@@ -26,6 +33,11 @@
   
   @if ($variant == 'neuzeit-grotesk-bold') {
     font-family: 'Neuzeit Grotesk Bold', sans-serif;
+  }
+  
+
+  @if ($variant == 'europa-') {
+    font-family: 'Europa ', sans-serif;
   }
   
 

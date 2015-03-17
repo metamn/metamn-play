@@ -11,7 +11,7 @@
   // - Used when no other settings are specified
   
   @if ($variant == 'default') {
-@include font(neuzeit-grotesk-regular);
+@include font(europa-);
     @include typographic-scale(default);
     @include colors(black-on-white);
     
@@ -22,6 +22,28 @@
   // - Used for body text
   
   @if ($variant == 'body-text') {
+@include font(europa-regular);
+    @include typographic-scale(body-text);
+    @include vertical-rhythm;
+    
+    
+  }
+  
+  // Default-NZ
+  // - Used when no other settings are specified
+  
+  @if ($variant == 'default-nz') {
+@include font(neuzeit-grotesk-regular);
+    @include typographic-scale(default);
+    @include colors(black-on-white);
+    
+    
+  }
+  
+  // Body text-NZ
+  // - Used for body text
+  
+  @if ($variant == 'body-text-nz') {
 @include font(neuzeit-grotesk-regular);
     @include typographic-scale(body-text);
     @include vertical-rhythm;

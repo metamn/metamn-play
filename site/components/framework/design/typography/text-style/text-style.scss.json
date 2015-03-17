@@ -3,6 +3,43 @@
     {
       "name": "Default",
       "description": "Used when no other settings are specified",
+      "based_on": "Europa",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "europa-"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "default"
+        },
+        {
+          "name": "colors",
+          "value": "black-on-white"
+        }
+      ]
+    },
+    {
+      "name": "Body text",
+      "description": "Used for body text",
+      "based_on": "Europa",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "europa-regular"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "body-text"
+        },
+        {
+          "name": "vertical-rhythm"
+        }
+      ]
+    },
+    {
+      "name": "Default-NZ",
+      "description": "Used when no other settings are specified",
       "based_on": "Neuzeit Grotesk",
       "mixins": [
         {
@@ -20,7 +57,7 @@
       ]
     },
     {
-      "name": "Body text",
+      "name": "Body text-NZ",
       "description": "Used for body text",
       "based_on": "Neuzeit Grotesk",
       "mixins": [
