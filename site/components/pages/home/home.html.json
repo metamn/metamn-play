@@ -6,8 +6,18 @@
         "title": "Clean User Interfaces",
         "images": [
           {
+            "title": "The Smuff archive page on mobile",
+            "name": "inu-frontpage-laptop-front",
+            "responsive": [
+              {
+                "breakpoint": "mobile",
+                "name": "smuff-archive-mobile-screenshot"
+              }
+            ]
+          },
+          {
             "title": "The Scatter frontpage on mobile",
-            "name": "anvelocom-frontpage-laptop-front",
+            "name": "scatter-frontpage-laptop-front",
             "responsive": [
               {
                 "breakpoint": "mobile",
@@ -17,15 +27,23 @@
           },
           {
             "title": "The OCCRP frontpage on mobile",
-            "name": "occrp-mobile-frontpage-screenshot"
-          },
-          {
-            "title": "The Smuff archive page on mobile",
-            "name": "smuff-archive-mobile-screenshot"
+            "name": "iorad-pricing-laptop-front",
+            "responsive": [
+              {
+                "breakpoint": "mobile",
+                "name": "occrp-mobile-frontpage-screenshot"
+              }
+            ]
           },
           {
             "title": "The Anvelocom menu on mobile",
-            "name": "anvelocom-menu-mobile-screenshot"
+            "name": "anvelocom-frontpage-laptop-front",
+            "responsive": [
+              {
+                "breakpoint": "mobile",
+                "name": "anvelocom-menu-mobile-screenshot"
+              }
+            ]
           }
         ]
       },
