@@ -1,4 +1,6 @@
 @mixin home__about {
+  padding: $lem;
+  
   .about {
     @include about;
   }

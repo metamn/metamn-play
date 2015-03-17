@@ -1,4 +1,3 @@
 @mixin about {
-  padding: $lem;
   @include text-style(body-text);
 }

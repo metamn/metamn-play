@@ -1,6 +1,4 @@
 @mixin home__values {
-  padding: $lem 0;
-
   .value {
     @include value;
   }
