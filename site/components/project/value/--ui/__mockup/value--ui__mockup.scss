@@ -3,6 +3,9 @@
 
   .ios-device {
     @include ios-device(17.5em);
-    @include ios-device--cut-half(24em);
+
+    @include mobile {
+      @include ios-device--cut-half(24em);
+    }
   }
 }

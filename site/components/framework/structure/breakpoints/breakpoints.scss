@@ -37,3 +37,9 @@ $breakpoint-tablet: 64em;
   }
 }
 
+@mixin tablet-and-up {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content
+  }
+}
+

@@ -27,6 +27,10 @@
     {
       "name": "tablet-and-below",
       "media_query": "(max-width: $breakpoint-tablet - 0.001)"
+    },
+    {
+      "name": "tablet-and-up",
+      "media_query": "(min-width: $breakpoint-tablet)"
     }
   ]
 }
