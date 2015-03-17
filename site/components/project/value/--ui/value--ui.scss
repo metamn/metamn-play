@@ -8,7 +8,6 @@
     @include mobile-and-up {
       figure {
         @include figure;
-        @include placeholder;
       }
     }
 

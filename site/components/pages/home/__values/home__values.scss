@@ -1,4 +1,7 @@
 @mixin home__values {
+  display: inline-flex;
+  flex-wrap: wrap;
+  
   .value {
     @include value;
   }

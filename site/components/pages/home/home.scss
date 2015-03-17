@@ -1,14 +1,24 @@
-.home__about {
-  @include home__about;
-}
+html {
+  body {
+    @include semantic-html5-titles;
 
-.home__values {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  @include home__values;
-}
+    .header {
+      @include header;
+    }
 
-.links {
-  padding: $lem;
+    .home__about {
+      @include home__about;
+    }
+
+    .home__values {
+      @include home__values;
+    }
+
+    .links {
+      padding: $lem;
+    }
+  }
 }
