@@ -3,5 +3,12 @@
 }
 
 .home__values {
+  display: flex;
+  flex-wrap: wrap;
+
   @include home__values;
+}
+
+.links {
+  padding: $lem;
 }

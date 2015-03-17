@@ -1,7 +1,9 @@
 html {
   body {
-    padding: 0 $lem $lem;
     @include semantic-html5-titles;
+
+    display: flex;
+    flex-wrap: wrap;
 
     .header {
       @include header;
