@@ -1,4 +1,4 @@
-<aside class="value__description value--{{ value.id }}__images">
+<aside class="value__description value--{{ value.id }}__description">
   <h3>Description</h3>
 
   <ul>
