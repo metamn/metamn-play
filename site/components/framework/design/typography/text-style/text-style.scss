@@ -13,6 +13,7 @@
   @if ($variant == 'default') {
 @include font(neuzeit-grotesk-regular);
     @include typographic-scale(default);
+    @include colors(black-on-white);
     
     
   }
@@ -24,28 +25,6 @@
 @include font(neuzeit-grotesk-regular);
     @include typographic-scale(body-text);
     @include vertical-rhythm;
-    
-    
-  }
-  
-  // Logo
-  // - Used for the logo
-  
-  @if ($variant == 'logo') {
-@include font(neuzeit-grotesk-bold);
-    @include typographic-scale(body-text);
-    @include uppercase(1.2px);
-    
-    
-  }
-  
-  // Navigation
-  // - Used for navigation elements
-  
-  @if ($variant == 'navigation') {
-@include font(neuzeit-grotesk-bold);
-    @include typographic-scale(default);
-    @include uppercase(1.2px);
     
     
   }

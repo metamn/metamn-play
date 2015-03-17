@@ -4,14 +4,14 @@
       "name": "default",
       "description": "The default font size and line height",
       "font_size": "100%",
-      "line_height": "1.35",
+      "line_height": "1.25",
       "lem": "1.25em"
     },
     {
       "name": "body-text",
-      "description": "Slightly larger than the default for better reading",
-      "font_size": "1.25em",
-      "line_height": "1.35",
+      "description": "Same as the default with fixed width for better reading",
+      "font_size": "1em",
+      "line_height": "1.25",
       "max_width": "30em"
     }
   ]

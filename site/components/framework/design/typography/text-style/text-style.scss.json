@@ -12,6 +12,10 @@
         {
           "name": "typographic-scale",
           "value": "default"
+        },
+        {
+          "name": "colors",
+          "value": "black-on-white"
         }
       ]
     },
@@ -30,44 +34,6 @@
         },
         {
           "name": "vertical-rhythm"
-        }
-      ]
-    },
-    {
-      "name": "Logo",
-      "description": "Used for the logo",
-      "based_on": "Neuzeit Grotesk",
-      "mixins": [
-        {
-          "name": "font",
-          "value": "neuzeit-grotesk-bold"
-        },
-        {
-          "name": "typographic-scale",
-          "value": "body-text"
-        },
-        {
-          "name": "uppercase",
-          "value": "1.2px"
-        }
-      ]
-    },
-    {
-      "name": "Navigation",
-      "description": "Used for navigation elements",
-      "based_on": "Neuzeit Grotesk",
-      "mixins": [
-        {
-          "name": "font",
-          "value": "neuzeit-grotesk-bold"
-        },
-        {
-          "name": "typographic-scale",
-          "value": "default"
-        },
-        {
-          "name": "uppercase",
-          "value": "1.2px"
         }
       ]
     }

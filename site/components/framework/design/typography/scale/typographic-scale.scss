@@ -23,7 +23,7 @@ $lem: 1.25em;
 // Reset all block text elements to default font size and line height
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  line-height: 1.35;
+  line-height: 1.25;
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -41,14 +41,14 @@ p, ul, li, dt, dl {
   // The default font size and line height
   @if ($variant == 'default') {
     font-size: 100%;
-    line-height: 1.35;
+    line-height: 1.25;
   
   }
 
-  // Slightly larger than the default for better reading
+  // Same as the default with fixed width for better reading
   @if ($variant == 'body-text') {
-    font-size: 1.25em;
-    line-height: 1.35;
+    font-size: 1em;
+    line-height: 1.25;
   max-width: 30em;
   }
 

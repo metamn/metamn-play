@@ -11,50 +11,20 @@
       "description": "The foreground color"
     },
     {
-      "name": "lightgray",
-      "value": "#f1f1f1",
-      "description": "The background color for article title"
-    },
-    {
-      "name": "gray",
-      "value": "#999",
-      "description": "The list border bottom color for the menu"
-    },
-    {
-      "name": "red",
-      "value": "#fa0000",
-      "description": "The list border bottom color for the menu"
+      "name": "marsala",
+      "value": "#6D403C",
+      "description": "The highlight color. A darker version of #AD655F for full AAA contrast"
     }
   ],
   "color_pairs": [
-    {
-      "name": "black-on-white",
-      "color": "$black",
-      "background": "$white"
-    },
     {
       "name": "white-on-black",
       "color": "$white",
       "background": "$black"
     },
     {
-      "name": "black-on-lightgray",
-      "color": "$black",
-      "background": "$lightgray"
-    },
-    {
-      "name": "white-on-gray",
-      "color": "$white",
-      "background": "$gray"
-    },
-    {
-      "name": "gray-on-white",
-      "color": "$gray",
-      "background": "$white"
-    },
-    {
-      "name": "red-on-white",
-      "color": "$red",
+      "name": "marsala-on-white",
+      "color": "$marsala",
       "background": "$white"
     }
   ]
