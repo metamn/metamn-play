@@ -1,22 +1,24 @@
 @mixin value--ui {
-  .value--ui__mockup {
-    @include value--ui__mockup;
 
-    @include tablet-and-below {
-      display: none;
-      &:first-of-type {
-        display: flex;
+  .value--ui__mockup {
+    @include mobile {
+      @include value--ui__mockup;
+    }
+
+    @include mobile-and-up {
+      figure {
+        @include figure;
+        @include placeholder;
       }
     }
-  }
 
-  @include tablet-and-up {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .value--ui__title {
-      width: 100%;
+    display: none;
+    &:first-of-type {
+      display: flex;
     }
   }
+
+
+
+
 }

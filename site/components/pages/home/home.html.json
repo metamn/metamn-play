@@ -7,7 +7,13 @@
         "images": [
           {
             "title": "The Scatter frontpage on mobile",
-            "name": "scatter-frontpage-mobile-screenshot"
+            "name": "placeholder-16-9",
+            "responsive": [
+              {
+                "breakpoint": "mobile",
+                "name": "scatter-frontpage-mobile-screenshot"
+              }
+            ]
           },
           {
             "title": "The OCCRP frontpage on mobile",
