@@ -26,6 +26,11 @@
       "name": "marsala-on-white",
       "color": "$marsala",
       "background": "$white"
+    },
+    {
+      "name": "white-on-marsala",
+      "color": "$white",
+      "background": "$marsala"
     }
   ]
 }

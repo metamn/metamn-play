@@ -26,4 +26,9 @@ $marsala: #6D403C;
     color: $marsala;
   }
 
+  @if ($name == 'white-on-marsala') {
+    background: $marsala;
+    color: $white;
+  }
+
 }

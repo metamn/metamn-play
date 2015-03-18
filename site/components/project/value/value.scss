@@ -1,7 +1,6 @@
 @mixin value {
   padding: $lem;
 
-
   figure {
     @include figure;
   }

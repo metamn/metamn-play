@@ -12,7 +12,7 @@
   @if ($variant == 'default') {
     @include font(futura-pt-book);
     @include typographic-scale(default);
-    @include colors(black-on-white);
+    @include colors(marsala-on-white);
     
     
   }
