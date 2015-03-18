@@ -1,0 +1,27 @@
+@mixin value--ui__slider {
+  padding: $lem/2 0;
+  display: flex;
+
+  div {
+    margin-right: $lem/2;
+    cursor: pointer;
+
+    span {
+      &.active {
+        display: none;
+      }
+    }
+
+    &.active {
+      cursor: default;
+      
+      span {
+        display: none;
+
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+}

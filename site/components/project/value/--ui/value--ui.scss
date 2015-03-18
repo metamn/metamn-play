@@ -1,7 +1,9 @@
 @mixin value--ui {
-//  @include slider('.value--ui__mockup');
-
   .value--ui__mockup {
     @include value--ui__mockup;
+  }
+
+  .value--ui__slider {
+    @include value--ui__slider;
   }
 }
