@@ -15,7 +15,7 @@
 // - The default typeface, sans-serif
 // - character set: English
 // - served from Typekit
-// - styles and weights: , 
+// - styles and weights: 
 
 
 
@@ -26,19 +26,17 @@
   @if ($variant == 'neuzeit-grotesk-light') {
     font-family: 'Neuzeit Grotesk Light', sans-serif;
   }
-  
+
   @if ($variant == 'neuzeit-grotesk-regular') {
     font-family: 'Neuzeit Grotesk Regular', sans-serif;
   }
-  
+
   @if ($variant == 'neuzeit-grotesk-bold') {
     font-family: 'Neuzeit Grotesk Bold', sans-serif;
   }
-  
 
-  @if ($variant == 'europa-') {
-    font-family: 'Europa ', sans-serif;
+  @if ($variant == 'europa') {
+    font-family: 'Europa', sans-serif;
   }
-  
 
 }

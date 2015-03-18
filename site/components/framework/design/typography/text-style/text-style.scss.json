@@ -1,13 +1,13 @@
 {
   "text_styles": [
     {
-      "name": "Default",
+      "name": "Default--E",
       "description": "Used when no other settings are specified",
       "based_on": "Europa",
       "mixins": [
         {
           "name": "font",
-          "value": "europa-"
+          "value": "europa"
         },
         {
           "name": "typographic-scale",
@@ -17,10 +17,20 @@
           "name": "colors",
           "value": "black-on-white"
         }
+      ],
+      "properties": [
+        {
+          "name": "font-weight",
+          "value": "400"
+        },
+        {
+          "name": "font-style",
+          "value": "normal"
+        }
       ]
     },
     {
-      "name": "Body text",
+      "name": "Body text-E",
       "description": "Used for body text",
       "based_on": "Europa",
       "mixins": [
@@ -38,7 +48,7 @@
       ]
     },
     {
-      "name": "Default-NZ",
+      "name": "Default",
       "description": "Used when no other settings are specified",
       "based_on": "Neuzeit Grotesk",
       "mixins": [
@@ -57,13 +67,13 @@
       ]
     },
     {
-      "name": "Body text-NZ",
+      "name": "Body text",
       "description": "Used for body text",
       "based_on": "Neuzeit Grotesk",
       "mixins": [
         {
           "name": "font",
-          "value": "neuzeit-grotesk-regular"
+          "value": "neuzeit-grotesk-bold"
         },
         {
           "name": "typographic-scale",

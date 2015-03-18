@@ -23,12 +23,7 @@
       "description": "The default typeface",
       "family": "sans-serif",
       "character_set": "English",
-      "served_from": "Typekit",
-      "styles": [
-        {
-          "name": ""
-        }
-      ]
+      "served_from": "Typekit"
     }
   ]
 }

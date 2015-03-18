@@ -17,10 +17,13 @@
 
 // The font mixin
 @mixin font($variant) {
-{% for font in fonts %}{% set font_name = c.classname(font.name ) %}{% for style in font.styles %}{% set style_name = c.classname(style.name ) %}
+{% for font in fonts %}{% set font_name = c.classname(font.name ) %}{% if font.styles %}{% for style in font.styles %}{% set style_name = c.classname(style.name ) %}
   @if ($variant == '{{ font_name }}-{{ style_name }}') {
     font-family: '{{ font.name }} {{ style.name }}', {{ font.family }};
   }
-  {% endfor %}
-{% endfor %}
+{% endfor %}{% else %}
+  @if ($variant == '{{ font_name }}') {
+    font-family: '{{ font.name }}', {{ font.family }};
+  }
+{% endif %}{% endfor %}
 }

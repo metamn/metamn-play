@@ -9,10 +9,12 @@
 
     <title>{{ title }} &mdash; {{ site.title }}</title>
 
+    <!--
     <script src="//use.typekit.net/qiy3lwz.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    -->
 
-    <!--
+
     <script type="text/javascript">
     (function() {
         var path = '//easy.myfonts.net/v2/js?sid=5071(font-family=Neuzeit+Grotesk+Bold)&sid=5070(font-family=Neuzeit+Grotesk+Regular)&sid=5069(font-family=Neuzeit+Grotesk+Light)&key=FcBJMlF3Ms',
@@ -25,7 +27,7 @@
         head.appendChild(trial);
     })();
     </script>
-    -->
+    
 
     <link href="{{ site.url }}assets/styles/site.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
