@@ -1,15 +1,5 @@
 @mixin value--ui {
-
   .value--ui__mockup {
     @include value--ui__mockup;
-
-    display: none;
-    &:first-of-type {
-      display: flex;
-    }
   }
-
-
-
-
 }
