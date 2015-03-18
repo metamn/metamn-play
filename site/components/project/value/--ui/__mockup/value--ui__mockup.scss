@@ -11,6 +11,7 @@
 
       figure {
         position: absolute;
+        @include animation(transform);
 
         img {
           width: 100%;

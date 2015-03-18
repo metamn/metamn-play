@@ -7,8 +7,11 @@
     cursor: pointer;
 
     span {
+      @include animation(opacity);
+      
       &.active {
         display: none;
+        opacity: 0;
       }
     }
 
@@ -17,9 +20,11 @@
 
       span {
         display: none;
+        opacity: 0;
 
         &.active {
           display: flex;
+          opacity: 1;
         }
       }
     }
