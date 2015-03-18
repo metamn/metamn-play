@@ -1,4 +1,6 @@
 <div class="ios-device__screen">
-  {% set image = content %}
-  {% include '../../../../../structure/images/figure.html.swig' %}
+  {% for image in images %}
+    {% set image = image %}
+    {% include '../../../../../structure/images/figure.html.swig' %}
+  {% endfor %}
 </div>

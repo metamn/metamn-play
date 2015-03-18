@@ -1,0 +1,8 @@
+@mixin slider($slide) {
+  position: relative;
+
+  #{$slide} {
+    position: absolute;
+    top: 0;
+  }
+}
