@@ -5,5 +5,27 @@
     @include mobile {
       @include ios-device--cut-half(23em);
     }
+
+    .ios-device__screen {
+      position: relative;
+
+      figure {
+        position: absolute;
+
+        img {
+          width: 100%;
+        }
+
+        @for $i from 0 through 3 {
+          &.moved-right-#{$i} {
+            transform: translateX($i * 100%);
+          }
+
+          &.moved-left-#{$i} {
+            transform: translateX(-$i * 100%);
+          }
+        }
+      }
+    }
   }
 }
