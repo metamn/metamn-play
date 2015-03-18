@@ -1,6 +1,4 @@
 @mixin home__values {
-  @include colors(white-on-blue);
-
   .value {
     @include value;
   }

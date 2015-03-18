@@ -8,17 +8,6 @@ html {
       @include link;
     }
 
-
-
-    display: flex;
-    flex-wrap: wrap;
-
-    @include cinema {
-      .home__values {
-        order: -1;
-      }
-    }
-
     .header {
       @include header;
     }
@@ -34,5 +23,23 @@ html {
     .links {
       padding: $lem;
     }
+
+    @include home-layout;
   }
+}
+
+
+@mixin home-layout {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .home__values {
+    @include colors(white-on-blue);
+
+    @include cinema {
+      order: -1;
+    }
+  }
+
 }
