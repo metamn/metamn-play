@@ -1,15 +1,7 @@
 @mixin value--ui {
 
   .value--ui__mockup {
-    @include mobile {
-      @include value--ui__mockup;
-    }
-
-    @include mobile-and-up {
-      figure {
-        @include figure;
-      }
-    }
+    @include value--ui__mockup;
 
     display: none;
     &:first-of-type {

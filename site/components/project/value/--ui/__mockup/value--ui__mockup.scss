@@ -1,6 +1,4 @@
 @mixin value--ui__mockup {
-  margin-bottom: $lem;
-
   .ios-device {
     @include ios-device(17.5em);
 

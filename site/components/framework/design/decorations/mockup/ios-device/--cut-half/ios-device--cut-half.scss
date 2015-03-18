@@ -7,4 +7,10 @@
   &:after {
     display: none;
   }
+
+  .ios-device__screen {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
