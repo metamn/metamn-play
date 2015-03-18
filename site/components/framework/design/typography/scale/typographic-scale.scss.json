@@ -12,7 +12,15 @@
       "description": "Same as the default with fixed width for better reading",
       "font_size": "1em",
       "line_height": "1.25",
-      "max_width": "30em"
+      "max_width": "30em",
+      "responsive": [
+        {
+          "breakpoint": "tablet-and-up",
+          "font_size": "1.25em",
+          "line_height": "1.25",
+          "max_width": "30em"
+        }
+      ]
     }
   ]
 }

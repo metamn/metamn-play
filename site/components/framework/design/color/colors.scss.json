@@ -7,7 +7,7 @@
     },
     {
       "name": "black",
-      "value": "#222",
+      "value": "#3c3c3c",
       "description": "The foreground color"
     },
     {
@@ -18,9 +18,9 @@
   ],
   "color_pairs": [
     {
-      "name": "white-on-black",
-      "color": "$white",
-      "background": "$black"
+      "name": "black-on-white",
+      "color": "$black",
+      "background": "$white"
     },
     {
       "name": "marsala-on-white",

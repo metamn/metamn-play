@@ -42,14 +42,22 @@ p, ul, li, dt, dl {
   @if ($variant == 'default') {
     font-size: 100%;
     line-height: 1.25;
-  
+    
+    
   }
 
   // Same as the default with fixed width for better reading
   @if ($variant == 'body-text') {
     font-size: 1em;
     line-height: 1.25;
-  max-width: 30em;
+    max-width: 30em;
+    
+    @include tablet-and-up {
+      font-size: 1.25em;
+      line-height: 1.25;
+      max-width: 30em;
+    }
+    
   }
 
 }

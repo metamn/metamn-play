@@ -7,35 +7,10 @@
 // The text mixin
 @mixin text-style($variant) {
   
-  // Default--E
-  // - Used when no other settings are specified
-  
-  @if ($variant == 'default--e') {
-@include font(europa);
-    @include typographic-scale(default);
-    @include colors(black-on-white);
-    
-    font-weight: 400;
-    font-style: normal;
-    
-  }
-  
-  // Body text-E
-  // - Used for body text
-  
-  @if ($variant == 'body-text-e') {
-@include font(europa-regular);
-    @include typographic-scale(body-text);
-    @include vertical-rhythm;
-    
-    
-  }
-  
   // Default
-  // - Used when no other settings are specified
-  
+  // - The default font
   @if ($variant == 'default') {
-@include font(neuzeit-grotesk-regular);
+    @include font(futura-pt-book);
     @include typographic-scale(default);
     @include colors(black-on-white);
     
@@ -43,10 +18,9 @@
   }
   
   // Body text
-  // - Used for body text
-  
+  // - Used for body text. It has a fixed width and a vertical rhytm.
   @if ($variant == 'body-text') {
-@include font(neuzeit-grotesk-bold);
+    @include font(futura-pt-book);
     @include typographic-scale(body-text);
     @include vertical-rhythm;
     

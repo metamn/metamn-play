@@ -1,60 +1,13 @@
 {
   "text_styles": [
     {
-      "name": "Default--E",
-      "description": "Used when no other settings are specified",
-      "based_on": "Europa",
-      "mixins": [
-        {
-          "name": "font",
-          "value": "europa"
-        },
-        {
-          "name": "typographic-scale",
-          "value": "default"
-        },
-        {
-          "name": "colors",
-          "value": "black-on-white"
-        }
-      ],
-      "properties": [
-        {
-          "name": "font-weight",
-          "value": "400"
-        },
-        {
-          "name": "font-style",
-          "value": "normal"
-        }
-      ]
-    },
-    {
-      "name": "Body text-E",
-      "description": "Used for body text",
-      "based_on": "Europa",
-      "mixins": [
-        {
-          "name": "font",
-          "value": "europa-regular"
-        },
-        {
-          "name": "typographic-scale",
-          "value": "body-text"
-        },
-        {
-          "name": "vertical-rhythm"
-        }
-      ]
-    },
-    {
       "name": "Default",
-      "description": "Used when no other settings are specified",
-      "based_on": "Neuzeit Grotesk",
+      "description": "The default font",
+      "based_on": "Futura PT Book",
       "mixins": [
         {
           "name": "font",
-          "value": "neuzeit-grotesk-regular"
+          "value": "futura-pt-book"
         },
         {
           "name": "typographic-scale",
@@ -68,12 +21,12 @@
     },
     {
       "name": "Body text",
-      "description": "Used for body text",
-      "based_on": "Neuzeit Grotesk",
+      "description": "Used for body text. It has a fixed width and a vertical rhytm.",
+      "based_on": "Futura PT Book",
       "mixins": [
         {
           "name": "font",
-          "value": "neuzeit-grotesk-bold"
+          "value": "futura-pt-book"
         },
         {
           "name": "typographic-scale",

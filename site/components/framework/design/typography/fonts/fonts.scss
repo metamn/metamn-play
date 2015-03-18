@@ -4,18 +4,11 @@
 // - this file is auto generated. Please do not edit
 
 
-// Neuzeit Grotesk
+// Futura PT
 // - The default typeface, sans-serif
-// - character set: English
-// - served from Myfonts.com
-// - styles and weights: Light, Regular, Bold, 
-
-
-// Europa
-// - The default typeface, sans-serif
-// - character set: English
+// - character set: English, with OpenType Features on
 // - served from Typekit
-// - styles and weights: 
+// - styles and weights: Book, 
 
 
 
@@ -23,20 +16,11 @@
 // The font mixin
 @mixin font($variant) {
 
-  @if ($variant == 'neuzeit-grotesk-light') {
-    font-family: 'Neuzeit Grotesk Light', sans-serif;
+  @if ($variant == 'futura-pt-book') {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
-
-  @if ($variant == 'neuzeit-grotesk-regular') {
-    font-family: 'Neuzeit Grotesk Regular', sans-serif;
-  }
-
-  @if ($variant == 'neuzeit-grotesk-bold') {
-    font-family: 'Neuzeit Grotesk Bold', sans-serif;
-  }
-
-  @if ($variant == 'europa') {
-    font-family: 'Europa', sans-serif;
-  }
-
+  
 }
+

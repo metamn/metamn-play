@@ -9,12 +9,11 @@
   {% for text in text_styles %}
   // {{ text.name }}
   // - {{ text.description }}
-  {% set classname = c.classname(text.name) %}
-  @if ($variant == '{{ classname }}') {
-{% for mixin in text.mixins %}@include {{ mixin.name }}{% if mixin.value %}({{ mixin.value }}){% endif %};
+  {% set classname = c.classname(text.name) %}@if ($variant == '{{ classname }}') {
+    {% for mixin in text.mixins %}@include {{ mixin.name }}{% if mixin.value %}({{ mixin.value }}){% endif %};
     {% endfor %}
-    {% for property in text.properties %}{{ property.name }}: {{ property.value }};
-    {% endfor %}
+    {% if text.properties %}{% for property in text.properties %}{{ property.name }}: {{ property.value }};
+    {% endfor %}{% endif %}
   }
   {% endfor %}
 }

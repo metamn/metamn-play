@@ -7,7 +7,7 @@
 $white: #fff;
 
 // The foreground color
-$black: #222;
+$black: #3c3c3c;
 
 // The highlight color. A darker version of #AD655F for full AAA contrast
 $marsala: #6D403C;
@@ -16,12 +16,12 @@ $marsala: #6D403C;
 // Color combinations. Colors are not used standalone but in pairs
 @mixin colors($name) {
 
-  @if $name == white-on-black {
-    background: $black;
-    color: $white;
+  @if ($name == 'black-on-white') {
+    background: $white;
+    color: $black;
   }
 
-  @if $name == marsala-on-white {
+  @if ($name == 'marsala-on-white') {
     background: $white;
     color: $marsala;
   }

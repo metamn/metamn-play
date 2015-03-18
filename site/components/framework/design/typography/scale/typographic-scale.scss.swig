@@ -42,7 +42,14 @@ p, ul, li, dt, dl {
   @if ($variant == '{{ scale.name }}') {
     font-size: {{ scale.font_size }};
     line-height: {{ scale.line_height }};
-  {% if scale.max_width %}max-width: {{ scale.max_width }};{% endif %}
+    {% if scale.max_width %}max-width: {{ scale.max_width }};{% endif %}
+    {% for responsive in scale.responsive %}
+    @include {{ responsive.breakpoint }} {
+      font-size: {{ responsive.font_size }};
+      line-height: {{ responsive.line_height }};
+      {% if responsive.max_width %}max-width: {{ responsive.max_width }};{% endif %}
+    }
+    {% endfor %}
   }
 {% endfor %}
 }
