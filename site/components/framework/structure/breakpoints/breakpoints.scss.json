@@ -19,6 +19,11 @@
       "name": "desktop",
       "value": "90em",
       "description": "Screens above 1440px"
+    },
+    {
+      "name": "cinema",
+      "value": "120em",
+      "description": "Screens above 1920px"
     }
   ],
   "responsive_mixins": [
@@ -53,6 +58,10 @@
     {
       "name": "desktop",
       "media_query": "(min-width: $breakpoint-laptop)"
+    },
+    {
+      "name": "cinema",
+      "media_query": "(min-width: $breakpoint-cinema)"
     }
   ]
 }

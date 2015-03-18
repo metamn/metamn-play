@@ -8,8 +8,16 @@ html {
       @include link;
     }
 
+
+
     display: flex;
     flex-wrap: wrap;
+
+    @include cinema {
+      .home__values {
+        order: -1;
+      }
+    }
 
     .header {
       @include header;
