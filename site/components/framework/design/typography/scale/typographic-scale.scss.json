@@ -12,10 +12,6 @@
         {
           "name": "line-height",
           "value": "1.25"
-        },
-        {
-          "name": "letter-spacing",
-          "value": "1.1px"
         }
       ]
     },

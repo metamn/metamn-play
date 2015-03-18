@@ -1,28 +1,6 @@
 @mixin value {
   padding: $lem;
 
-  figure {
-    @include figure;
-  }
-
-  // Display semantic HTML5 titles
-  .value__title {
-    display: flex;
-  }
-
-  .container {
-    @include mobile-and-up {
-      display: flex;
-
-      .value__description {
-        order: 2;
-        padding-left: $lem;
-      }
-    }
-  }
-
-
-
   &.value--ui {
     @include value--ui;
   }

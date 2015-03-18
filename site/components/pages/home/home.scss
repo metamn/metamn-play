@@ -8,8 +8,13 @@ html {
       @include link;
     }
 
-    @include home-layout;
+    figure {
+      @include figure;
+    }
     
+
+    @include home-layout;
+
 
     .header {
       @include header;
