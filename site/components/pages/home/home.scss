@@ -1,6 +1,7 @@
 html {
   body {
     @include text-style(default);
+    @include reset;
     @include semantic-html5-titles;
 
     display: flex;

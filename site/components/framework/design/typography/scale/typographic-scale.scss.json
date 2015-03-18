@@ -3,22 +3,25 @@
     {
       "name": "default",
       "description": "The default font size and line height",
-      "font_size": "100%",
-      "line_height": "1.25",
-      "lem": "1.25em"
+      "lem": "1.25em",
+      "properties": [
+        {
+          "name": "font-size",
+          "value": "125%"
+        },
+        {
+          "name": "line-height",
+          "value": "1.25"
+        }
+      ]
     },
     {
       "name": "body-text",
       "description": "Same as the default with fixed width for better reading",
-      "font_size": "1em",
-      "line_height": "1.25",
-      "max_width": "30em",
-      "responsive": [
+      "properties": [
         {
-          "breakpoint": "tablet-and-up",
-          "font_size": "1.25em",
-          "line_height": "1.25",
-          "max_width": "30em"
+          "name": "max-width",
+          "value": "30em"
         }
       ]
     }

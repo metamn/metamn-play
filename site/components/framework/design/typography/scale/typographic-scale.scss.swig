@@ -20,34 +20,18 @@
 {% set default_scale = typographic_scale | first %}
 $lem: {{ default_scale.lem }};
 
-// Reset all block text elements to default font size and line height
-h1, h2, h3, h4, h5, h6 {
-  font-size: {{ default_scale.font_size }};
-  line-height: {{ default_scale.line_height }};
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-p, ul, li, dt, dl {
-  margin: 0;
-  padding: 0;
-}
-
 
 // Different typographic scales
 @mixin typographic-scale($variant) {
 {% for scale in typographic_scale %}
   // {{ scale.description }}
   @if ($variant == '{{ scale.name }}') {
-    font-size: {{ scale.font_size }};
-    line-height: {{ scale.line_height }};
-    {% if scale.max_width %}max-width: {{ scale.max_width }};{% endif %}
+    {% for property in scale.properties %}{{ property.name }}: {{ property.value }};
+    {% endfor %}
     {% for responsive in scale.responsive %}
     @include {{ responsive.breakpoint }} {
-      font-size: {{ responsive.font_size }};
-      line-height: {{ responsive.line_height }};
-      {% if responsive.max_width %}max-width: {{ responsive.max_width }};{% endif %}
+      {% for property in responsive.properties %}{{ property.name }}: {{ property.value }};
+      {% endfor %}
     }
     {% endfor %}
   }

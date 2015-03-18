@@ -20,27 +20,13 @@
 
 $lem: 1.25em;
 
-// Reset all block text elements to default font size and line height
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  line-height: 1.25;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-p, ul, li, dt, dl {
-  margin: 0;
-  padding: 0;
-}
-
 
 // Different typographic scales
 @mixin typographic-scale($variant) {
 
   // The default font size and line height
   @if ($variant == 'default') {
-    font-size: 100%;
+    font-size: 125%;
     line-height: 1.25;
     
     
@@ -48,15 +34,8 @@ p, ul, li, dt, dl {
 
   // Same as the default with fixed width for better reading
   @if ($variant == 'body-text') {
-    font-size: 1em;
-    line-height: 1.25;
     max-width: 30em;
     
-    @include tablet-and-up {
-      font-size: 1.25em;
-      line-height: 1.25;
-      max-width: 30em;
-    }
     
   }
 
