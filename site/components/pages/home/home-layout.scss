@@ -1,0 +1,14 @@
+@mixin home-layout {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .home__values {
+    @include colors(white-on-blue);
+
+    @include cinema {
+      order: -1;
+    }
+  }
+
+}
