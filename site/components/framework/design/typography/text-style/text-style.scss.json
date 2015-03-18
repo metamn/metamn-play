@@ -15,7 +15,7 @@
         },
         {
           "name": "colors",
-          "value": "marsala-on-white"
+          "value": "black-on-white"
         }
       ]
     },
@@ -34,6 +34,21 @@
         },
         {
           "name": "vertical-rhythm"
+        }
+      ]
+    },
+    {
+      "name": "Logo",
+      "description": "Used for the logo only",
+      "based_on": "Futura PT Medium",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "futura-pt-medium"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "body-text"
         }
       ]
     }

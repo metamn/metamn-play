@@ -7,13 +7,13 @@
     },
     {
       "name": "black",
-      "value": "#3c3c3c",
-      "description": "The foreground color"
+      "value": "#000",
+      "description": "The text color"
     },
     {
-      "name": "marsala",
-      "value": "#6D403C",
-      "description": "The highlight color. A darker version of #AD655F for full AAA contrast"
+      "name": "blue",
+      "value": "#00f",
+      "description": "The highlight color"
     }
   ],
   "color_pairs": [
@@ -23,14 +23,14 @@
       "background": "$white"
     },
     {
-      "name": "marsala-on-white",
-      "color": "$marsala",
+      "name": "blue-on-white",
+      "color": "$blue",
       "background": "$white"
     },
     {
-      "name": "white-on-marsala",
+      "name": "white-on-blue",
       "color": "$white",
-      "background": "$marsala"
+      "background": "$blue"
     }
   ]
 }

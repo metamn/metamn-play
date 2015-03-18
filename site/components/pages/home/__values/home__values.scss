@@ -1,6 +1,5 @@
 @mixin home__values {
-  display: inline-flex;
-  flex-wrap: wrap;
+  @include colors(white-on-blue);
 
   .value {
     @include value;

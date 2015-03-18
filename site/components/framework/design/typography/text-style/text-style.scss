@@ -12,7 +12,7 @@
   @if ($variant == 'default') {
     @include font(futura-pt-book);
     @include typographic-scale(default);
-    @include colors(marsala-on-white);
+    @include colors(black-on-white);
     
     
   }
@@ -23,6 +23,15 @@
     @include font(futura-pt-book);
     @include typographic-scale(body-text);
     @include vertical-rhythm;
+    
+    
+  }
+  
+  // Logo
+  // - Used for the logo only
+  @if ($variant == 'logo') {
+    @include font(futura-pt-medium);
+    @include typographic-scale(body-text);
     
     
   }

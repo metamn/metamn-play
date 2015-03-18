@@ -4,6 +4,10 @@ html {
     @include reset;
     @include semantic-html5-titles;
 
+    a {
+      @include link;
+    }
+
     display: flex;
     flex-wrap: wrap;
 

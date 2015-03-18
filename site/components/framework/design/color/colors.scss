@@ -6,11 +6,11 @@
 // The background color
 $white: #fff;
 
-// The foreground color
-$black: #3c3c3c;
+// The text color
+$black: #000;
 
-// The highlight color. A darker version of #AD655F for full AAA contrast
-$marsala: #6D403C;
+// The highlight color
+$blue: #00f;
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -21,13 +21,13 @@ $marsala: #6D403C;
     color: $black;
   }
 
-  @if ($name == 'marsala-on-white') {
+  @if ($name == 'blue-on-white') {
     background: $white;
-    color: $marsala;
+    color: $blue;
   }
 
-  @if ($name == 'white-on-marsala') {
-    background: $marsala;
+  @if ($name == 'white-on-blue') {
+    background: $blue;
     color: $white;
   }
 

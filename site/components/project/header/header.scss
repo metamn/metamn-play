@@ -1,6 +1,6 @@
 @mixin header {
   padding: $lem;
-  
+
   .logo {
     @include logo;
   }

@@ -6,4 +6,8 @@
     @include logo__first_letter;
     display: none;
   }
+
+  .logo__site-title {
+    @include text-style(logo);
+  }
 }
