@@ -1,5 +1,9 @@
 @mixin ux__description {
   div {
     @include text-style(body-text);
+
+    &.blockquote {
+      @include blockquote;
+    }
   }
 }

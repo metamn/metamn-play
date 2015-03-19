@@ -1,0 +1,11 @@
+@mixin blockquote {
+  span {
+    &.blockquote__separator {
+      margin: 0 $lem / 3;
+    }
+
+    &.blockquote__source {
+      font-style: italic;
+    }
+  }
+}

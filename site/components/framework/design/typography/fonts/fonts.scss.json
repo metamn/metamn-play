@@ -16,6 +16,11 @@
           "name": "Medium",
           "weight": "500",
           "style": "normal"
+        },
+        {
+          "name": "Book italic",
+          "weight": "400",
+          "style": "italic"
         }
       ]
     }

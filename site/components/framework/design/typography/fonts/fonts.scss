@@ -8,7 +8,7 @@
 // - The default typeface, sans-serif
 // - character set: English, with OpenType Features on
 // - served from Typekit
-// - styles and weights: Book, Medium, 
+// - styles and weights: Book, Medium, Book italic, 
 
 
 
@@ -26,6 +26,12 @@
     font-family: 'futura-pt', sans-serif;
     font-weight: 500;
     font-style: normal;
+  }
+  
+  @if ($variant == 'futura-pt-book-italic') {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+    font-style: italic;
   }
   
 }

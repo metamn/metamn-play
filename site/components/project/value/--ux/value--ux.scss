@@ -1,16 +1,5 @@
 @mixin value--ux {
-  &__description {
+  .value--ux__description {
     @include ux__description;
-  }
-
-  .container {
-    @include mobile-and-up {
-      display: flex;
-
-      .value--ux__description {
-        order: 2;
-        padding-left: $lem;
-      }
-    }
   }
 }

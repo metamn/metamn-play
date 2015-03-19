@@ -2,11 +2,11 @@
   <h3>Description</h3>
 
   <div>
-    <blockquote>Visitors can focus only on five things on a page</blockquote>
-    <p class="blockquote--source">
-      {% set link = {title: "Jakob Nielsen, Usability Expert", url: "na"} %}
-      {% include '../../../../framework/design/decorations/link/link.html.swig' %}
-    </p>
+    {% set blockquote = "Visitors can focus only on five things on a page" %}
+    {% set blockquote__source = "Jakob Nielsen, Usability Expert" %}
+    {% set blockquote__url = "xxx" %}
+    {% include '../../../../framework/design/typography/mixins/blockquote/blockquote.html.swig' %}
+    
 
     <ol>
       <li>Identity</li>
