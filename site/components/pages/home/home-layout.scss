@@ -6,6 +6,10 @@
   .home__values {
     @include colors(white-on-blue);
 
+    a {
+      @include link(white-on-blue);
+    }
+
     @include cinema {
       order: -1;
     }

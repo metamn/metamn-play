@@ -1,4 +1,11 @@
-@mixin link {
-  @include colors(blue-on-white);
-  text-decoration: none;
+@mixin link($type: default) {
+  @if ($type == 'default') {
+    @include colors(blue-on-white);
+    text-decoration: none;
+  }
+
+  @if ($type == 'white-on-blue') {
+    @include colors(white-on-blue);
+    text-decoration: underline;
+  }
 }
