@@ -1,4 +1,11 @@
 @mixin ul {
-  padding-left: $lem;
-  list-style-position: inside;
+  list-style-position: outside;
+  list-style-type: none;
+
+  li {
+    &:before {
+      content: '\2014';
+      margin-right: $lem / 6;
+    }
+  }
 }

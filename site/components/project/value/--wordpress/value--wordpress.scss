@@ -1,11 +1,5 @@
 @mixin value--wordpress {
-  .container {
-    @include mobile-and-up {
-      display: flex;
-
-      .value--wordpress__description {
-        padding-left: $lem * 2;
-      }
-    }
+  .value--wordpress__description {
+    @include wordpress__description;
   }
 }
