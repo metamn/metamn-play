@@ -1,3 +1,3 @@
 <div class='value--interactions__switcher'>
-  <div>A</div>
+  <div>&#9728;</div>
 </div>

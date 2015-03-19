@@ -1,6 +1,4 @@
 @mixin value--interactions__mockup {
-  margin-bottom: $lem;
-
   .ios-device {
     @include ios-device(17.5em);
 
@@ -14,12 +12,17 @@
       figure {
         position: absolute;
         @include animation(opacity);
+
         opacity: 0;
         z-index: 0;
 
         &.active {
           opacity: 1;
           z-index: 1;
+        }
+
+        img {
+          width: 100%;
         }
       }
     }
