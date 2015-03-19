@@ -1,27 +1,13 @@
 @mixin value--ui__mockup {
-  @include phablet {
-    padding: 0 $lem;
-  }
+  position: relative;
+  min-height: 24em;
+  overflow: hidden;
 
-  .ios-device {
-    @include ios-device;
-    @include ios-device--white;
+  figure {
+    @include slider(4);
 
-    @include phablet-and-below {
-      @include ios-device--iphone-5s;
-      @include ios-device--cut-half(23em);
-    }
-
-    .ios-device__screen {
-      position: relative;
-
-      figure {
-        @include slider(4);
-
-        img {
-          width: 100%;
-        }
-      }
+    img {
+      width: 100%;
     }
   }
 }

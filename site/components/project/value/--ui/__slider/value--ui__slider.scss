@@ -2,10 +2,6 @@
   padding: $lem/2 0;
   display: flex;
 
-  @include phablet {
-    padding-left: $lem;
-  }
-
   div {
     margin-right: $lem/2;
     cursor: pointer;
