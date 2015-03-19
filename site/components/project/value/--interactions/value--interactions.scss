@@ -1,4 +1,7 @@
 @mixin value--interactions {
+  // Because of the slider in UI is moved up
+  padding-top: 0;
+
   .value--interactions__switcher {
     @include value--interactions__switcher;
   }

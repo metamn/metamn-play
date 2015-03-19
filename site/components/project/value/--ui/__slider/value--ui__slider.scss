@@ -1,6 +1,10 @@
 @mixin value--ui__slider {
   padding: $lem/2 0;
-  display: flex;
+  display: inline-flex;
+
+  position: relative;
+  top: -$lem * 3;
+  @include colors(white-on-blue);
 
   div {
     margin-right: $lem/2;

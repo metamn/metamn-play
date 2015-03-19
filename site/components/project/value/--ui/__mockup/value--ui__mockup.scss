@@ -1,7 +1,15 @@
 @mixin value--ui__mockup {
   position: relative;
-  min-height: 24em;
   overflow: hidden;
+
+  max-width: 320px;
+  min-height: 24em;
+
+  @include tablet-and-up {
+    min-height: 20em;
+    max-width: none;
+    width: 100%;
+  }
 
   figure {
     @include slider(4);
