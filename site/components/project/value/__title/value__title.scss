@@ -1,0 +1,15 @@
+@mixin value__title {
+  padding-bottom: $lem;
+
+  display: flex;
+  align-items: center;
+
+  span {
+    &:nth-of-type(2) {
+      border-bottom: 1px solid;
+      height: 1px;
+      width: $lem;
+      margin: 0 $lem/6;
+    }
+  }
+}

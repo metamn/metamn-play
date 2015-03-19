@@ -1,5 +1,7 @@
 <article class="value value--{{ value.id }}">
-  <h3 class="value__title value--{{ value.id }}__title">{{ value.title }}</h3>
+  {% set value = value %}
+  {% set index = 3 %}
+  {% include '../__title/value__title.html.swig' %}
 
   <div class="container">
     {% include '__description/ux__description.html.swig' %}

@@ -1,6 +1,10 @@
 @mixin value {
   padding: $lem;
 
+  .value__title {
+    @include value__title;
+  }
+
   &.value--ui {
     @include value--ui;
   }
