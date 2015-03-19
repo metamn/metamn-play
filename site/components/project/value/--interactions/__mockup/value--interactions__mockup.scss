@@ -6,10 +6,13 @@
   .ios-device {
     @include ios-device;
     @include ios-device--white;
-    @include ios-device--iphone-5s;
-
     @include phablet-and-below {
+      @include ios-device--iphone-5s;
       @include ios-device--cut-half(23em);
+    }
+
+    @include tablet {
+      @include ios-device--iphone-5s(12.5em);
     }
 
     .ios-device__screen {
