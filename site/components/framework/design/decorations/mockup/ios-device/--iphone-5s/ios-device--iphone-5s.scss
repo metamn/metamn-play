@@ -1,7 +1,7 @@
-@mixin ios-device--iphone-5s($width) {
+@mixin ios-device--iphone-5s($width: 17.5em) {
   border-radius: calc(#{$width} * 10.345 / 100);
-  //width: $width;
-
+  max-width: $width;
+  
   // Originally it was 212.068 but doesn't fit the screemshot
   height: calc(#{$width} * 200.068 / 100);
 

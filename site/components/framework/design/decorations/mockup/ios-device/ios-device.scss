@@ -1,5 +1,5 @@
 // - from http://lukejamestaylor.com/portfolio/css-devices/
-@mixin ios-device($width) {
+@mixin ios-device {
   background: #fff;
   border: 1px solid #000;
   position: relative;
@@ -10,9 +10,4 @@
   &__screen {
     @include ios-device__screen;
   }
-
-
-
-  @include ios-device--white;
-  @include ios-device--iphone-5s($width);
 }

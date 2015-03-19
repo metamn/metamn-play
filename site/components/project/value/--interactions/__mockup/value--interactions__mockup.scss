@@ -4,7 +4,9 @@
   }
 
   .ios-device {
-    @include ios-device(17.5em);
+    @include ios-device;
+    @include ios-device--white;
+    @include ios-device--iphone-5s;
 
     @include phablet-and-below {
       @include ios-device--cut-half(23em);
