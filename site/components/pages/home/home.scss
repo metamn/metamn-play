@@ -33,7 +33,7 @@ html {
     }
 
     .links {
-      padding: $lem;
+      @include links;
     }
   }
 }

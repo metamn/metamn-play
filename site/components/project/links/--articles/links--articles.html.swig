@@ -4,7 +4,10 @@
   <ul>
     {% for link in site.articles %}
       {% set link = link %}
-      <li>{% include '../../../framework/design/decorations/link/link.html.swig' %}</li>
+      <li>
+        {% include '../../../framework/design/decorations/long-dash/long-dash.html.swig' %}
+        {% include '../../../framework/design/decorations/link/link.html.swig' %}
+      </li>
     {% endfor %}
   </ul>
 </nav>
