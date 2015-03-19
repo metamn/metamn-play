@@ -2,9 +2,13 @@
   padding: $lem/2 0;
   display: inline-flex;
 
-  position: relative;
-  top: -$lem * 3;
-  @include colors(white-on-blue);
+  @include tablet-and-below {
+    position: relative;
+    top: -$lem * 3;
+    @include colors(white-on-blue);
+  }
+
+  
 
   div {
     margin-right: $lem/2;

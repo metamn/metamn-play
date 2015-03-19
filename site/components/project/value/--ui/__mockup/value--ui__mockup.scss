@@ -6,9 +6,8 @@
   min-height: 24em;
 
   @include tablet-and-up {
-    min-height: 20em;
-    max-width: none;
-    width: 100%;
+    min-height: 18em;
+    max-width: 768px;
   }
 
   figure {
