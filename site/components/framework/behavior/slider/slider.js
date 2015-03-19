@@ -24,7 +24,7 @@ var slider = function(bulletsSelector, slidesSelector) {
 
   // Single navigation bullet
   function clickBulletSingle(bullet) {
-    moveSlide(bullet);
+    // ??? 
   }
 
   // Multiple navigation bullets
@@ -38,8 +38,8 @@ var slider = function(bulletsSelector, slidesSelector) {
   }
 
   // Move slide
-  function moveSlide(slide) {
-    current = slideIndex(slide);
+  function moveSlide(bullet) {
+    current = bulletIndex(bullet);
     for (var i = 0; i < slides.length; i++ ) {
       slides[i].className = '';
 
@@ -56,10 +56,10 @@ var slider = function(bulletsSelector, slidesSelector) {
   // Helpers
 
   // Return the index of the clicked element
-  function slideIndex(slide) {
-    var childs = slide.parentNode.childNodes;
-    for (var i = 0; i < childs.length; i++) {
-      if (slide == childs[i]) break;
+  function bulletIndex(bullet) {
+    var siblings = bullet.parentNode.childNodes;
+    for (var i = 0; i < siblings.length; i++) {
+      if (bullet == siblings[i]) break;
     }
     return i;
   }
