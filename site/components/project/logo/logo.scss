@@ -8,6 +8,6 @@
   }
 
   .logo__site-title {
-    @include text-style(logo);
+    @include text-style(title);
   }
 }

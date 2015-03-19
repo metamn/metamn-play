@@ -1,5 +1,6 @@
 @mixin wordpress__description {
   ul {
-    padding: $lem 0;
+    @include ul--classic;
+    padding: $lem;
   }
 }

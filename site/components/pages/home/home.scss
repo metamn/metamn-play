@@ -12,10 +12,6 @@ html {
       @include figure;
     }
 
-    ul {
-      @include ul;
-    }
-
 
     @include home-layout;
 

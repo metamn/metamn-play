@@ -38,8 +38,8 @@
       ]
     },
     {
-      "name": "Logo",
-      "description": "Used for the logo only",
+      "name": "Title",
+      "description": "Used for titles",
       "based_on": "Futura PT Medium",
       "mixins": [
         {

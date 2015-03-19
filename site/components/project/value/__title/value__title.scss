@@ -1,12 +1,6 @@
 @mixin value__title {
-  padding-bottom: $lem;
-
   display: flex;
-  align-items: center;
+  @include text-style(title);
 
-  span {
-    &.long-dash {
-      @include long-dash;
-    }
-  }
+  padding-bottom: $lem;
 }

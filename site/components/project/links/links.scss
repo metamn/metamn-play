@@ -1,4 +1,4 @@
 @mixin links {
   padding: $lem;
-  @include ul;
+  @include ul("1px solid");
 }

@@ -27,9 +27,9 @@
     
   }
   
-  // Logo
-  // - Used for the logo only
-  @if ($variant == 'logo') {
+  // Title
+  // - Used for titles
+  @if ($variant == 'title') {
     @include font(futura-pt-medium);
     @include typographic-scale(body-text);
     
