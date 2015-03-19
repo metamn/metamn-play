@@ -17,18 +17,22 @@ $blue: #00f;
 @mixin colors($name) {
 
   @if ($name == 'black-on-white') {
-    background: $white;
     color: $black;
+    background-color: $white;
+    
   }
 
   @if ($name == 'blue-on-white') {
-    background: $white;
     color: $blue;
+    background-color: $white;
+    
   }
 
   @if ($name == 'white-on-blue') {
-    background: $blue;
     color: $white;
+    background-color: $blue;
+    letter-spacing: 1.1px;
+    
   }
 
 }

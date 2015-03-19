@@ -19,18 +19,46 @@
   "color_pairs": [
     {
       "name": "black-on-white",
-      "color": "$black",
-      "background": "$white"
+      "properties": [
+        {
+          "name": "color",
+          "value": "$black"
+        },
+        {
+          "name": "background-color",
+          "value": "$white"
+        }
+      ]
     },
     {
       "name": "blue-on-white",
-      "color": "$blue",
-      "background": "$white"
+      "properties": [
+        {
+          "name": "color",
+          "value": "$blue"
+        },
+        {
+          "name": "background-color",
+          "value": "$white"
+        }
+      ]
     },
     {
       "name": "white-on-blue",
-      "color": "$white",
-      "background": "$blue"
+      "properties": [
+        {
+          "name": "color",
+          "value": "$white"
+        },
+        {
+          "name": "background-color",
+          "value": "$blue"
+        },
+        {
+          "name": "letter-spacing",
+          "value": "1.1px"
+        }
+      ]
     }
   ]
 }

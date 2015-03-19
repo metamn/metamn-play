@@ -11,8 +11,8 @@ ${{ color.name }}: {{ color.value }};
 @mixin colors($name) {
 {% for pair in color_pairs %}
   @if ($name == '{{ pair.name }}') {
-    background: {{ pair.background }};
-    color: {{ pair.color }};
+    {% for property in pair.properties %}{{ property.name }}: {{ property.value }};
+    {% endfor %}
   }
 {% endfor %}
 }
