@@ -1,11 +1,14 @@
 @mixin ul {
-  list-style-position: outside;
   list-style-type: none;
 
   li {
-    &:before {
-      content: '\2014';
-      margin-right: $lem / 6;
+    display: flex;
+    align-items: center;
+    
+    span {
+      &.long-dash {
+        @include long-dash;
+      }
     }
   }
 }
