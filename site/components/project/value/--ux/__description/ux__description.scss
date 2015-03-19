@@ -8,8 +8,7 @@
 
     ol {
       @include ol;
-      // Align to the dash in the title
-      padding: $lem 0 $lem $lem + $lem / 2;
+      padding: $lem 0;
     }
   }
 }
