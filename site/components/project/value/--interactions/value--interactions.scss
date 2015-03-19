@@ -1,10 +1,9 @@
 @mixin value--interactions {
+  .value--interactions__switcher {
+    @include value--interactions__switcher;
+  }
+
   .value--interactions__mockup {
     @include value--interactions__mockup;
-
-    display: none;
-    &:first-of-type {
-      display: flex;
-    }
   }
 }

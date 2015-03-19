@@ -10,21 +10,10 @@
       position: relative;
 
       figure {
-        position: absolute;
-        @include animation(transform);
+        @include slider(4);
 
         img {
           width: 100%;
-        }
-
-        @for $i from 0 through 3 {
-          &.moved-right-#{$i} {
-            transform: translateX($i * 100%);
-          }
-
-          &.moved-left-#{$i} {
-            transform: translateX(-$i * 100%);
-          }
         }
       }
     }

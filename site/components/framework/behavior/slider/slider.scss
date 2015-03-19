@@ -1,0 +1,14 @@
+@mixin slider($nr-of-slides) {
+  position: absolute;
+  @include animation(transform);
+
+  @for $i from 0 through $nr-of-slides {
+    &.moved-right-#{$i} {
+      transform: translateX($i * 100%);
+    }
+
+    &.moved-left-#{$i} {
+      transform: translateX(-$i * 100%);
+    }
+  }
+}
