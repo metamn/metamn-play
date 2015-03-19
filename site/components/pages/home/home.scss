@@ -11,7 +11,11 @@ html {
     figure {
       @include figure;
     }
-    
+
+    ul {
+      @include ul;
+    }
+
 
     @include home-layout;
 
