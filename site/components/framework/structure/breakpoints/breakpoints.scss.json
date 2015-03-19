@@ -2,8 +2,13 @@
   "breakpoints": [
     {
       "name": "mobile",
+      "value": "20em",
+      "description": "Screens smaller than 320px"
+    },
+    {
+      "name": "phablet",
       "value": "37.5em",
-      "description": "Screens smaller than 599px"
+      "description": "Screens between 321px and 599px"
     },
     {
       "name": "tablet",
@@ -29,15 +34,23 @@
   "responsive_mixins": [
     {
       "name": "mobile",
-      "media_query": "(max-width: $breakpoint-mobile - 0.001)"
+      "media_query": "(max-width: $breakpoint-mobile)"
     },
     {
       "name": "mobile-and-up",
-      "media_query": "(min-width: $breakpoint-mobile)"
+      "media_query": "(min-width: $breakpoint-mobile + 0.001)"
+    },
+    {
+      "name": "phablet",
+      "media_query": "(min-width: $breakpoint-mobile + 0.001) and (max-width: $breakpoint-phablet - 0.001)"
+    },
+    {
+      "name": "phablet-and-below",
+      "media_query": "(max-width: $breakpoint-phablet - 0.001)"
     },
     {
       "name": "tablet",
-      "media_query": "(min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 0.001)"
+      "media_query": "(min-width: $breakpoint-phablet) and (max-width: $breakpoint-tablet - 0.001)"
     },
     {
       "name": "tablet-and-below",

@@ -1,8 +1,12 @@
 @mixin value--interactions__mockup {
+  @include phablet {
+    padding: 0 $lem;
+  }
+
   .ios-device {
     @include ios-device(17.5em);
 
-    @include mobile {
+    @include phablet-and-below {
       @include ios-device--cut-half(23em);
     }
 
