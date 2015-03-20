@@ -1,4 +1,11 @@
 @mixin value--interactions {
+
+  // The slider on UX is moved up on mobile
+  @include mobile {
+    padding-top: 0;
+  }
+
+  // Two columns
   @include mobile-and-up {
     display: flex;
     align-items: center;

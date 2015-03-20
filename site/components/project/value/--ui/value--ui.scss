@@ -1,4 +1,10 @@
 @mixin value--ui {
+
+  // The slider is moved up on mobile
+  @include mobile {
+    padding-bottom: 0;
+  }
+
   .value--ui__mockup {
     @include value--ui__mockup;
   }
