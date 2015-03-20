@@ -1,6 +1,7 @@
 @mixin home__values {
   @include desktop {
     order: -1;
+    margin: $lem 0 $lem $lem;
   }
 
   .value {
