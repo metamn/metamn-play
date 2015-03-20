@@ -1,4 +1,15 @@
 @mixin value--wordpress {
+  .container {
+    @include mobile-and-up {
+      display: flex;
+      align-items: center;
+
+      .value--wordpress__description {
+        margin-left: $lem;
+      }
+    }
+  }
+
   .value--wordpress__description {
     @include wordpress__description;
   }
