@@ -1,6 +1,5 @@
 @mixin value--ui__slider {
-  padding: $lem/2 0;
-  display: inline-flex;
+  display: flex;
 
   div {
     margin-right: $lem/2;

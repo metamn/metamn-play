@@ -1,4 +1,16 @@
 @mixin value--ui {
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
   .value--ui__mockup {
     @include value--ui__mockup;
   }
