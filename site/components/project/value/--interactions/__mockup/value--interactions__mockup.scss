@@ -1,8 +1,4 @@
 @mixin value--interactions__mockup {
-  @include phablet {
-    padding: 0 $lem;
-  }
-
   .ios-device {
     @include ios-device;
     @include ios-device--white;

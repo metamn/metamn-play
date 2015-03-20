@@ -1,4 +1,14 @@
 @mixin value--ux {
+  @include mobile-and-up {
+    display: flex;
+    align-items: center;
+
+    .value--ux__images {
+      order: -1;
+      margin-right: $lem;
+    }
+  }
+
   .value--ux__description {
     @include ux__description;
   }

@@ -9,10 +9,6 @@
     a {
       @include link(white-on-blue);
     }
-
-    @include cinema {
-      order: -1;
-    }
   }
 
 }

@@ -7,41 +7,20 @@
 // - typography might be responsive, so they use first breakpoints and not vice versa
 // - breakpoints in this project depends on image size which is set in pixels
 
-// Screens smaller than 320px
-$breakpoint-mobile: 320px;
-
-// Screens starting from 600px
-$breakpoint-tablet: 600px;
+// Screens smaller than 600px
+$breakpoint-mobile: 600px;
 
 
 
 
 @mixin mobile {
-  @media only screen and (max-width: $breakpoint-mobile) {
+  @media only screen and (max-width: $breakpoint-mobile - 0.1) {
     @content
   }
 }
 
 @mixin mobile-and-up {
-  @media only screen and (min-width: $breakpoint-mobile + 0.1) {
-    @content
-  }
-}
-
-@mixin tablet {
-  @media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
-    @content
-  }
-}
-
-@mixin tablet-and-below {
-  @media only screen and (max-width: $breakpoint-tablet - 0.1) {
-    @content
-  }
-}
-
-@mixin tablet-and-up {
-  @media only screen and (min-width: $breakpoint-tablet + 0.1) {
+  @media only screen and (min-width: $breakpoint-mobile) {
     @content
   }
 }

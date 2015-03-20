@@ -2,13 +2,13 @@
   padding: $lem/2 0;
   display: inline-flex;
 
-  @include tablet-and-below {
+  @include mobile {
     position: relative;
     top: -$lem * 3;
     @include colors(white-on-blue);
   }
 
-  
+
 
   div {
     margin-right: $lem/2;
