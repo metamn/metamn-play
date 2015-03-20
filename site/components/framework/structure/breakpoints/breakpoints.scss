@@ -10,6 +10,9 @@
 // Screens smaller than 600px
 $breakpoint-mobile: 600px;
 
+// Screens larger than 1600px
+$breakpoint-desktop: 1600px;
+
 
 
 
@@ -21,6 +24,12 @@ $breakpoint-mobile: 600px;
 
 @mixin mobile-and-up {
   @media only screen and (min-width: $breakpoint-mobile) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $breakpoint-desktop + 0.1) {
     @content
   }
 }

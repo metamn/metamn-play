@@ -1,4 +1,8 @@
 @mixin home__values {
+  @include desktop {
+    order: -1;
+  }
+
   .value {
     @include value;
   }

@@ -4,6 +4,11 @@
       "name": "mobile",
       "value": "600px",
       "description": "Screens smaller than 600px"
+    },
+    {
+      "name": "desktop",
+      "value": "1600px",
+      "description": "Screens larger than 1600px"
     }
   ],
   "responsive_mixins": [
@@ -14,6 +19,10 @@
     {
       "name": "mobile-and-up",
       "media_query": "(min-width: $breakpoint-mobile)"
+    },
+    {
+      "name": "desktop",
+      "media_query": "(min-width: $breakpoint-desktop + 0.1)"
     }
   ]
 }
