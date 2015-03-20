@@ -31,6 +31,7 @@
     position: absolute;
     left: calc(#{$width} * 15 / 50);
     top: calc(#{$width} * 15 / 50);
+    opacity: .5;
   }
 }
 

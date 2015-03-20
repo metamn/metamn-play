@@ -1,5 +1,10 @@
 @mixin value--interactions__switcher {
   .pulsating-circle {
-    @include pulsating-circle(50px, $blue);
+    @include pulsating-circle(75px, $blue);
+
+    @include mobile {
+      top: -15.75em; //315px;
+      left: 5.7em; //114px;
+    }
   }
 }
