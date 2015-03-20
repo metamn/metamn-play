@@ -1,8 +1,4 @@
 <div class="value--ui__slider">
-  {% for image in images %}
-  <div {% if loop.first %}class="active"{% endif %}>
-      <span>O</span>
-      <span class="active">&bull;</span>
-    </div>
-  {% endfor %}
+  {% set slider = { items: images, active: '&bull;', inactive: 'O' } %}
+  {% include '../../../../framework/behavior/slider/--bullets/slider--bullets.html.swig' %}
 </div>

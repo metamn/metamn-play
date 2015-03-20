@@ -2,34 +2,11 @@
   display: flex;
 
   div {
-    margin-right: $lem/2;
+    @include slider--bullets;
+
+    margin-right: $lem / 2;
     &:last-of-type {
       margin-right: 0;
-    }
-    
-    cursor: pointer;
-
-    span {
-      @include animation(opacity);
-
-      &.active {
-        display: none;
-        opacity: 0;
-      }
-    }
-
-    &.active {
-      cursor: default;
-
-      span {
-        display: none;
-        opacity: 0;
-
-        &.active {
-          display: flex;
-          opacity: 1;
-        }
-      }
     }
   }
 }
