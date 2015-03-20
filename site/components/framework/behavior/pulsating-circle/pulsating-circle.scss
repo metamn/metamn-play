@@ -1,0 +1,62 @@
+// http://cssdeck.com/labs/css3-pulsating-dot
+@mixin pulsating-circle($width, $color) {
+  width: $width;
+	height: $width;
+	position: relative;
+
+  .pulsating-circle__dot {
+    border: calc(#{$width} * 10 / 50) solid $color;
+  	background: transparent;
+  	border-radius: calc(#{$width} * 60 / 50);
+  	height: $width;
+  	width: $width;
+
+    animation: pulse 3s ease-out;
+  	animation-iteration-count: infinite;
+
+    position: absolute;
+  	top: calc(#{$width} * -10 / 50);
+  	left: calc(#{$width} * -10 / 50);
+  	z-index: 1;
+  	opacity: 0;
+  }
+
+  .pulsating-circle__pulse {
+    width: calc(#{$width} * 10 / 50);
+    height: calc(#{$width} * 10 / 50);
+    border: calc(#{$width} * 5 / 50) solid $color;
+    border-radius: calc(#{$width} * 30 / 50);
+    background-color: $color;
+    z-index: 10;
+    position: absolute;
+    left: calc(#{$width} * 15 / 50);
+    top: calc(#{$width} * 15 / 50);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0.0;
+  }
+
+  25% {
+    transform: scale(0);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: scale(0.1);
+    opacity: 0.3;
+  }
+
+  75% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.0;
+  }
+}

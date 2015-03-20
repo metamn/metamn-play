@@ -1,3 +1,3 @@
 <div class='value--interactions__switcher'>
-  <div>&#9728;</div>
+  {% include '../../../../framework/behavior/pulsating-circle/pulsating-circle.html.swig' %}
 </div>
