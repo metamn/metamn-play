@@ -1,1 +1,1 @@
-slider('.value--ui__slider div', '.value--ui__mockup figure');
+sliderBullets('.value--ui__slider div', '.value--ui__mockup figure');
