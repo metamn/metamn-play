@@ -1,6 +1,14 @@
 @mixin value--interactions {
-  // Because of the slider in UI is moved up
-  padding-top: 0;
+  @include mobile-and-up {
+    display: flex;
+    align-items: center;
+
+    .value--interactions__mockup {
+      order: -1;
+      margin-right: $lem;
+    }
+  }
+
 
   .value--interactions__switcher {
     @include value--interactions__switcher;

@@ -6,5 +6,5 @@
   {% set images = value.images %}
   {% include '__mockup/value--interactions__mockup.html.swig' %}
 
-  {% include '__switcher/value--interactions__switcher.html.swig' %}
+  {# include '__switcher/value--interactions__switcher.html.swig' #}
 </article>
