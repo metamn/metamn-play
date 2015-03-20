@@ -1,17 +1,4 @@
 @mixin value--interactions {
-  // Two columns
-  @include mobile-and-up {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .value--interactions__mockup {
-      order: -1;
-      margin-right: $lem;
-    }
-  }
-
-
   .value--interactions__switcher {
     @include value--interactions__switcher;
   }

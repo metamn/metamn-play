@@ -1,12 +1,12 @@
-@mixin ios-device--ipad-air {
-  border-radius: 12px;
-  width: 340px;
-  height: 480px;
-  padding: 36px 16px;
+@mixin ios-device--ipad-air($width: 768px) {
+  max-width: $width;
+  height: calc(#{$width} * 480 / 340);
+  border-radius: calc(#{$width} * 12 / 340);
+  padding: calc(#{$width} * 36 / 340) calc(#{$width} * 16 / 340);
 
   &:after {
-    width: 16px;
-    height: 16px;
-    bottom: 9px;
+    width: calc(#{$width} * 16 / 340);
+    height: calc(#{$width} * 16 / 340);
+    bottom: calc(#{$width} * 9 / 340);
   }
 }

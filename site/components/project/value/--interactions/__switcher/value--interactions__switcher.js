@@ -26,4 +26,4 @@ var interactionSwitcher = function() {
 
 interactionSwitcher();
 
-pulse('.value--interactions__switcher div');
+//pulse('.value--interactions__switcher div');

@@ -3,11 +3,14 @@
     @include ios-device;
     @include ios-device--white;
 
-    @include ios-device--iphone-5s;
-    @include ios-device--cut-half(23em);
+    @include mobile {
+      @include ios-device--iphone-5s;
+      @include ios-device--cut-half(23em);
+    }
 
     @include mobile-and-up {
       @include ios-device--ipad-air;
+      @include ios-device--cut-half(32em);
     }
 
     .ios-device__screen {

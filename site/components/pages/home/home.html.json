@@ -53,7 +53,13 @@
         "images": [
           {
             "title": "Interaction on Inu Chivu, white",
-            "name": "inu-archive-mobile-screenshot"
+            "name": "inu-frontpage-tablet-screenshot",
+            "responsive": [
+              {
+                "breakpoint": "mobile",
+                "name": "inu-archive-mobile-screenshot"
+              }
+            ]
           },
           {
             "title": "Interaction on Inu Chivu, black",
