@@ -2,6 +2,8 @@
   position: relative;
   overflow: hidden;
 
+  // The size of the images.
+  // - if bigger the slider will show the beginning of the next image too
   max-width: 320px;
   min-height: 24em;
 

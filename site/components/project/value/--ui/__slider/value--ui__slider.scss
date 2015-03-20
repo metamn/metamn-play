@@ -3,6 +3,10 @@
 
   div {
     margin-right: $lem/2;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    
     cursor: pointer;
 
     span {

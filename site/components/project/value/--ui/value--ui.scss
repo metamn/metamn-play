@@ -8,6 +8,14 @@
 
     @include mobile {
       align-items: center;
+
+      .value--ui__title, .value--ui__slider {
+        flex: 1 0px 0px;
+      }
+
+      .value--ui__slider {
+        justify-content: flex-end;
+      }
     }
   }
 
