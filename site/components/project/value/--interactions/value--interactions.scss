@@ -3,6 +3,7 @@
   @include mobile-and-up {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     .value--interactions__mockup {
       order: -1;

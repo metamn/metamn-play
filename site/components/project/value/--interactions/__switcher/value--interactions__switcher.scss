@@ -1,4 +1,12 @@
 @mixin value--interactions__switcher {
-  padding: $lem / 2 0;
-  cursor: pointer;
+  div {
+    cursor: pointer;
+
+    @include mobile-and-up {
+      font-size: 1000%;
+      margin-top: -10px;
+
+      @include pulse;
+    }
+  }
 }
