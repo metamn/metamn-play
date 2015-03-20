@@ -6,7 +6,7 @@ var interactionSwitcher = function() {
   slides[0].classList.add('active');
 
   // Listen to the click event
-  bullet.addEventListener('click', clickBullet, false)
+  bullet.addEventListener('click', clickBullet, false);
 
   // Switch slides
   function clickBullet() {
@@ -18,7 +18,8 @@ var interactionSwitcher = function() {
     }
     slides[active].classList.remove('active');
 
-    next = (active == (slides.length - 1)) ? 0 : active + 1;
+    next = active + 1;
+    if (active == (slides.length - 1)) next = 0;
     slides[next].classList.add('active');
   }
 }
