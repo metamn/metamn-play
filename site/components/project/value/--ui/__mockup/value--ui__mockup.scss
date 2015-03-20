@@ -10,6 +10,10 @@
     min-height: 22em;
   }
 
+  @include mobile {
+    @include card(2);
+  }
+
   figure {
     @include slider(4);
 

@@ -24,7 +24,7 @@ var slider = function(bulletsSelector, slidesSelector) {
 
   // Single navigation bullet
   function clickBulletSingle(bullet) {
-    // ??? 
+    // ???
   }
 
   // Multiple navigation bullets
