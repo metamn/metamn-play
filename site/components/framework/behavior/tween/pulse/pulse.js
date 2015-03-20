@@ -1,5 +1,6 @@
 var pulse = function(elementClass) {
   var element = document.querySelector(elementClass);
+
   TweenMax.fromTo(element, 1,
     {
       scale: 1

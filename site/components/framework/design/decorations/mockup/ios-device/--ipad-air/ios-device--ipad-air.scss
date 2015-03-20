@@ -1,0 +1,12 @@
+@mixin ios-device--ipad-air {
+  border-radius: 12px;
+  width: 340px;
+  height: 480px;
+  padding: 36px 16px;
+
+  &:after {
+    width: 16px;
+    height: 16px;
+    bottom: 9px;
+  }
+}

@@ -7,7 +7,7 @@
     @include ios-device--cut-half(23em);
 
     @include mobile-and-up {
-      @include ios-device--cut-half(25em);
+      @include ios-device--ipad-air;
     }
 
     .ios-device__screen {
