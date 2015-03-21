@@ -22,14 +22,25 @@
       ],
       "images": [
         {
-          "title": "Wanderlust",
+          "title": "The Wanderlust screenshot",
           "url": "wanderlust",
           "name": "wanderlust-mobile-screenshot"
         }
       ]
     },
     {
-      "title": "Iorad"
+      "title": "Iorad",
+      "services": [
+        "Design",
+        "Front-end"
+      ],
+      "images": [
+        {
+          "title": "The Iorad screenshot",
+          "url": "iorad",
+          "name": "iorad-mobile-screenshot"
+        }
+      ]
     },
     {
       "title": "OCCRP"
