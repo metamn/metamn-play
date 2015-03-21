@@ -1,4 +1,5 @@
 @mixin value--interactions__switcher {
+  
   .pulsating-circle {
     @include pulsating-circle(75px, $blue);
     cursor: pointer;
