@@ -1,0 +1,15 @@
+html {
+  body {
+    @include text-style(default);
+    @include reset;
+    @include semantic-html5-titles;
+
+    .header {
+      @include header;
+    }
+
+    .links {
+      @include links;
+    }
+  }
+}

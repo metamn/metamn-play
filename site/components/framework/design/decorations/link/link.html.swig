@@ -4,12 +4,12 @@
 
 {% import "../../../../../helpers/classname.swig" as c  %}
 {% if link.url == '' %}
-  {% set url = c.classname(link) %}
-  {% set title = link %}
+  {% set url = c.classname(link.title) %}
 {% else %}
   {% set url = link.url %}
-  {% set title = link.title %}
 {% endif %}
+
+{% set title = link.title %}
 
 
 {#

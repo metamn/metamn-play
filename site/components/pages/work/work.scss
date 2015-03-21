@@ -1,0 +1,11 @@
+html {
+  &.work {
+    .title {
+      @include title;
+    }
+
+    .work--thumb {
+      @include work--thumb;
+    }
+  }
+}

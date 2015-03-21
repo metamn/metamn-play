@@ -1,0 +1,8 @@
+@mixin title {
+  padding: $lem / 2 0;
+
+  h3 {
+    display: flex;
+    padding-left: $lem;
+  }
+}

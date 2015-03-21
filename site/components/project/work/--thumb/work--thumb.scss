@@ -1,0 +1,7 @@
+@mixin work--thumb {
+  padding: 0 $lem;
+
+  figure {
+    @include figure;
+  }
+}

@@ -9,5 +9,9 @@
 
   .logo__site-title {
     @include text-style(title);
+
+    a {
+      @include link;
+    }
   }
 }

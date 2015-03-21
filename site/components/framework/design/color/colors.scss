@@ -4,13 +4,16 @@
 
 
 // The background color
-$white: #fff;
+$white: rgba(255, 255, 255, 1);
 
 // The text color
-$black: #000;
+$black: rgba(0, 0, 0, 1);
 
 // The highlight color
-$blue: #00f;
+$blue: rgba(0, 0, 255, 1);
+
+// Secondary background color
+$gray: rgba(0, 0, 0, .1);
 
 
 // Color combinations. Colors are not used standalone but in pairs
@@ -32,6 +35,12 @@ $blue: #00f;
     color: $white;
     background-color: $blue;
     letter-spacing: 1.1px;
+    
+  }
+
+  @if ($name == 'black-on-gray') {
+    color: $black;
+    background-color: $gray;
     
   }
 

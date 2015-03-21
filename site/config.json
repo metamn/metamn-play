@@ -15,7 +15,18 @@
 
   "works": [
     {
-      "title": "Wanderlust"
+      "title": "Wanderlust",
+      "services": [
+        "Front-end",
+        "Wordpress"
+      ],
+      "images": [
+        {
+          "title": "Wanderlust",
+          "url": "wanderlust",
+          "name": "wanderlust-mobile-screenshot"
+        }
+      ]
     },
     {
       "title": "Iorad"

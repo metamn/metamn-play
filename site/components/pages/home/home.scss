@@ -1,35 +1,15 @@
 html {
-  body {
-    @include text-style(default);
-    @include reset;
-    @include semantic-html5-titles;
+  &.home {
+    body {
+      @include home-layout;
 
-    a {
-      @include link;
-    }
+      .home__about {
+        @include home__about;
+      }
 
-    figure {
-      @include figure;
-    }
-
-
-    @include home-layout;
-
-
-    .header {
-      @include header;
-    }
-
-    .home__about {
-      @include home__about;
-    }
-
-    .home__values {
-      @include home__values;
-    }
-
-    .links {
-      @include links;
+      .home__values {
+        @include home__values;
+      }
     }
   }
 }

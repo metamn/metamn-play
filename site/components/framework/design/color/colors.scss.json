@@ -2,18 +2,23 @@
   "colors": [
     {
       "name": "white",
-      "value": "#fff",
+      "value": "rgba(255, 255, 255, 1)",
       "description": "The background color"
     },
     {
       "name": "black",
-      "value": "#000",
+      "value": "rgba(0, 0, 0, 1)",
       "description": "The text color"
     },
     {
       "name": "blue",
-      "value": "#00f",
+      "value": "rgba(0, 0, 255, 1)",
       "description": "The highlight color"
+    },
+    {
+      "name": "gray",
+      "value": "rgba(0, 0, 0, .1)",
+      "description": "Secondary background color"
     }
   ],
   "color_pairs": [
@@ -57,6 +62,19 @@
         {
           "name": "letter-spacing",
           "value": "1.1px"
+        }
+      ]
+    },
+    {
+      "name": "black-on-gray",
+      "properties": [
+        {
+          "name": "color",
+          "value": "$black"
+        },
+        {
+          "name": "background-color",
+          "value": "$gray"
         }
       ]
     }
