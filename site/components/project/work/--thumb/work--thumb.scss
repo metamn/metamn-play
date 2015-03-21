@@ -1,5 +1,5 @@
 @mixin work--thumb {
-  padding: 0 $lem;
+  padding: $lem 0;
 
   figure {
     @include figure;

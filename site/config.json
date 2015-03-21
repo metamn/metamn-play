@@ -43,13 +43,47 @@
       ]
     },
     {
-      "title": "OCCRP"
+      "title": "OCCRP",
+      "services": [
+        "Design",
+        "Front-end"
+      ],
+      "images": [
+        {
+          "title": "The OCCRP screenshot",
+          "url": "occrp",
+          "name": "occrp-mobile-screenshot"
+        }
+      ]
     },
     {
-      "title": "Reboot"
+      "title": "Reboot",
+      "services": [
+        "Front-end",
+        "Wordpress"
+      ],
+      "images": [
+        {
+          "title": "The Reboot screenshot",
+          "url": "reboot",
+          "name": "reboot-mobile-screenshot"
+        }
+      ]
     },
     {
-      "title": "Anvelocom"
+      "title": "Anvelocom",
+      "services": [
+        "Design",
+        "Front-end",
+        "Wordpress"
+      ],
+      "images": [
+        {
+          "title": "The Anvelocom screenshot",
+          "url": "anvelocom",
+          "name": "anvelocom-mobile-screenshot"
+        }
+      ]
     },
     {
       "title": "Scatter"
