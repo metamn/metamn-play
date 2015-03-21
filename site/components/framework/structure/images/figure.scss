@@ -9,4 +9,10 @@
   figcaption {
     display: none;
   }
+
+  // Remove the extra bottom spacing for <img> inside <a>
+  a {
+    line-height: 0;
+    display: block;
+  }
 }

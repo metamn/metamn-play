@@ -3,7 +3,7 @@ html {
     .title {
       @include title;
     }
-
+    
     .work--thumb {
       @include work--thumb;
     }

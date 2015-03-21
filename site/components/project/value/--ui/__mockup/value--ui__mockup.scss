@@ -13,7 +13,7 @@
   }
 
   @include mobile {
-    @include card(2);
+    @include shadow(2);
   }
 
   figure {

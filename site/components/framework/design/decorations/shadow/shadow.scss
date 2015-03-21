@@ -18,7 +18,7 @@
 
 
 
-@mixin card($depth) {
+@mixin shadow($depth) {
   @if $depth < 1 {
     box-shadow: none;
   } @else {

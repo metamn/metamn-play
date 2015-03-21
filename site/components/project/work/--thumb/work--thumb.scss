@@ -1,7 +1,16 @@
 @mixin work--thumb {
-  padding: $lem 0;
+  padding: $lem;
+  @include colors(white-on-blue);
 
   figure {
     @include figure;
+
+    @include mobile {
+      @include shadow(2);
+    }
+  }
+
+  .work--thumb__services {
+    padding-top: $lem / 2;
   }
 }
