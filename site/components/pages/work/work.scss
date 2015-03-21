@@ -1,11 +1,25 @@
 html {
   &.work {
+    display: flex;
+    flex-wrap: wrap;
+    
     .title {
       @include title;
     }
-    
-    .work--thumb {
-      @include work--thumb;
+
+    .works {
+      @include colors(white-on-blue);
+      padding: $lem;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      .work--thumb {
+        @include work--thumb;
+      }
+
     }
   }
 }

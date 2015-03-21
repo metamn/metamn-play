@@ -1,6 +1,10 @@
 @mixin work--thumb {
-  padding: $lem;
-  @include colors(white-on-blue);
+  padding-bottom: $lem;
+
+  @include mobile-and-up {
+    margin-right: $lem;
+    margin-bottom: $lem;
+  }
 
   figure {
     @include figure;
@@ -12,5 +16,8 @@
 
   .work--thumb__services {
     padding-top: $lem / 2;
+
+    // Break text is longer than the image
+    max-width: 320px;
   }
 }
