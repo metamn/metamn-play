@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{% extends '../../project/templates/home/home.html.swig' %}
+{% extends '../../project/templates/default/default.html.swig' %}
 {% block content %}
   {% include '__about/home__about.html.swig' %}
 

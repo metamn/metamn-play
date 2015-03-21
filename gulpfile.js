@@ -296,8 +296,9 @@ gulp.task('html_site', function() {
       // rename home/home.html > index.html
       if (path.dirname == 'home') {
         path.dirname = '';
-        path.basename = 'index';
       }
+      // rename work.html > index.html
+      path.basename = 'index';
     }))
     .pipe(minifyHTML())
     .pipe(gulp.dest(paths.dest));

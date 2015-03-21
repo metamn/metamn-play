@@ -13,6 +13,33 @@
     }
   },
 
+  "works": [
+    {
+      "title": "Wanderlust"
+    },
+    {
+      "title": "Iorad"
+    },
+    {
+      "title": "OCCRP"
+    },
+    {
+      "title": "Reboot"
+    },
+    {
+      "title": "Anvelocom"
+    },
+    {
+      "title": "Scatter"
+    },
+    {
+      "title": "Inu Chivu"
+    },
+    {
+      "title": "Smuff"
+    }
+  ],
+
   "articles": [
     "How this site was made",
     "BEM + Gulp: A framework and workflow",
