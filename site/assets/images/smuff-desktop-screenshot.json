@@ -2,19 +2,19 @@
   "image_sizes": [
     {
       "name": "mobile",
-      "width": "310"
+      "width": "320"
     },
     {
       "name": "tablet",
-      "width": "310"
+      "width": "320"
     },
     {
       "name": "laptop",
-      "width": "310"
+      "width": "320"
     },
     {
       "name": "desktop",
-      "width": "310"
+      "width": "320"
     }
   ]
 }
