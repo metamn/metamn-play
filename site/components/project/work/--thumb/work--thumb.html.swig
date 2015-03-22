@@ -1,4 +1,7 @@
-<article class="work work--thumb">
+{% import "../../../../helpers/classname.swig" as c  %}
+{% set classname = c.classname(work.title) %}
+
+<article class="work work--thumb work--{{ classname }}">
   <h3 class="work--thumb__title">{{ work.title }}</h3>
 
   {% set image = work.images | first %}

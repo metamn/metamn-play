@@ -1,7 +1,5 @@
 html {
   &.work {
-    display: flex;
-    flex-wrap: wrap;
     
     .title {
       @include title;
