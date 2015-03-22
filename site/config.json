@@ -130,27 +130,6 @@
       ]
     },
     {
-      "title": "Inu Chivu",
-      "services": [
-        "Design",
-        "Front-end",
-        "Wordpress"
-      ],
-      "images": [
-        {
-          "title": "The Inu Chivu screenshot",
-          "url": "inu-chivu",
-          "name": "inu-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "inu-archive-mobile-screenshot"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "Smuff",
       "services": [
         "Design",
@@ -168,6 +147,27 @@
             {
               "breakpoint": "mobile",
               "name": "smuff-archive-mobile-screenshot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Inu Chivu",
+      "services": [
+        "Design",
+        "Front-end",
+        "Wordpress"
+      ],
+      "images": [
+        {
+          "title": "The Inu Chivu screenshot",
+          "url": "inu-chivu",
+          "name": "inu-desktop-screenshot",
+          "responsive": [
+            {
+              "breakpoint": "mobile",
+              "name": "inu-archive-mobile-screenshot"
             }
           ]
         }
