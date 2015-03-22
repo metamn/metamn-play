@@ -1,18 +1,24 @@
 @mixin work--thumb {
   padding-bottom: $lem * 2;
 
+  @include mobile {
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
   @include mobile-and-up {
     margin-right: $lem * 3;
     margin-bottom: $lem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
 
   figure {
     @include figure;
-
-    @include mobile {
-      @include shadow(2);
-    }
   }
 
 
