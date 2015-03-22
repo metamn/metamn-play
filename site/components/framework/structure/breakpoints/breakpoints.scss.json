@@ -6,6 +6,11 @@
       "description": "Screens smaller than 600px"
     },
     {
+      "name": "tablet",
+      "value": "1024px",
+      "description": "Screens bigger than 600px and smaller than 1024px"
+    },
+    {
       "name": "desktop",
       "value": "1600px",
       "description": "Screens larger than 1600px"
@@ -19,6 +24,14 @@
     {
       "name": "mobile-and-up",
       "media_query": "(min-width: $breakpoint-mobile)"
+    },
+    {
+      "name": "tablet",
+      "media_query": "(min-width: $breakpoint-mobile + 0.1) and (max-width: $breakpoint-tablet)"
+    },
+    {
+      "name": "tablet-and-up",
+      "media_query": "(min-width: $breakpoint-tablet + 0.1)"
     },
     {
       "name": "desktop",
