@@ -24,13 +24,7 @@
         {
           "title": "The Wanderlust screenshot",
           "url": "wanderlust",
-          "name": "wanderlust-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "wanderlust-mobile-screenshot"
-            }
-          ]
+          "name": "wanderlust-desktop-screenshot"
         }
       ]
     },
@@ -44,13 +38,7 @@
         {
           "title": "The Iorad screenshot",
           "url": "iorad",
-          "name": "iorad-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "iorad-mobile-screenshot"
-            }
-          ]
+          "name": "iorad-desktop-screenshot"
         }
       ]
     },
@@ -64,13 +52,7 @@
         {
           "title": "The OCCRP screenshot",
           "url": "occrp",
-          "name": "occrp-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "occrp-mobile-screenshot"
-            }
-          ]
+          "name": "occrp-desktop-screenshot"
         }
       ]
     },
@@ -84,13 +66,7 @@
         {
           "title": "The Reboot screenshot",
           "url": "reboot",
-          "name": "reboot-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "reboot-mobile-screenshot"
-            }
-          ]
+          "name": "reboot-desktop-screenshot"
         }
       ]
     },
@@ -119,13 +95,7 @@
         {
           "title": "The Scatter screenshot",
           "url": "scatter",
-          "name": "scatter-frontpage-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "scatter-frontpage-mobile-screenshot"
-            }
-          ]
+          "name": "scatter-frontpage-desktop-screenshot"
         }
       ]
     },
@@ -140,13 +110,7 @@
         {
           "title": "The Inu Chivu screenshot",
           "url": "inu-chivu",
-          "name": "inu-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "inu-archive-mobile-screenshot"
-            }
-          ]
+          "name": "inu-desktop-screenshot"
         }
       ]
     },
@@ -163,13 +127,7 @@
         {
           "title": "The Smuff screenshot",
           "url": "smuff",
-          "name": "smuff-desktop-screenshot",
-          "responsive": [
-            {
-              "breakpoint": "mobile",
-              "name": "smuff-archive-mobile-screenshot"
-            }
-          ]
+          "name": "smuff-desktop-screenshot"
         }
       ]
     }
