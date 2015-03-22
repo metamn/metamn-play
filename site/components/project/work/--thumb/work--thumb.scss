@@ -17,6 +17,7 @@
 
   figure {
     @include figure;
+    @include color-overlay($lightblue);
   }
 
 

@@ -1,4 +1,4 @@
 @mixin animation($change) {
   will-change: $change;
-  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  transition: $change 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
 }
