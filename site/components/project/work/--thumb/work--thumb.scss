@@ -26,9 +26,7 @@
     padding-top: $lem / 2;
 
     // Break text when it is longer than the image
-    @include mobile {
-      max-width: 320px;
-    }
+    max-width: 320px;
   }
 
 }

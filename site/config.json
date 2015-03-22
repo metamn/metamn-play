@@ -119,7 +119,13 @@
         {
           "title": "The Scatter screenshot",
           "url": "scatter",
-          "name": "scatter-frontpage-mobile-screenshot"
+          "name": "scatter-frontpage-desktop-screenshot",
+          "responsive": [
+            {
+              "breakpoint": "mobile",
+              "name": "scatter-frontpage-mobile-screenshot"
+            }
+          ]
         }
       ]
     },
@@ -134,7 +140,13 @@
         {
           "title": "The Inu Chivu screenshot",
           "url": "inu-chivu",
-          "name": "inu-archive-mobile-screenshot"
+          "name": "inu-desktop-screenshot",
+          "responsive": [
+            {
+              "breakpoint": "mobile",
+              "name": "inu-archive-mobile-screenshot"
+            }
+          ]
         }
       ]
     },
@@ -151,7 +163,13 @@
         {
           "title": "The Smuff screenshot",
           "url": "smuff",
-          "name": "smuff-archive-mobile-screenshot"
+          "name": "smuff-desktop-screenshot",
+          "responsive": [
+            {
+              "breakpoint": "mobile",
+              "name": "smuff-archive-mobile-screenshot"
+            }
+          ]
         }
       ]
     }
