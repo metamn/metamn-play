@@ -2,14 +2,11 @@
   "wanderlust": {
     "services": [
       "Front-end development",
-      "Back-end development"
+      "Back-end development",
+      "Wordpress",
+      "Storytelling"
     ],
     "technologies": [
-      "HTML5",
-      "CSS3",
-      "SASS",
-      "jQuery",
-      "Wordpress"
     ],
     "slides": [
       {
@@ -22,6 +19,19 @@
           {
             "title": "The Smuff archive page on mobile",
             "name": "inu-frontpage-laptop-front"
+          }
+        ]
+      },
+      {
+        "name": "Overview",
+        "text": [
+          "Wanderlust’s core mission is to create community around mindful living.",
+          "They focus on yoga, eating well, be green, practice purpose, create awareness and showcase art."
+        ],
+        "images": [
+          {
+            "title": "The Smuff archive page on mobile",
+            "name": "scatter-frontpage-laptop-front"
           }
         ]
       }

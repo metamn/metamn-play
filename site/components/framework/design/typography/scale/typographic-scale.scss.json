@@ -4,6 +4,7 @@
       "name": "default",
       "description": "The default font size and line height",
       "lem": "1.25em",
+      "text_width": "26em",
       "properties": [
         {
           "name": "font-size",
@@ -21,7 +22,7 @@
       "properties": [
         {
           "name": "max-width",
-          "value": "26em"
+          "value": "$text-width"
         }
       ]
     }

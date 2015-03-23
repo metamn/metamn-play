@@ -2,6 +2,14 @@
   @include colors(white-on-blue);
   padding: $lem;
 
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile-and-up {
+    flex-wrap: no-wrap;
+    align-items: center;
+  }
+
   .portfolio__text {
     @include portfolio__text;
   }

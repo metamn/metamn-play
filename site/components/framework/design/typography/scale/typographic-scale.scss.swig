@@ -21,6 +21,10 @@
 $lem: {{ default_scale.lem }};
 
 
+// The maximun size of a text block
+$text-width: {{ default_scale.text_width }};
+
+
 // Different typographic scales
 @mixin typographic-scale($variant) {
 {% for scale in typographic_scale %}
