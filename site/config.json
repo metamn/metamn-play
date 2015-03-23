@@ -24,7 +24,7 @@
         {
           "title": "The Wanderlust screenshot",
           "url": "wanderlust",
-          "name": "wanderlust-desktop-screenshot"
+          "name": "wanderlust-thumb"
         }
       ]
     },
@@ -38,7 +38,7 @@
         {
           "title": "The Iorad screenshot",
           "url": "iorad",
-          "name": "iorad-desktop-screenshot"
+          "name": "iorad-thumb"
         }
       ]
     },
@@ -52,7 +52,7 @@
         {
           "title": "The OCCRP screenshot",
           "url": "occrp",
-          "name": "occrp-desktop-screenshot"
+          "name": "occrp-thumb"
         }
       ]
     },
@@ -66,7 +66,7 @@
         {
           "title": "The Reboot screenshot",
           "url": "reboot",
-          "name": "reboot-desktop-screenshot"
+          "name": "reboot-thumb"
         }
       ]
     },
@@ -81,7 +81,7 @@
         {
           "title": "The Anvelocom screenshot",
           "url": "anvelocom",
-          "name": "anvelocom-mobile-screenshot"
+          "name": "anvelocom-thumb"
         }
       ]
     },
@@ -95,7 +95,7 @@
         {
           "title": "The Scatter screenshot",
           "url": "scatter",
-          "name": "scatter-frontpage-desktop-screenshot"
+          "name": "scatter-thumb"
         }
       ]
     },
