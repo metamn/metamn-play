@@ -12,7 +12,6 @@ html {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
 
       @include tablet-and-up {
         justify-content: flex-start;
