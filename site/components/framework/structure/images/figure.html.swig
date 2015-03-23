@@ -13,7 +13,7 @@
   {% set mobile = image.name + '_mobile.png' %}
   {% set mobile2x = image.name + '_mobile2x.png' %}
 
-  
+
   <!-- Showing different images for different devices -->
   {% for responsive in image.responsive %}
     {% if responsive.breakpoint == 'desktop' %}
@@ -35,6 +35,16 @@
   {% endfor %}
 
 
+
+  {% set figcaption = image.title %}
+  {% set figcaption_class = 'figcaption--from-title' %}
+
+  {% if image.figcaption %}
+    {% set figcaption = image.figcaption %}
+    {% set figcaption_class = 'figcaption' %}
+  {% endif %}
+
+
   <picture>
     <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source media="(min-width: 90em)" srcset="{{ site.url }}assets/images/{{ desktop }}, {{ site.url }}assets/images/{{ desktop2x }} 2x">
@@ -45,8 +55,8 @@
     <img srcset="{{ site.url }}assets/images/{{ desktop }}" alt="{{ image.title }}">
   </picture>
 
-  <figcaption>
-    {{ image.title }}
+  <figcaption class="{{ figcaption_class }}">
+    {{ figcaption }}
   </figcaption>
 
   {% if image.url %}</a>{% endif %}

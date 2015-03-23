@@ -1,3 +1,4 @@
 @mixin portfolio__text {
+  padding-bottom: $lem;
   @include text-style(body-text);
 }

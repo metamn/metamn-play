@@ -1,5 +1,9 @@
 @mixin portfolio__image {
   figure {
-    @include figure;
+    @include figure($figcaption: figcaption);
+
+    figcaption {
+      @include text-style(small-text);
+    }
   }
 }
