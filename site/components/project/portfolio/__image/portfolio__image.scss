@@ -1,0 +1,5 @@
+@mixin portfolio__image {
+  figure {
+    @include figure;
+  }
+}

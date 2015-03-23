@@ -1,0 +1,12 @@
+@mixin portfolio__slide {
+  @include colors(white-on-blue);
+  padding: $lem;
+
+  .portfolio__text {
+    @include portfolio__text;
+  }
+
+  .portfolio__image {
+    @include portfolio__image;
+  }
+}

@@ -2,4 +2,8 @@
   .portfolio__description {
     @include portfolio__description;
   }
+
+  .portfolio__slide {
+    @include portfolio__slide;
+  }
 }
