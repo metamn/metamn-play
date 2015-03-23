@@ -1,0 +1,5 @@
+@mixin portfolio {
+  .portfolio__description {
+    @include portfolio__description;
+  }
+}

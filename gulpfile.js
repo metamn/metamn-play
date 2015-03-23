@@ -46,7 +46,7 @@ var paths = {
 
 
   // .html files from /site to be moved into dest
-  html_src: 'site/components/pages/**/*.html',
+  html_src: 'site/components/pages/**/**/*.html',
 
   // the destination folder
   dest: 'dist',

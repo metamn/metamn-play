@@ -1,0 +1,10 @@
+@mixin portfolio__description {
+  padding: $lem;
+  @include colors(black-on-gray);
+
+  display: flex;
+
+  .portfolio__services {
+    @include portfolio__services;
+  }
+}

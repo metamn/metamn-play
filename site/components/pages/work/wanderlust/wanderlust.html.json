@@ -1,0 +1,15 @@
+{
+  "wanderlust": {
+    "services": [
+      "Front-end development",
+      "Back-end development"
+    ],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "SASS",
+      "jQuery",
+      "Wordpress"
+    ]
+  }
+}

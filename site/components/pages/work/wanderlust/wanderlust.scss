@@ -1,0 +1,13 @@
+html {
+  &.wanderlust {
+    body {
+      .title {
+        @include title;
+      }
+
+      .portfolio {
+        @include portfolio;
+      }
+    }
+  }
+}
