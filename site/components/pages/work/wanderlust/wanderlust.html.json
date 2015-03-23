@@ -14,12 +14,37 @@
         "text": [
           "Wanderlust runs each year a few dozen of yoga events and festivals around the world.",
           "They've decided to merge individual event sites running on Drupal into a single Wordpress site and give editors an easy way to publish rich, semantic content.",
-          "Our task&mdash;a team of three developers working remotely&mdash; was to create a storytelling engine and a new theme based on the design coming from the creative team."
+          "Our task&mdash;a team of three developers working remotely&mdash; was to create a storytelling engine and a new theme based on the design coming from the creative team.",
+          "And prepare the site for traffic peaks of 50.000 visitors / day when tickets go sales."
         ],
         "images": [
           {
-            "title": "The Wanderlust thumb",
-            "name": "wanderlust-thumb"
+            "title": "The Whistler festival homepage",
+            "name": "wanderlust-whistler"
+          },
+          {
+            "title": "The Stratton festival homepage",
+            "name": "wanderlust-stratton"
+          },
+          {
+            "title": "The Snowshoe festival homepage",
+            "name": "wanderlust-snowshoe",
+            "figcaption": "Each festival has it's own page"
+          },
+          {
+            "title": "Artist lineup",
+            "name": "wanderlust-lineup",
+            "figcaption": "Artist lineup"
+          },
+          {
+            "title": "Recent stories",
+            "name": "wanderlust-recent-stories",
+            "figcaption": "Recent stories of an event"
+          },
+          {
+            "title": "The storytelling engine on the admin interface",
+            "name": "wanderlust-storytelling",
+            "figcaption": "The storytelling engine on the admin interface"
           }
         ]
       },
