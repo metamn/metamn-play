@@ -21,7 +21,7 @@
     },
     {
       "name": "Body text",
-      "description": "Used for body text. It has a fixed width and a vertical rhytm.",
+      "description": "Used for body text. It has a fixed width and a vertical rhythm.",
       "based_on": "Futura PT Book",
       "mixins": [
         {
@@ -49,6 +49,24 @@
         {
           "name": "typographic-scale",
           "value": "body-text"
+        }
+      ]
+    },
+    {
+      "name": "Small text",
+      "description": "Used for small text.",
+      "based_on": "Futura PT Book",
+      "mixins": [
+        {
+          "name": "font",
+          "value": "futura-pt-book"
+        },
+        {
+          "name": "typographic-scale",
+          "value": "small-text"
+        },
+        {
+          "name": "vertical-rhythm"
         }
       ]
     }

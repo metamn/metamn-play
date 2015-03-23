@@ -25,6 +25,20 @@
           "value": "$text-width"
         }
       ]
+    },
+    {
+      "name": "small-text",
+      "description": "Set for text black on gray",
+      "properties": [
+        {
+          "name": "font-size",
+          "value": "90%"
+        },
+        {
+          "name": "line-height",
+          "value": "1.39"
+        }
+      ]
     }
   ]
 }

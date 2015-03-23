@@ -43,4 +43,12 @@ $text-width: 26em;
     
   }
 
+  // Set for text black on gray
+  @if ($variant == 'small-text') {
+    font-size: 90%;
+    line-height: 1.39;
+    
+    
+  }
+
 }

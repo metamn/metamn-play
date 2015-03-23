@@ -1,5 +1,5 @@
 @mixin title {
-  padding: $lem;
+  padding: 0 $lem $lem;
 
   h3 {
     display: flex;

@@ -1,8 +1,8 @@
 {
   "wanderlust": {
     "services": [
-      "Front-end development",
-      "Back-end development",
+      "Front&ndash;end development",
+      "Back&ndash;end development",
       "Wordpress",
       "Storytelling"
     ],
@@ -12,13 +12,14 @@
       {
         "name": "Overview",
         "text": [
-          "Wanderlust’s core mission is to create community around mindful living.",
-          "They focus on yoga, eating well, be green, practice purpose, create awareness and showcase art."
+          "Wanderlust runs each year a few dozen of yoga events and festivals around the world.",
+          "They've decided to merge individual event sites running on Drupal into a single Wordpress site and give editors an easy way to publish rich, semantic content.",
+          "Our task&mdash;a team of three developers working remotely&mdash; was to create a storytelling engine and a new theme based on the design coming from the creative team."
         ],
         "images": [
           {
-            "title": "The Smuff archive page on mobile",
-            "name": "inu-frontpage-laptop-front"
+            "title": "The Wanderlust thumb",
+            "name": "wanderlust-thumb"
           }
         ]
       },

@@ -18,7 +18,7 @@
   }
   
   // Body text
-  // - Used for body text. It has a fixed width and a vertical rhytm.
+  // - Used for body text. It has a fixed width and a vertical rhythm.
   @if ($variant == 'body-text') {
     @include font(futura-pt-book);
     @include typographic-scale(body-text);
@@ -32,6 +32,16 @@
   @if ($variant == 'title') {
     @include font(futura-pt-medium);
     @include typographic-scale(body-text);
+    
+    
+  }
+  
+  // Small text
+  // - Used for small text.
+  @if ($variant == 'small-text') {
+    @include font(futura-pt-book);
+    @include typographic-scale(small-text);
+    @include vertical-rhythm;
     
     
   }

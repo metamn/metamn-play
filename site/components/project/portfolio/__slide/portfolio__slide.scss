@@ -1,6 +1,5 @@
 @mixin portfolio__slide {
   @include colors(white-on-blue);
-  padding: $lem;
 
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +11,7 @@
 
   .portfolio__text {
     @include portfolio__text;
+    padding: $lem;
   }
 
   .portfolio__image {
