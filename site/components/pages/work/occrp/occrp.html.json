@@ -14,8 +14,17 @@
         ],
         "images": [
           {
-            "title": "The Whistler festival homepage",
-            "name": "wanderlust-whistler"
+            "title": "OCCRP headlines",
+            "name": "occrp-headlines"
+          },
+          {
+            "title": "OCCRP Daily News",
+            "name": "occrp-daily-news"
+          },
+          {
+            "title": "OCCRP From Members section",
+            "name": "occrp-from-members",
+            "figcaption": "Clean headlines"
           }
         ]
       }
