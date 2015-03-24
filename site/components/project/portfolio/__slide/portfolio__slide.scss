@@ -1,6 +1,4 @@
 @mixin portfolio__slide {
-  padding: $lem;
-  padding-bottom: none;
   @include colors(white-on-blue);
 
   display: flex;
@@ -18,4 +16,22 @@
   .portfolio__image {
     @include portfolio__image;
   }
+
+  padding: $lem;
+  padding-bottom: none;
+
+  &:last-of-type {
+    padding: 0;
+
+    .portfolio__image {
+      figure {
+        padding-bottom: $lem;
+
+        figcaption {
+          padding-left: $lem;
+        }
+      }
+    }
+  }
+
 }

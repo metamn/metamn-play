@@ -30,7 +30,12 @@
             "title": "The checkout page, Most popular plan",
             "name": "iorad-checkout",
             "figcaption": "The checkout page for a pricing plan"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Real life mockups",
+        "images": [
           {
             "title": "The pricing page on desktop",
             "name": "iorad-pricing-desktop-left"
@@ -42,7 +47,7 @@
           {
             "title": "The pricing page on tablet",
             "name": "iorad-pricing-tablet-angle1",
-            "figcaption": "The pricing page in context"
+            "figcaption": "The pricing page on real devices"
           }
         ]
       }
