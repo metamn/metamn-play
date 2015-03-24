@@ -1,0 +1,24 @@
+{
+  "occrp": {
+    "services": [
+      "Responsive web design",
+      "Front&ndash;end development"
+    ],
+    "slides": [
+      {
+        "name": "Overview",
+        "text": [
+          "Organized Crime and Corruption Reporting Project helps citizens better understand how organized crime and corruption affect their lives. OCCRP runs in-depth investigative stories as well as the latest news about organized crime and corruption.",
+          "I was asked to redesign their website and support all screens from mobile devices up to large projectors",
+          "We've managed to come up with a modern, newspaper-like redesign with clean headlines and intuitive structure."
+        ],
+        "images": [
+          {
+            "title": "The Whistler festival homepage",
+            "name": "wanderlust-whistler"
+          }
+        ]
+      }
+    ]
+  }
+}

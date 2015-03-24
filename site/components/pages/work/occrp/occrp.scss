@@ -1,0 +1,13 @@
+html {
+  &.occrp {
+    body {
+      .title {
+        @include title;
+      }
+
+      .portfolio {
+        @include portfolio;
+      }
+    }
+  }
+}
