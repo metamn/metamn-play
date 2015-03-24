@@ -1,5 +1,6 @@
 @mixin portfolio__slide {
   padding: $lem;
+  padding-bottom: none;
   @include colors(white-on-blue);
 
   display: flex;

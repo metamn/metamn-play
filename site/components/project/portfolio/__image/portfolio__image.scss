@@ -4,6 +4,10 @@
 
     figcaption {
       @include text-style(small-text);
+
+      &.figcaption {
+        padding-bottom: $lem;
+      }
     }
   }
 }

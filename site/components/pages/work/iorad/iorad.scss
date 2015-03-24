@@ -1,0 +1,13 @@
+html {
+  &.iorad {
+    body {
+      .title {
+        @include title;
+      }
+
+      .portfolio {
+        @include portfolio;
+      }
+    }
+  }
+}
