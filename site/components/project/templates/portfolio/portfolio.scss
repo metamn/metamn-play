@@ -2,8 +2,7 @@ html {
   &.portfolio {
     body {
 
-      display: flex;
-      flex-wrap: wrap;
+      
 
       .page-title {
         @include page-title;
