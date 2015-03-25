@@ -12,16 +12,19 @@
     "images": [
       {
         "title": "OCCRP headlines",
-        "name": "occrp-headlines"
+        "name": "occrp-headlines",
+        "class": "screenshot"
       },
       {
         "title": "OCCRP Daily News",
-        "name": "occrp-daily-news"
+        "name": "occrp-daily-news",
+        "class": "screenshot"
       },
       {
         "title": "OCCRP From Members section",
         "name": "occrp-from-members",
-        "figcaption": "Clean headlines"
+        "figcaption": "Clean headlines",
+        "class": "screenshot"
       },
       {
         "title": "The frontpage on mobile",

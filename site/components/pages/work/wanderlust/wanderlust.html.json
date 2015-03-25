@@ -15,30 +15,36 @@
     "images": [
       {
         "title": "The Whistler festival homepage",
-        "name": "wanderlust-whistler"
+        "name": "wanderlust-whistler",
+        "class": "screenshot"
       },
       {
         "title": "The Stratton festival homepage",
-        "name": "wanderlust-stratton"
+        "name": "wanderlust-stratton",
+        "class": "screenshot"
       },
       {
         "title": "The Snowshoe festival homepage",
         "name": "wanderlust-snowshoe",
+        "class": "screenshot",
         "figcaption": "Each festival has it's own page"
       },
       {
         "title": "Artist lineup",
         "name": "wanderlust-lineup",
+        "class": "screenshot",
         "figcaption": "Artist lineup"
       },
       {
         "title": "Recent stories",
         "name": "wanderlust-recent-stories",
+        "class": "screenshot",
         "figcaption": "Recent stories of an event"
       },
       {
         "title": "The storytelling engine on the admin interface",
         "name": "wanderlust-storytelling",
+        "class": "screenshot",
         "figcaption": "The storytelling engine on the admin interface"
       }
     ]

@@ -2,13 +2,20 @@
   @include colors(white-on-blue);
 
   figure {
+    padding: $lem / 2 $lem;
+    &:last-of-type {
+      padding-bottom: $lem;
+    }
+
     @include figure($figcaption: figcaption);
 
     figcaption {
       @include text-style(small-text);
+    }
 
-      &.figcaption {
-        padding-bottom: $lem;
+    &.screenshot {
+      img {
+        @include shadow(1);
       }
     }
   }

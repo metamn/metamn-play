@@ -12,21 +12,25 @@
     "images": [
       {
         "title": "The pricing page, Individual plan",
-        "name": "iorad-pricing-individual"
+        "name": "iorad-pricing-individual",
+        "class": "screenshot"
       },
       {
         "title": "The pricing page, Most poplular plan",
-        "name": "iorad-pricing-popular"
+        "name": "iorad-pricing-popular",
+        "class": "screenshot"
       },
       {
         "title": "The pricing page, One-timer plan",
         "name": "iorad-pricing-onetimer",
-        "figcaption": "The pricing plans"
+        "figcaption": "The pricing plans",
+        "class": "screenshot"
       },
       {
         "title": "The checkout page, Most popular plan",
         "name": "iorad-checkout",
-        "figcaption": "The checkout page for a pricing plan"
+        "figcaption": "The checkout page for a pricing plan",
+        "class": "screenshot"
       },
       {
         "title": "The pricing page on desktop",

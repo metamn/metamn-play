@@ -13,23 +13,28 @@
     "images": [
       {
         "title": "Reboot hero",
-        "name": "reboot-hero"
+        "name": "reboot-hero",
+        "class": "screenshot"
       },
       {
         "title": "Reboot about",
-        "name": "reboot-about"
+        "name": "reboot-about",
+        "class": "screenshot"
       },
       {
         "title": "Reboot capabilities",
-        "name": "reboot-capabilities"
+        "name": "reboot-capabilities",
+        "class": "screenshot"
       },
       {
         "title": "Reboot team",
-        "name": "reboot-team"
+        "name": "reboot-team",
+        "class": "screenshot"
       },
       {
         "title": "Reboot archive",
-        "name": "reboot-archive"
+        "name": "reboot-archive",
+        "class": "screenshot"
       }
     ]
   }
