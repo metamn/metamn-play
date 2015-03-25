@@ -1,6 +1,6 @@
 @mixin home__values {
   @include desktop {
-    order: -1;
+    order: 6;
   }
 
   .value {

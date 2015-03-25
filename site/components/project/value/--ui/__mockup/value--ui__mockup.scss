@@ -1,26 +1,17 @@
 @mixin value--ui__mockup {
-  position: relative;
-  overflow: hidden;
-
-  // The size of the images.
-  // - if bigger the slider will show the beginning of the next image too
-  max-width: 320px;
-  min-height: 24em;
-
-  @include mobile-and-up {
-    max-width: 768px;
-    min-height: 22em;
-  }
 
   @include mobile {
     @include shadow(2);
   }
 
   figure {
-    @include slider(4);
+    @include figure;
+    //@include slider(4);
 
-    img {
-      width: 100%;
+    display: none;
+
+    &:first-of-type {
+      display: flex;
     }
   }
 }

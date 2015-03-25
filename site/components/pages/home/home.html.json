@@ -46,48 +46,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "interactions",
-        "title": "Meaningful Interactions",
-        "images": [
-          {
-            "title": "Interaction on Inu Chivu, white",
-            "name": "inu-frontpage-tablet-screenshot",
-            "responsive": [
-              {
-                "breakpoint": "mobile",
-                "name": "inu-archive-mobile-screenshot"
-              }
-            ]
-          },
-          {
-            "title": "Interaction on Inu Chivu, black",
-            "name": "inu-archive-mobile-screenshot-black"
-          }
-        ]
-      },
-      {
-        "id": "ux",
-        "title": "Usability & User Experience Design",
-        "image": {
-          "title": "The five focus points",
-          "name": "ux-five-focus-points"
-        }
-      },
-      {
-        "id": "wordpress",
-        "title": "Wordpress",
-        "image": {
-          "title": "The Wordpress logo",
-          "name": "wordpress-logo-notext-rgb"
-        },
-        "description": [
-          "10 years experience",
-          "Custom themes",
-          "Custom plugins",
-          "Storytelling"
-        ]
       }
     ]
   }

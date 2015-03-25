@@ -1,26 +1,30 @@
 html {
   &.work {
-
-    .page-title {
-      @include page-title;
-    }
-
-    .works {
-      @include colors(white-on-blue);
-      padding: $lem;
-
+    body {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
 
-      @include tablet-and-up {
-        justify-content: flex-start;
+      .page-title {
+        @include page-title;
       }
 
-      .work--thumb {
-        @include work--thumb;
-      }
+      .works {
+        @include colors(white-on-blue);
+        padding: $lem;
 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include tablet-and-up {
+          justify-content: flex-start;
+        }
+
+        .work--thumb {
+          @include work--thumb;
+        }
+
+      }
     }
   }
 }
