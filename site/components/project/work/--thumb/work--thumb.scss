@@ -18,7 +18,7 @@
 
   figure {
     @include figure;
-    @include color-overlay($blue);
+    @include color-overlay(rgba(0, 0, 255, .8));
   }
 
 
