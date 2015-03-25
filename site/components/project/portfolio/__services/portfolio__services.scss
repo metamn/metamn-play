@@ -1,7 +1,9 @@
 @mixin portfolio__services {
   @include ul;
+  padding: 0 $lem $lem;
 
   span {
     display: none;
   }
+
 }

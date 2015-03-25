@@ -1,4 +1,8 @@
 @mixin portfolio {
+
+  display: flex;
+  flex-wrap: wrap;
+  
   .portfolio__services {
     @include portfolio__services;
   }

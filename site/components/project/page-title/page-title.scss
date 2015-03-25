@@ -1,7 +1,13 @@
 @mixin page-title {
-  padding: 0 $lem $lem;
+  padding: $lem;
+
+  @include mobile {
+    width: 100%;
+    padding-top: 0;
+  }
 
   h3 {
     display: flex;
+    @include text-style(title);
   }
 }
