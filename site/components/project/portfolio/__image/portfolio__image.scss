@@ -10,4 +10,13 @@
       }
     }
   }
+
+  &.image--half {
+    width: 45%;
+    margin-left: 3.3%;
+  }
+
+  &.image--centered {
+    margin: 0 3.3%;
+  }
 }

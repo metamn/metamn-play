@@ -1,4 +1,4 @@
-<aside class="portfolio__image">
+<aside class="portfolio__image {{ image.class }}">
   <h3>Portfolio image</h3>
 
   {% set image = image %}

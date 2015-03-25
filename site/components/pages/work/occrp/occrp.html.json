@@ -27,6 +27,25 @@
             "figcaption": "Clean headlines"
           }
         ]
+      },
+      {
+        "name": "Real life mockups",
+        "images": [
+          {
+            "title": "The frontpage on mobile",
+            "name": "occrp-frontpage-2-mobile-portrait",
+            "class": "image--half"
+          },
+          {
+            "title": "The archive page on mobile",
+            "name": "occrp-archive-mobile-portrait",
+            "class": "image--half"
+          },
+          {
+            "title": "The archive page on laptop",
+            "name": "occrp-archive-laptop-front"
+          }
+        ]
       }
     ]
   }
