@@ -1,0 +1,13 @@
+html {
+  &.reboot {
+    body {
+      .title {
+        @include title;
+      }
+
+      .portfolio {
+        @include portfolio;
+      }
+    }
+  }
+}
