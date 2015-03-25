@@ -1,4 +1,4 @@
-@mixin portfolio__image {
+@mixin portfolio__images {
   figure {
     @include figure($figcaption: figcaption);
 

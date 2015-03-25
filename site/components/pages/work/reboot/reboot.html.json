@@ -5,36 +5,31 @@
       "Back&ndash;end development",
       "Wordpress"
     ],
-    "slides": [
+    "description": [
+      "Reboot is a social impact firm dedicated to inclusive development and accountable governance. They help governments, foundations, and international organizations achieve their missions.",
+      "After growing out the startup phase the Reboot design team created a new look and wanted a developer to implement in Wordpress.",
+      "The requirement for back&ndash;end was portability. No third-party plugins, just Wordpress core features and structures."
+    ],
+    "images": [
       {
-        "name": "Overview",
-        "text": [
-          "Reboot is a social impact firm dedicated to inclusive development and accountable governance. They help governments, foundations, and international organizations achieve their missions.",
-          "After growing out the startup phase the Reboot design team created a new look and wanted a developer to implement in Wordpress.",
-          "The requirement for back&ndash;end was portability. No third-party plugins, just Wordpress core features and structures."
-        ],
-        "images": [
-          {
-            "title": "Reboot hero",
-            "name": "reboot-hero"
-          },
-          {
-            "title": "Reboot about",
-            "name": "reboot-about"
-          },
-          {
-            "title": "Reboot capabilities",
-            "name": "reboot-capabilities"
-          },
-          {
-            "title": "Reboot team",
-            "name": "reboot-team"
-          },
-          {
-            "title": "Reboot archive",
-            "name": "reboot-archive"
-          }
-        ]
+        "title": "Reboot hero",
+        "name": "reboot-hero"
+      },
+      {
+        "title": "Reboot about",
+        "name": "reboot-about"
+      },
+      {
+        "title": "Reboot capabilities",
+        "name": "reboot-capabilities"
+      },
+      {
+        "title": "Reboot team",
+        "name": "reboot-team"
+      },
+      {
+        "title": "Reboot archive",
+        "name": "reboot-archive"
       }
     ]
   }

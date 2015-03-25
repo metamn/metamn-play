@@ -1,6 +1,6 @@
 <aside class="portfolio__services">
-  <h3>{{ service.title }}</h3>
+  <h3>Services</h3>
 
-  {% set items = service.items %}
+  {% set items = portfolio.services %}
   {% include '../../../framework/design/typography/mixins/ul/ul.html.swig' %}
 </aside>

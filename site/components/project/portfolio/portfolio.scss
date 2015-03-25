@@ -1,9 +1,13 @@
 @mixin portfolio {
+  .portfolio__services {
+    @include portfolio__services;
+  }
+
   .portfolio__description {
     @include portfolio__description;
   }
 
-  .portfolio__slide {
-    @include portfolio__slide;
+  .portfolio__images {
+    @include portfolio__images;
   }
 }

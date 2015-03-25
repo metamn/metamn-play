@@ -1,9 +1,3 @@
 @mixin portfolio__description {
-  padding: $lem;
-  @include colors(black-on-gray);
-
-  .portfolio__services {
-    @include portfolio__services;
-    @include text-style(small-text);
-  }
+  @include text-style(body-text);
 }
