@@ -14,9 +14,7 @@
     }
 
     &.screenshot {
-      img {
-        @include shadow(1);
-      }
+      display: none;
     }
   }
 }

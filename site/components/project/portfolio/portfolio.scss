@@ -1,8 +1,4 @@
 @mixin portfolio {
-
-  display: flex;
-  flex-wrap: wrap;
-
   @include tablet-and-up {
     background: $gray;
     .container {

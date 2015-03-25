@@ -1,6 +1,9 @@
 @mixin links {
   padding: $lem;
 
+  display: inline-flex;
+  flex-wrap: wrap;
+
   @include ul("1px solid");
 
   a {

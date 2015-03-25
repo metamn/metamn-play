@@ -1,5 +1,5 @@
 @mixin page-title {
-  padding: $lem;
+  padding: $lem / 2 $lem;
 
   @include tablet-and-below {
     width: 100%;
