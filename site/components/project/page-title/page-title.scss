@@ -1,7 +1,7 @@
 @mixin page-title {
   padding: $lem;
 
-  @include mobile {
+  @include tablet-and-below {
     width: 100%;
     padding-top: 0;
   }

@@ -2,7 +2,15 @@
 
   display: flex;
   flex-wrap: wrap;
-  
+
+  @include tablet-and-up {
+    background: $gray;
+    .container {
+      flex-basis: 100%;
+    }
+  }
+
+
   .portfolio__services {
     @include portfolio__services;
   }

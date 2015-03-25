@@ -1,5 +1,8 @@
 @mixin portfolio__description {
   padding: $lem;
-  @include text-style(body-text);
   @include colors(white-on-blue);
+
+  div {
+    @include text-style(body-text);
+  }
 }

@@ -37,6 +37,12 @@ $breakpoint-desktop: 1600px;
   }
 }
 
+@mixin tablet-and-below {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content
+  }
+}
+
 @mixin tablet-and-up {
   @media only screen and (min-width: $breakpoint-tablet + 0.1) {
     @content

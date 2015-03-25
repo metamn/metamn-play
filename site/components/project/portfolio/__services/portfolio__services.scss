@@ -6,4 +6,9 @@
     display: none;
   }
 
+  @include tablet-and-up {
+    padding: $lem;
+    @include text-style(small-text);
+  }
+
 }
