@@ -5,7 +5,7 @@ title: Work
 {% extends '../../project/templates/default/default.html.swig' %}
 {% block content %}
 
-  {% include '../../project/title/title.html.swig' %}
+  {% include '../../project/page-title/page-title.html.swig' %}
 
   <section class="works">
     <h3>Works</h3>

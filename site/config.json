@@ -23,7 +23,7 @@
       "images": [
         {
           "title": "The Wanderlust screenshot",
-          "url": "wanderlust",
+          "url": "work/wanderlust",
           "name": "wanderlust-thumb"
         }
       ]
@@ -37,7 +37,7 @@
       "images": [
         {
           "title": "The Iorad screenshot",
-          "url": "iorad",
+          "url": "work/iorad",
           "name": "iorad-thumb"
         }
       ]
@@ -51,7 +51,7 @@
       "images": [
         {
           "title": "The OCCRP screenshot",
-          "url": "occrp",
+          "url": "work/occrp",
           "name": "occrp-thumb"
         }
       ]
@@ -65,7 +65,7 @@
       "images": [
         {
           "title": "The Reboot screenshot",
-          "url": "reboot",
+          "url": "work/reboot",
           "name": "reboot-thumb"
         }
       ]
@@ -80,7 +80,7 @@
       "images": [
         {
           "title": "The Anvelocom screenshot",
-          "url": "anvelocom",
+          "url": "work/anvelocom",
           "name": "anvelocom-thumb"
         }
       ]
@@ -94,7 +94,7 @@
       "images": [
         {
           "title": "The Scatter screenshot",
-          "url": "scatter",
+          "url": "work/scatter",
           "name": "scatter-thumb"
         }
       ]
@@ -109,7 +109,7 @@
       "images": [
         {
           "title": "The Inu Chivu screenshot",
-          "url": "inu-chivu",
+          "url": "work/inu-chivu",
           "name": "inu-thumb",
           "responsive": [
             {
@@ -132,7 +132,7 @@
       "images": [
         {
           "title": "The Smuff screenshot",
-          "url": "smuff",
+          "url": "work/smuff",
           "name": "smuff-thumb",
           "responsive": [
             {

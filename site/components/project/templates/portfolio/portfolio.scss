@@ -1,8 +1,8 @@
 html {
-  &.occrp {
+  &.portfolio {
     body {
-      .title {
-        @include title;
+      .page-title {
+        @include page-title;
       }
 
       .portfolio {
