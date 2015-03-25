@@ -1,6 +1,9 @@
 html {
   &.portfolio {
     body {
+
+      display: flex;
+      
       .page-title {
         @include page-title;
       }
