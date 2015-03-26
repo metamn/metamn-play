@@ -1,7 +1,5 @@
 @mixin portfolio__description {
-  @include tablet-and-up {
-    padding-right: $lem;
-  }
+  padding: $lem;
 
   div {
     @include text-style(body-text);
