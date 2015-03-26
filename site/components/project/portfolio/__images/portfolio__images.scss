@@ -1,12 +1,20 @@
 @mixin portfolio__images {
   display: flex;
-  
+  flex-wrap: wrap;
+  justify-content: center;
 
   figure {
     @include figure($figcaption: figcaption);
 
     figcaption {
       @include text-style(small-text);
+    }
+
+    &.iphone {
+      width: calc(50% - #{$lem / 2});
+      &:first-of-type {
+        margin-right: $lem;
+      }
     }
   }
 }

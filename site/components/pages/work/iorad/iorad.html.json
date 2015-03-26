@@ -11,12 +11,14 @@
     ],
     "images": [
       {
-        "title": "The pricing page on mobile",
-        "name": "iorad-pricing-mobile"
+        "title": "The iorad pricing page on mobile",
+        "name": "iorad-pricing-mobile",
+        "class": "iphone"
       },
       {
-        "title": "The checkout page on mobile",
-        "name": "iorad-checkout-mobile"
+        "title": "The iorad checkout page on mobile",
+        "name": "iorad-checkout-mobile",
+        "class": "iphone"
       }
     ]
   }
