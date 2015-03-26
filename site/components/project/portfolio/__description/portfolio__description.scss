@@ -1,12 +1,8 @@
 @mixin portfolio__description {
-  @include mobile {
-    padding-bottom: $lem;
-  }
-
-  @include mobile-and-up {
+  @include tablet-and-up {
     padding-right: $lem;
   }
-  
+
   div {
     @include text-style(body-text);
   }

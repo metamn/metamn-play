@@ -19,6 +19,10 @@
         "title": "The iorad checkout page on mobile",
         "name": "iorad-checkout-mobile",
         "class": "iphone"
+      },
+      {
+        "title": "The iorad pricing page on laptop",
+        "name": "iorad-pricing-laptop"
       }
     ]
   }

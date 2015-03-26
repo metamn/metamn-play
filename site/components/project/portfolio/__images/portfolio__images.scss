@@ -4,6 +4,10 @@
   justify-content: center;
 
   figure {
+    @include tablet-and-below {
+      padding-top: $lem;
+    }
+
     @include figure($figcaption: figcaption);
 
     figcaption {
@@ -14,6 +18,10 @@
       width: calc(50% - #{$lem / 2});
       &:first-of-type {
         margin-right: $lem;
+      }
+
+      @include tablet-and-up {
+        display: none;
       }
     }
   }

@@ -9,7 +9,7 @@
     align-items: center;
 
     flex-wrap: wrap;
-    @include mobile-and-up {
+    @include tablet-and-up {
       flex-wrap: nowrap;
     }
   }
