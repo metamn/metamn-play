@@ -1,20 +1,12 @@
 @mixin portfolio__images {
-  @include colors(white-on-blue);
+  display: flex;
+  
 
   figure {
-    padding: $lem / 2 $lem;
-    &:last-of-type {
-      padding-bottom: $lem;
-    }
-
     @include figure($figcaption: figcaption);
 
     figcaption {
       @include text-style(small-text);
-    }
-
-    &.screenshot {
-      display: none;
     }
   }
 }

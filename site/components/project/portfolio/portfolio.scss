@@ -1,11 +1,18 @@
 @mixin portfolio {
-  @include tablet-and-up {
-    background: $gray;
-    .container {
-      flex-basis: 100%;
+
+  .container {
+    @include colors(white-on-blue);
+    padding: $lem;
+
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+    @include mobile-and-up {
+      flex-wrap: nowrap;
     }
   }
-
 
   .portfolio__services {
     @include portfolio__services;

@@ -9,5 +9,4 @@ klass: portfolio
   {% set portfolio = iorad %}
   {% include '../../../project/portfolio/portfolio.html.swig' %}
 
-
 {% endblock %}

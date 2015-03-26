@@ -1,14 +1,16 @@
 @mixin portfolio__services {
+  @include colors(black-on-gray);
+  padding: $lem;
+
   @include ul;
-  padding: 0 $lem $lem;
 
-  span {
-    display: none;
-  }
-
-  @include tablet-and-up {
-    padding: $lem;
+  ul {
     @include text-style(small-text);
-  }
 
+    li {
+      span {
+        display: none;
+      }
+    }
+  }
 }

@@ -5,45 +5,18 @@
       "Front&ndash;end development"
     ],
     "description": [
-      "iorad is a startup helping businesses creating better presentations and tutorials on web and mobile.",
+      "iorad is a startup helping businesses creating better tutorials on web and mobile.",
       "Before the launch they've decided to give a face lift for their two most important pages: the Pricing and the Checkout page.",
       "The project requirements were: speed of execution, keeping current visual assets untouched, cross-device and cross-browser compatibility. And a week duration from signing the contract to the final delivery."
     ],
     "images": [
       {
-        "title": "The pricing page, Individual plan",
-        "name": "iorad-pricing-individual",
-        "class": "screenshot"
+        "title": "The pricing page on mobile",
+        "name": "iorad-pricing-mobile"
       },
       {
-        "title": "The pricing page, Most poplular plan",
-        "name": "iorad-pricing-popular",
-        "class": "screenshot"
-      },
-      {
-        "title": "The pricing page, One-timer plan",
-        "name": "iorad-pricing-onetimer",
-        "figcaption": "The pricing plans",
-        "class": "screenshot"
-      },
-      {
-        "title": "The checkout page, Most popular plan",
-        "name": "iorad-checkout",
-        "figcaption": "The checkout page for a pricing plan",
-        "class": "screenshot"
-      },
-      {
-        "title": "The pricing page on desktop",
-        "name": "iorad-pricing-desktop-left"
-      },
-      {
-        "title": "The pricing page on laptop",
-        "name": "iorad-pricing-laptop-front"
-      },
-      {
-        "title": "The pricing page on tablet",
-        "name": "iorad-pricing-tablet-angle1",
-        "figcaption": "The pricing page on real devices"
+        "title": "The checkout page on mobile",
+        "name": "iorad-checkout-mobile"
       }
     ]
   }
