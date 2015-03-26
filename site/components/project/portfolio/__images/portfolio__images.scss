@@ -1,11 +1,11 @@
 @mixin portfolio__images {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: $lem $lem 0;
 
   figure {
-    @include tablet-and-below {
-      padding-bottom: $lem;
-    }
+    padding-bottom: $lem;
 
     @include figure($figcaption: figcaption);
 
@@ -14,12 +14,20 @@
     }
 
     &.iphone {
-      width: calc((100% - #{$lem * 3}) / 2);
-      padding-left: $lem;
+      width: 35%;
+      &:first-of-type {
+        padding-right: $lem;
+      }
+
 
       @include tablet-and-up {
         display: none;
       }
+    }
+
+    &.desktop--left {
+      padding-left: $lem;
+      padding-right: $lem;
     }
   }
 }

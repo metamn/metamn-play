@@ -21,8 +21,17 @@
         "class": "iphone"
       },
       {
+        "title": "The iorad pricing page on tablet",
+        "name": "iorad-pricing-tablet-angle1"
+      },
+      {
         "title": "The iorad pricing page on laptop",
         "name": "iorad-pricing-laptop"
+      },
+      {
+        "title": "The iorad pricing page on desktop",
+        "name": "iorad-pricing-desktop-left",
+        "class": "desktop--left"
       }
     ]
   }
