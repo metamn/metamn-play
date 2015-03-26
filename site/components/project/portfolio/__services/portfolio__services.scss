@@ -1,6 +1,6 @@
 @mixin portfolio__services {
   @include colors(black-on-gray);
-  padding: $lem;
+  padding: $lem / 2 $lem;
 
   @include ul;
 
