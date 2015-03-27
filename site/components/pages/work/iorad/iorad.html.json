@@ -9,29 +9,45 @@
       "Before the launch they've decided to give a face lift for their two most important pages: the Pricing and the Checkout page.",
       "The project requirements were: speed of execution, keeping current visual assets untouched, cross-device and cross-browser compatibility. And a week duration from signing the contract to the final delivery."
     ],
-    "images": [
+    "slides": [
       {
-        "title": "The iorad pricing page on mobile",
-        "name": "iorad-pricing-mobile",
-        "class": "iphone"
+        "images": [
+          {
+            "title": "The iorad pricing page on mobile",
+            "name": "iorad-pricing-mobile",
+            "class": "iphone"
+          },
+          {
+            "title": "The iorad checkout page on mobile",
+            "name": "iorad-checkout-mobile",
+            "class": "iphone"
+          }
+        ]
       },
       {
-        "title": "The iorad checkout page on mobile",
-        "name": "iorad-checkout-mobile",
-        "class": "iphone"
+        "images": [
+          {
+            "title": "The iorad pricing page on tablet",
+            "name": "iorad-pricing-tablet-angle1"
+          }
+        ]
       },
       {
-        "title": "The iorad pricing page on tablet",
-        "name": "iorad-pricing-tablet-angle1"
+        "images": [
+          {
+            "title": "The iorad pricing page on laptop",
+            "name": "iorad-pricing-laptop"
+          }
+        ]
       },
       {
-        "title": "The iorad pricing page on laptop",
-        "name": "iorad-pricing-laptop"
-      },
-      {
-        "title": "The iorad pricing page on desktop",
-        "name": "iorad-pricing-desktop-left",
-        "class": "desktop--left"
+        "images": [
+          {
+            "title": "The iorad pricing page on desktop",
+            "name": "iorad-pricing-desktop-left",
+            "class": "desktop--left"
+          }
+        ]
       }
     ]
   }

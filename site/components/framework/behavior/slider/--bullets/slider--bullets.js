@@ -2,6 +2,7 @@ var sliderBullets = function(bulletsSelector, slidesSelector) {
   var bullets = document.querySelectorAll(bulletsSelector);
   var slides = document.querySelectorAll(slidesSelector);
 
+
   // Mark first slide active
   for (var i = 0; i < slides.length; i++) {
     slides[i].classList.add('moved-right-' + i);

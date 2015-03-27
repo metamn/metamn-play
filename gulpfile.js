@@ -73,7 +73,7 @@ var paths = {
 
 
   // .js files to concat
-  js_src: 'site/components/**/*.js',
+  js_src: ['site/components/framework/**/**/*.js', 'site/components/project/**/**/*.js', 'site/components/framework/pages/**/**/*.js]'],
 
   // .js file destination
   js_dest: 'dist/assets/scripts',
@@ -214,7 +214,7 @@ gulp.task('js', function() {
     }))
     .pipe(concat('site.js'))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest(paths.js_dest));
 });
 

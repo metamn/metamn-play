@@ -1,4 +1,33 @@
 @mixin portfolio__images {
+  flex-grow: 1;
+  overflow: hidden;
+
+  .portfolio__slides {
+    @include intrinsic-ratio(16, 9, '.slide');
+
+    .slide {
+      @include animation(transform);
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      figure {
+        @include figure;
+      }
+    }
+  }
+
+  .portfolio__bullets {
+    div {
+      @include slider--bullets;
+    }
+  }
+}
+
+
+@mixin portfolio__images2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

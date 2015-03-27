@@ -1,3 +1,4 @@
+
 var sliderSwitcher = function(switcherClass, slidesClass) {
   var bullet = document.querySelector(switcherClass);
   var slides = document.querySelectorAll(slidesClass);

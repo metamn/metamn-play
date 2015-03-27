@@ -1,0 +1,17 @@
+// https://github.com/kevinmack18/Intrinsic-Ratio-for-SASS/blob/master/assets/scss/styles.scss
+
+@mixin intrinsic-ratio($height, $width, $item) {
+  position: relative;
+  height: 0;
+  padding-bottom: 100% / ($height / $width);
+
+
+  #{$item} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}

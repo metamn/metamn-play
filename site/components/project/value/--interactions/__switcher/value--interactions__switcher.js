@@ -1,7 +1,7 @@
-sliderSwitcher('.value--interactions__switcher div', '.value--interactions__mockup figure');
+//sliderSwitcher('.value--interactions__switcher div', '.value--interactions__mockup figure');
 
 
-
+/*
 var positionSwitcher = function() {
   var container = document.querySelector('.value--interactions__mockup');
   var x = container.clientWidth;
@@ -31,3 +31,4 @@ window.onload = function(e) {
 window.onchange = function(e) {
   positionSwitcher();
 }
+*/
