@@ -7,7 +7,7 @@
 
     .slide {
       @include animation(transform);
-      
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,41 +22,6 @@
   .portfolio__bullets {
     div {
       @include slider--bullets;
-    }
-  }
-}
-
-
-@mixin portfolio__images2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: $lem $lem / 2 0;
-
-  figure {
-    padding-bottom: $lem / 2;
-
-    @include figure($figcaption: figcaption);
-
-    figcaption {
-      @include text-style(small-text);
-    }
-
-    &.iphone {
-      width: 35%;
-      &:first-of-type {
-        padding-right: $lem;
-      }
-
-
-      @include tablet-and-up {
-        display: none;
-      }
-    }
-
-    &.desktop--left {
-      padding-left: $lem;
-      padding-right: $lem;
     }
   }
 }
